@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="../index.html">
+                <span>H</span>AVEN<span>T</span>ALES
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                                <div class="col-md-6 categorys">
+                                    <li><a class="dropdown-item mb-0" href="#">Adventure<p>Tales of daring quests
+                                                and exploration.</p></a>
+                                    </li>
+                                    <li><a class="dropdown-item mb-0" href="#">Mystery<p>Puzzling crimes and
+                                                enigmatic events.</p></a>
+                                    </li>
+                                    <li><a class="dropdown-item mb-0" href="#">Romance<p>Stories of love, passion,
+                                                and relationships.</p></a></li>
+                                </div>
+                                <div class="col-md-6 categorys">
+                                    <li><a class="dropdown-item mb-0" href="#">Fantasy<p>Stories of magic, myths,
+                                                and mythical creatures.</p></a>
+                                    </li>
+                                    <li><a class="dropdown-item mb-0" href="#">Sci-Fi<p>Journeys through space,
+                                                time, and technology.</p></a>
+                                    </li>
+                                    <li><a class="dropdown-item mb-0" href="#">Kids<p>Fun and imaginative stories for
+                                                children.</p></a>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Emotions
+                        </a>
+                        <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                                <div class="col-md-6 categorys">
+                                    <li><a class="dropdown-item mb-0" href="#">Scary<p>Stories that thrill and give
+                                                goosebumps.</p></a>
+                                    </li>
+                                    <li><a class="dropdown-item mb-0" href="#">Peaceful<p>Emotional stories that touch
+                                                the heart.</p></a>
+                                    </li>
+                                    <li><a class="dropdown-item mb-0" href="#">Mind-Blowing<p>Unexpected twists that
+                                                leave you amazed.</p></a></li>
+                                </div>
+                                <div class="col-md-6 categorys">
+                                    <li><a class="dropdown-item mb-0" href="#">Funny<p>Humorous tales that make you
+                                                laugh.</p></a>
+                                    </li>
+                                    <li><a class="dropdown-item mb-0" href="#">Sad<p>Emotional stories that touch the
+                                                heart.</p></a>
+                                    </li>
+                                    <li><a class="dropdown-item mb-0" href="#">Inspiring<p>Motivational tales that
+                                                uplift your spirit.</p></a>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Submit Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">SignUp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+            </div>
+        </div>
+        </ul>
+        </li>
+        </ul>
+        <form class="d-flex">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input class="form-control me-2 search" type="search" placeholder="Search Stories" aria-label="Search">
+            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+        </form>
+        </div>
+        </div>
+    </nav>
+    <!-- Card Section -->
+    <div class="container">
+        <h2 class="heading-2 text-center mb-3 ">ADVENTURE</h2>
+        <p class="text-center mb-5">
+            An adventure story is a thrilling journey filled with danger, discovery, and daring feats.</p>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                <div class="overlay-card" id="bg-adv-1">
+                    <h2 class="overlay-card-title"> Harry Potter and the Philosopher`s Stone</h2>
+                    <p class="overlay-card-text">
+                        The first book in the Harry Potter series, where a young boy discovers he is a wizard and
+                        attends Hogwarts School of Witchcraft and Wizardry.
+                    </p>
+                    <button class="overlay-card-btn">Read Story</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                <div class="overlay-card" id="bg-adv-2">
+                    <h2 class="overlay-card-title">The Lightning Thief</h2>
+                    <p class="overlay-card-text">
+                        Percy Jackson discovers he's a demigod, the son of Poseidon, and must retrieve Zeus`s stolen
+                        lightning bolt to prevent a war among the gods. A fast-paced mix of modern adventure and Greek
+                        mythology
+                    </p>
+                    <button class="overlay-card-btn">Read Story</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                <div class="overlay-card" id="bg-adv-3">
+                    <h2 class="overlay-card-title">Hatchet</h2>
+                    <p class="overlay-card-text">
+                        Thirteen-year-old Brian survives a plane crash and must live alone in the Canadian wilderness
+                        with only a hatchet. A gripping survival story of resilience, nature, and self-discovery.
+                    </p>
+                    <button class="overlay-card-btn">Read Story</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                <div class="overlay-card" id="bg-adv-4">
+                    <h2 class="overlay-card-title">The Hobbit</h2>
+                    <p class="overlay-card-text">
+                        Bilbo, a simple hobbit, joins a group of dwarves on a treasure hunt. He faces dragons, trolls,
+                        and his own courage.
+                    </p>
+                    <button class="overlay-card-btn">Read Story</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                <div class="overlay-card" id="bg-adv-5">
+                    <h2 class="overlay-card-title">Around the World in Eighty Days</h2>
+                    <p class="overlay-card-text">
+                        English gentleman Phileas Fogg bets he can circle the globe in 80 days. He embarks on a
+                        whirlwind journey with his servant, encountering danger, excitement, and love along the way.
+                    </p>
+                    <button class="overlay-card-btn">Read Story</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                <div class="overlay-card" id="bg-adv-6">
+                    <h2 class="overlay-card-title"> The Call of the Wild</h2>
+                    <p class="overlay-card-text">
+                        Buck, a domestic dog, is stolen and sold into the brutal life of an Alaskan sled dog. He must
+                        adapt to the wild and eventually embraces his primal instincts in this powerful tale of survival
+                        and nature.
+                    </p>
+                    <button class="overlay-card-btn">Read Story</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- AOS (Animation on Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
