@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Submit Story || HavenTales</title>
+        <link rel="stylesheet" href="./css/style.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init({
+                    publicKey: "LrMM9dx12EXp1RGHX",
+                });
+            })();
+        </script>
+        <script> 
+        document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById("storyForm"); // Correctly reference the form by its ID
+
+    function sendEmail() {
+        let params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            title: document.getElementById("title").value,
+            category: document.getElementById("category").value,
+            emotion: document.getElementById("emotion").value,
+            story: document.getElementById("story").value
+        }
+
+        emailjs.send('service_f0dq80t', 'template_o5zeila', params)
+            .then(function (response) {
+                // Hide form and show thank you
+                document.getElementById("storyForm").style.display = "none";
+                document.getElementById("formHeading").style.display = "none";
+                document.getElementById("thankYou").style.display = "block";
+                console.log("SUCCESS!", response.status, response.text);
+            }, function (error) {
+                alert("Failed to send email. Please try again.");
+                console.error("FAILED...", error);
+            });
+    }
+
+    // Add event listener for form submission
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission initially
+        event.stopPropagation(); // Stop propagation of the event
+
+        const categorySelect = document.getElementById("category");
+        const emotionSelect = document.getElementById("emotion");
+
+        // Custom validation for category or emotion
+        const isCategorySelected = categorySelect.value !== "";
+        const isEmotionSelected = emotionSelect.value !== "";
+
+        let isValidCategoryOrEmotion = false;
+        if (isCategorySelected || isEmotionSelected) {
+            isValidCategoryOrEmotion = true;
+            // Remove 'is-invalid' class if previously set
+            categorySelect.classList.remove('is-invalid');
+            emotionSelect.classList.remove('is-invalid');
+        } else {
+            // Add 'is-invalid' class to both if neither is selected
+            categorySelect.classList.add('is-invalid');
+            emotionSelect.classList.add('is-invalid');
+        }
+
+        if (form.checkValidity() && isValidCategoryOrEmotion) {
+            // If the form is valid (including custom check), then call sendEmail
+            sendEmail();
+        }
+
+        form.classList.add('was-validated'); // Apply Bootstrap's validation styles
+    });
+}); // End of DOMContentLoaded
+        </script>
+
+    </head>
+
+<body>
+
+    <div class="container">
+        <div class="form-container">
+            <div id="formHeading">
+                <h2 class="mb-4 text-center heading-2">✍️ Submit Your Story</h2>
+                <p class="description text-center mb-5">Share your words with the world — every story deserves to be
+                    heard.</p>
+            </div>
+            <div class="form-content">
+                <form id="storyForm" class="needs-validation" novalidate>
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required pattern="^[a-zA-Z\s]+$"
+                        autocomplete="name" title="Please enter your full name using only letters.">
+                    <div class="invalid-feedback">Please enter your name using only letters.</div>
+
+
+                    <label for="email" class="mt-4 form-label">Your Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required autocomplete="email">
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+
+
+                    <label for="title" class="mt-4 form-label">Story Title</label>
+                    <input type="text" id="title" name="title" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a story title.</div>
+
+                    <label for="category" class="mt-4 form-label">Category</label>
+                    <select id="category" name="category" class="form-select">
+                        <option value="">--Choose Category--</option>
+                        <option value="Kids">Kids</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Real Life">Real Life</option>
+                        <option value="Horror">Horror</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a category.</div>
+
+                    <label for="emotion" class="mt-4 form-label">Emotion</label>
+                    <select id="emotion" name="emotion" class="form-select">
+                        <option value="">--Choose Emotion--</option>
+                        <option value="Funny">Funny</option>
+                        <option value="Sad">Sad</option>
+                        <option value="Scary">Scary</option>
+                        <option value="Peaceful">Peaceful</option>
+                        <option value="Inspiring">Inspiring</option>
+                        <option value="Mind-Blowing">Mind-Blowing</option>
+                    </select>
+                    <div class="invalid-feedback">Please select an emotion.</div>
+
+                    <label for="story" class="mt-4 form-label">Your Story</label>
+                    <textarea id="story" name="story" rows="8" class="form-control" required></textarea>
+                    <div class="invalid-feedback">Please write your story.</div>
+
+                    <div style="text-align: center;">
+                        <button type="submit" class="btns">Submit Story</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="thankyou-message" id="thankYou" style="display: none;">
+                <h2 class="heading-2">🎉 Thank you!</h2>
+                <p>Your story has been submitted successfully. We'll review it soon!</p>
+                <a href="index.html">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
