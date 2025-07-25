@@ -613,10 +613,9 @@ ul li {
     list-style: none;
 }
 
-
 /* Story Submit Page */
 .form-container {
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: 40px auto;
     background: #fff;
     padding: 35px;
@@ -626,12 +625,11 @@ ul li {
 
 
 .form-content label {
-    display: block;
+    /* display: block; */
     font-weight: 500;
     color: var(--primary-color);
 }
 
-.form-content 
 input[type="text"],
 input[type="email"],
 select,
