@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventure || Category</title>
-      <!-- CSS -->
+    <title>Read Story || Harry Potter and the Philosopher`s Stone</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
     <!-- Bootstrap CSS -->
@@ -26,11 +26,13 @@
 
     <!-- AOS (Animate on Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="../index.html">
                 <span>H</span>AVEN<span>T</span>ALES
@@ -50,7 +52,7 @@
                         <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
                             <div class="row">
                                 <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="#">Adventure<p>Tales of daring quests
+                                    <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>Tales of daring quests
                                                 and exploration.</p></a>
                                     </li>
                                     <li><a class="dropdown-item mb-0" href="#">Mystery<p>Puzzling crimes and
@@ -130,78 +132,84 @@
         </div>
     </nav>
     
-    <!-- Card Section -->
+
     <div class="container">
-        <h2 class="heading-2 text-center mb-3 ">ADVENTURE</h2>
-        <p class="text-center mb-5">
-            An adventure story is a thrilling journey filled with danger, discovery, and daring feats.</p>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
-                <div class="overlay-card" id="bg-adv-1">
-                    <h2 class="overlay-card-title"> Harry Potter and the Philosopher's Stone</h2>
-                    <p class="overlay-card-text">
-                        The first book in the Harry Potter series, where a young boy discovers he is a wizard and
-                        attends Hogwarts School of Witchcraft and Wizardry.
-                    </p>
-                    <button class="overlay-card-btn"><a href="../adventure/advStory1.html">Read Story</a></button>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
-                <div class="overlay-card" id="bg-adv-2">
-                    <h2 class="overlay-card-title">The Lightning Thief</h2>
-                    <p class="overlay-card-text">
-                        Percy Jackson discovers he's a demigod, the son of Poseidon, and must retrieve Zeus`s stolen
-                        lightning bolt to prevent a war among the gods. A fast-paced mix of modern adventure and Greek
-                        mythology
-                    </p>
-                    <button class="overlay-card-btn"><a href="">Read Story</a></button>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
-                <div class="overlay-card" id="bg-adv-3">
-                    <h2 class="overlay-card-title">Hatchet</h2>
-                    <p class="overlay-card-text">
-                        Thirteen-year-old Brian survives a plane crash and must live alone in the Canadian wilderness
-                        with only a hatchet. A gripping survival story of resilience, nature, and self-discovery.
-                    </p>
-                    <button class="overlay-card-btn"><a href="">Read Story</a></button>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
-                <div class="overlay-card" id="bg-adv-4">
-                    <h2 class="overlay-card-title">The Hobbit</h2>
-                    <p class="overlay-card-text">
-                        Bilbo, a simple hobbit, joins a group of dwarves on a treasure hunt. He faces dragons, trolls,
-                        and his own courage.
-                    </p>
-                    <button class="overlay-card-btn"><a href="">Read Story</a></button>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
-                <div class="overlay-card" id="bg-adv-5">
-                    <h2 class="overlay-card-title">Around the World in Eighty Days</h2>
-                    <p class="overlay-card-text">
-                        English gentleman Phileas Fogg bets he can circle the globe in 80 days. He embarks on a
-                        whirlwind journey with his servant, encountering danger, excitement, and love along the way.
-                    </p>
-                    <button class="overlay-card-btn"><a href="">Read Story</a></button>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
-                <div class="overlay-card" id="bg-adv-6">
-                    <h2 class="overlay-card-title"> The Call of the Wild</h2>
-                    <p class="overlay-card-text">
-                        Buck, a domestic dog, is stolen and sold into the brutal life of an Alaskan sled dog. He must
-                        adapt to the wild and eventually embraces his primal instincts in this powerful tale of survival
-                        and nature.
-                    </p>
-                    <button class="overlay-card-btn"><a href="">Read Story</a></button>
-                </div>
-            </div>
+        <h1 class="heading-1 text-center">Harry Potter and the Philosopher's Stone</h1>
+        <div class="text-center mt-5 story_image">
+            <img src="../image/adventure/advStory1.jpg" alt="Harry Potter and the Philosopher's Stone image">
+        </div>
+        <div class="text-center mt-5 mb-0">
+            <h2 class="heading-2">Author</h2>
+            <p class="fs-4">J.K. Rowling</p>
+        </div>
+        <div class="text-center mt-4 mb-0 fs-5">
+            <h2 class="heading-2">The Full Story</h2>
+            <button class="btns" onclick="downloadPDF()">Download PDF</button>
+            <p>Harry Potter, an orphaned boy living with his cruel aunt, uncle, and cousin, learns on his 11th birthday
+                that he is a wizard. He receives a letter from Hogwarts School of Witchcraft and Wizardry, inviting him
+                to study magic.
+            </p>
+            <p>
+                At Hogwarts, Harry makes friends — especially Ron Weasley and Hermione Granger — and learns about his
+                past. He discovers that his parents were killed by a dark wizard named Lord Voldemort, whose killing
+                curse mysteriously failed when he tried to kill baby Harry. This event made Harry famous in the
+                wizarding world as “The Boy Who Lived.”
+            </p>
+
+            <p>
+                Throughout the school year, Harry and his friends uncover the mystery of the Philosopher's Stone, a
+                magical object that grants immortality. They suspect their teacher Professor Snape is trying to steal it
+                for Voldemort.
+            </p>
+            <p>
+                However, it turns out Professor Quirrell is the real villain, possessed by Voldemort himself. In a
+                dramatic climax, Harry protects the Stone, and Voldemort is once again defeated — though not destroyed.
+            </p>
+            <p>
+                Harry returns to his relatives for the summer, having found friendship, courage, and a sense of
+                belonging.
+            </p>
+        </div>
+        <div class="text-center mt-5 mb-4">
+            <h2 class="heading-2">Moral</h2>
+            <p>The most powerful magic is love, which grants protection and inspires courage</p>
         </div>
     </div>
 
-   
+
+
+
+
+    <script>
+        async function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            let content = `
+Harry Potter and the Philosopher's Stone
+Author: J.K. Rowling
+
+Full Story Summary:
+At Hogwarts, Harry makes friends — especially Ron Weasley and Hermione Granger — and learns about his past. He discovers that his parents were killed by a dark wizard named Lord Voldemort, whose killing curse mysteriously failed when he tried to kill baby Harry. This event made Harry famous in the wizarding world  as “The Boy Who Lived.”
+Throughout the school year, Harry and his friends uncover the mystery of the Philosopher's Stone, a magical object that grants immortality. They suspect their teacher Professor Snape is trying to steal it for Voldemort.
+However, it turns out Professor Quirrell is the real villain, possessed by Voldemort himself. In a dramatic climax, Harry protects the Stone, and Voldemort is once again defeated — though not destroyed.
+Harry returns to his relatives for the summer, having found friendship, courage, and a sense of belonging.
+Harry Potter, an orphaned boy living with his cruel aunt, uncle, and cousin, learns on his 11th birthday that he is a wizard. He receives a letter from Hogwarts School of Witchcraft and Wizardry, inviting him to study magic.
+
+Moral:
+- Love is the strongest magic.
+- True courage and friendship overcome evil.
+- It's our choices that show who we really are, far more than our abilities.
+
+        `;
+
+            // Split content into lines
+            let lines = doc.splitTextToSize(content, 180); // 180 = page width limit
+            doc.text(lines, 10, 10);
+
+            doc.save("Harry_Potter_Summary.pdf");
+        }
+    </script>
 
 
     <!-- Bootstrap JS -->

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HavenTales || A Safe Space for Every Story and Every Soul</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- Bootstrap CSS -->
@@ -130,6 +131,8 @@
         </div>
         </div>
     </nav>
+    <!-- Go To Top (Button) -->
+    <button onclick="topFunction()" id="myBtn" class="top_btn" title="Go to top"><i class="fa-solid fa-arrow-up"></i> Go to Top</button>
 
     <!-- Hero Section -->
     <section class="section hero-section">
@@ -140,7 +143,7 @@
                     <p class="text-center">Explore a world of captivating stories across various genres and emotions.
                     </p>
                     <div>
-                        <a href="#" class="text-center btns" type="button">Explore Stories</a>
+                        <a href="#featured-stories" class="text-center btns" type="button">Explore Stories</a>
                         <a href="./submit.html" class="text-center btns" type="button">Share Your Tales</a>
                     </div>
                 </div>
@@ -149,7 +152,7 @@
     </section>
 
     <!-- Section 1 (Featured Stories) -->
-    <section class="section">
+    <section class="section" id="featured-stories">
         <div class="container">
             <h2 class="heading-2 text-center mt-4 mb-3">FEATURED STORIES</h2>
             <div class="row align-items-center card-section h-25">
@@ -412,15 +415,32 @@
 
                 </div>
             </div>
-
-
-
-
         </div>
-
-
-
     </footer>
+
+    <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
