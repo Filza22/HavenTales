@@ -111,7 +111,7 @@
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../submit.html">Submit Story</a>
+                        <a class="nav-link active" aria-current="page" href="../submit.htmls">Submit Story</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">SignUp</a>
@@ -125,7 +125,7 @@
         </li>
         </ul>
         <form class="d-flex">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <!-- <i class="fa-solid fa-magnifying-glass search-icon"></i> -->
             <input class="form-control me-2 search" type="search" placeholder="Search Stories" aria-label="Search">
             <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
         </form>
@@ -135,47 +135,121 @@
 
 
     <div class="container">
-        <h1 class="heading-1 text-center">Harry Potter and the Philosopher's Stone</h1>
+        <h1 class="heading-1 text-center">Treasure Island</h1>
         <div class="text-center mt-5 story_image">
-            <img src="../image/adventure/advStory1.jpg" alt="Harry Potter and the Philosopher's Stone image">
+            <img src="../image/homePage/cardStory1.jpg" alt="Treasure Island image">
         </div>
         <div class="text-center mt-5 mb-0">
             <h2 class="heading-2">Author</h2>
-            <p class="fs-4">J.K. Rowling</p>
+            <p class="fs-4">Robert Louis Stevenson</p>
         </div>
         <div class="text-center mt-4 mb-0 fs-5">
             <h2 class="heading-2">The Full Story</h2>
-            <p>Harry Potter, an orphaned boy living with his cruel aunt, uncle, and cousin, learns on his 11th birthday
-                that he is a wizard. He receives a letter from Hogwarts School of Witchcraft and Wizardry, inviting him
-                to study magic.
+            <p>The story begins at the Admiral Benbow Inn, run by young Jim Hawkins and his family. A mysterious old
+                seaman named Billy Bones arrives, bringing with him a large sea chest and a constant fear of a
+                "one-legged seafaring man." Bones spends his days drinking rum and singing old sea shanties, but his
+                peace is shattered when two terrifying figures from his past, Black Dog and Blind Pew, track him down.
+                The stress of these encounters eventually leads to Billy Bones' death.
             </p>
             <p>
-                At Hogwarts, Harry makes friends — especially Ron Weasley and Hermione Granger — and learns about his
-                past. He discovers that his parents were killed by a dark wizard named Lord Voldemort, whose killing
-                curse mysteriously failed when he tried to kill baby Harry. This event made Harry famous in the
-                wizarding world as “The Boy Who Lived.”
+                Before he dies, Jim and his mother discover a treasure map in Billy Bones' sea chest, which details the
+                location of Captain Flint's buried treasure on a distant island. Jim takes the map to Dr. Livesey and
+                Squire Trelawney, who are excited by the prospect of adventure and decide to finance an expedition to
+                find the treasure.
             </p>
 
             <p>
-                Throughout the school year, Harry and his friends uncover the mystery of the Philosopher's Stone, a
-                magical object that grants immortality. They suspect their teacher Professor Snape is trying to steal it
-                for Voldemort.
+                They commission a schooner called the Hispaniola and hire a crew. Among them is the charismatic
+                one-legged cook, Long John Silver, who quickly befriends Jim. Jim is initially drawn to Silver's charm
+                and impressive tales of the sea. However, Jim soon overhears Silver plotting a mutiny with a large
+                portion of the crew, revealing that many of them are former pirates from Captain Flint's crew, and
+                Silver himself was Flint's quartermaster. Their plan is to wait until the treasure is found, then seize
+                it for themselves and kill the loyal crew members.
             </p>
             <p>
-                However, it turns out Professor Quirrell is the real villain, possessed by Voldemort himself. In a
-                dramatic climax, Harry protects the Stone, and Voldemort is once again defeated — though not destroyed.
+                Upon arriving at Treasure Island, tensions escalate. Captain Smollett, the ship's honest and capable
+                captain, is wary of the crew. Jim, driven by curiosity and a desire for adventure, sneaks ashore with
+                the pirates. On the island, he witnesses Silver murder a loyal sailor who refuses to join the mutiny.
+                Fleeing into the dense jungle, Jim stumbles upon Ben Gunn, a wild, half-ccrazed former pirate who was
+                marooned on the island three years prior by Flint's crew. Ben Gunn, yearning to escape the island,
+                offers to help Jim and his allies.
             </p>
             <p>
-                Harry returns to his relatives for the summer, having found friendship, courage, and a sense of
-                belonging.
+                Meanwhile, Dr. Livesey, Squire Trelawney, and Captain Smollett, with a few loyal crewmen, fortify
+                themselves in an old stockade on the island. A series of confrontations and battles ensue between the
+                loyalists and Silver's mutineers. Jim, acting on impulse and courage, undertakes several solo endeavors,
+                including secretly cutting the Hispaniola adrift, which deprives the pirates of their escape route. He
+                even manages to kill a pirate named Israel Hands in a desperate struggle for control of the ship.
+            </p>
+            <p>
+                Returning to the stockade, Jim finds it has been taken over by the pirates, and he is taken hostage by
+                Long John Silver. Silver, ever the opportunist, tries to maintain control of his increasingly rebellious
+                crew while also protecting Jim, recognizing that Jim could be useful. The pirates, led by Silver,
+                eventually reach the site marked on the map, only to find the treasure chests already excavated and
+                empty. This enrages the pirates, who turn on Silver. At this critical moment, Dr. Livesey, Ben Gunn, and
+                the remaining loyalists ambush the pirates, scattering them.
+            </p>
+            <p>
+                It is revealed that Ben Gunn had discovered Flint's treasure months earlier during his solitude on the
+                island and had moved it to his cave. The loyal crew members load the treasure onto the Hispaniola.
+                Despite his treacherous actions, Long John Silver, with his persuasive charm and quick thinking, manages
+                to escape at their first port of call with a portion of the treasure.
+            </p>
+            <p>
+                The remaining adventurers sail home safely, wealthy beyond their dreams. Jim Hawkins, deeply affected by
+                the harrowing experience, forever foreswears treasure hunting, haunted by nightmares of the sea and gold
+                coins.
             </p>
             <button class="btns" onclick="downloadPDF()">Download PDF</button>
         </div>
         <div class="text-center mt-5 mb-4">
             <h2 class="heading-2">Moral</h2>
-            <p><strong>The most powerful magic is love, which grants protection and inspires courage.</strong></p>
+            <p><strong>Greed often leads to ruin, but courage and loyalty can lead to true fortune.</strong></p>
         </div>
     </div>
+
+
+
+
+
+    <script>
+        async function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            let content = `
+Treasure Island
+Author: Robert Louis Stevenson
+
+Full Story Summary:
+The story begins at the Admiral Benbow Inn, run by young Jim Hawkins and his family. A mysterious old seaman named Billy Bones arrives, bringing with him a large sea chest and a constant fear of a "one-legged seafaring man." Bones spends his days drinking rum and singing old sea shanties, but his peace is shattered when two terrifying figures from his past, Black Dog and Blind Pew, track him down. The stress of these encounters eventually leads to Billy Bones' death.
+
+Before he dies, Jim and his mother discover a treasure map in Billy Bones' sea chest, which details the location of Captain Flint's buried treasure on a distant island. Jim takes the map to Dr. Livesey and Squire Trelawney, who are excited by the prospect of adventure and decide to finance an expedition to find the treasure.
+
+They commission a schooner called the Hispaniola and hire a crew. Among them is the charismatic one-legged cook, Long John Silver, who quickly befriends Jim. Jim is initially drawn to Silver's charm and impressive tales of the sea. However, Jim soon overhears Silver plotting a mutiny with a large portion of the crew, revealing that many of them are former pirates from Captain Flint's crew, and Silver himself was Flint's quartermaster. Their plan is to wait until the treasure is found, then seize it for themselves and kill the loyal crew members.
+
+Upon arriving at Treasure Island, tensions escalate. Captain Smollett, the ship's honest and capable captain, is wary of the crew. Jim, driven by curiosity and a desire for adventure, sneaks ashore with the pirates. On the island, he witnesses Silver murder a loyal sailor who refuses to join the mutiny. Fleeing into the dense jungle, Jim stumbles upon Ben Gunn, a wild, half-ccrazed former pirate who was marooned on the island three years prior by Flint's crew. Ben Gunn, yearning to escape the island, offers to help Jim and his allies.
+
+Meanwhile, Dr. Livesey, Squire Trelawney, and Captain Smollett, with a few loyal crewmen, fortify themselves in an old stockade on the island. A series of confrontations and battles ensue between the loyalists and Silver's mutineers. Jim, acting on impulse and courage, undertakes several solo endeavors, including secretly cutting the Hispaniola adrift, which deprives the pirates of their escape route. He even manages to kill a pirate named Israel Hands in a desperate struggle for control of the ship.
+
+Returning to the stockade, Jim finds it has been taken over by the pirates, and he is taken hostage by Long John Silver. Silver, ever the opportunist, tries to maintain control of his increasingly rebellious crew while also protecting Jim, recognizing that Jim could be useful. The pirates, led by Silver, eventually reach the site marked on the map, only to find the treasure chests already excavated and empty. This enrages the pirates, who turn on Silver. At this critical moment, Dr. Livesey, Ben Gunn, and the remaining loyalists ambush the pirates, scattering them.
+
+It is revealed that Ben Gunn had discovered Flint's treasure months earlier during his solitude on the island and had moved it to his cave. The loyal crew members load the treasure onto the Hispaniola. Despite his treacherous actions, Long John Silver, with his persuasive charm and quick thinking, manages to escape at their first port of call with a portion of the treasure.
+
+The remaining adventurers sail home safely, wealthy beyond their dreams. Jim Hawkins, deeply affected by the harrowing experience, forever foreswears treasure hunting, haunted by nightmares of the sea and gold coins.
+
+Moral:
+- Greed often leads to ruin, but courage and loyalty can lead to true fortune.
+
+        `;
+
+            // Split content into lines
+            let lines = doc.splitTextToSize(content, 180); // 180 = page width limit
+            doc.text(lines, 10, 10);
+
+            doc.save("Harry_Potter_Summary.pdf");
+        }
+    </script>
 
     <!-- Footer -->
     <footer class="footer-section mt-5 pt-5 pb-3">
@@ -217,37 +291,6 @@
                 </div>
             </div>
     </footer>
-
-    <script>
-        async function downloadPDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-
-            let content = `
-Harry Potter and the Philosopher's Stone
-Author: J.K. Rowling
-
-Full Story Summary:
-At Hogwarts, Harry makes friends — especially Ron Weasley and Hermione Granger — and learns about his past. He discovers that his parents were killed by a dark wizard named Lord Voldemort, whose killing curse mysteriously failed when he tried to kill baby Harry. This event made Harry famous in the wizarding world  as “The Boy Who Lived.”
-Throughout the school year, Harry and his friends uncover the mystery of the Philosopher's Stone, a magical object that grants immortality. They suspect their teacher Professor Snape is trying to steal it for Voldemort.
-However, it turns out Professor Quirrell is the real villain, possessed by Voldemort himself. In a dramatic climax, Harry protects the Stone, and Voldemort is once again defeated — though not destroyed.
-Harry returns to his relatives for the summer, having found friendship, courage, and a sense of belonging.
-Harry Potter, an orphaned boy living with his cruel aunt, uncle, and cousin, learns on his 11th birthday that he is a wizard. He receives a letter from Hogwarts School of Witchcraft and Wizardry, inviting him to study magic.
-
-Moral:
-- Love is the strongest magic.
-- True courage and friendship overcome evil.
-- It's our choices that show who we really are, far more than our abilities.
-
-        `;
-
-            // Split content into lines
-            let lines = doc.splitTextToSize(content, 180); // 180 = page width limit
-            doc.text(lines, 10, 10);
-
-            doc.save("Harry_Potter_Summary.pdf");
-        }
-    </script>
 
 
     <!-- Bootstrap JS -->
