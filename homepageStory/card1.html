@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Read Story || Harry Potter and the Philosopher`s Stone</title>
+    <title>Read Story || Treasure Island</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
@@ -133,7 +133,7 @@
         </div>
     </nav>
 
-
+    <!-- Story Section -->
     <div class="container">
         <h1 class="heading-1 text-center">Treasure Island</h1>
         <div class="text-center mt-5 story_image">
@@ -208,49 +208,6 @@
         </div>
     </div>
 
-
-
-
-
-    <script>
-        async function downloadPDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-
-            let content = `
-Treasure Island
-Author: Robert Louis Stevenson
-
-Full Story Summary:
-The story begins at the Admiral Benbow Inn, run by young Jim Hawkins and his family. A mysterious old seaman named Billy Bones arrives, bringing with him a large sea chest and a constant fear of a "one-legged seafaring man." Bones spends his days drinking rum and singing old sea shanties, but his peace is shattered when two terrifying figures from his past, Black Dog and Blind Pew, track him down. The stress of these encounters eventually leads to Billy Bones' death.
-
-Before he dies, Jim and his mother discover a treasure map in Billy Bones' sea chest, which details the location of Captain Flint's buried treasure on a distant island. Jim takes the map to Dr. Livesey and Squire Trelawney, who are excited by the prospect of adventure and decide to finance an expedition to find the treasure.
-
-They commission a schooner called the Hispaniola and hire a crew. Among them is the charismatic one-legged cook, Long John Silver, who quickly befriends Jim. Jim is initially drawn to Silver's charm and impressive tales of the sea. However, Jim soon overhears Silver plotting a mutiny with a large portion of the crew, revealing that many of them are former pirates from Captain Flint's crew, and Silver himself was Flint's quartermaster. Their plan is to wait until the treasure is found, then seize it for themselves and kill the loyal crew members.
-
-Upon arriving at Treasure Island, tensions escalate. Captain Smollett, the ship's honest and capable captain, is wary of the crew. Jim, driven by curiosity and a desire for adventure, sneaks ashore with the pirates. On the island, he witnesses Silver murder a loyal sailor who refuses to join the mutiny. Fleeing into the dense jungle, Jim stumbles upon Ben Gunn, a wild, half-ccrazed former pirate who was marooned on the island three years prior by Flint's crew. Ben Gunn, yearning to escape the island, offers to help Jim and his allies.
-
-Meanwhile, Dr. Livesey, Squire Trelawney, and Captain Smollett, with a few loyal crewmen, fortify themselves in an old stockade on the island. A series of confrontations and battles ensue between the loyalists and Silver's mutineers. Jim, acting on impulse and courage, undertakes several solo endeavors, including secretly cutting the Hispaniola adrift, which deprives the pirates of their escape route. He even manages to kill a pirate named Israel Hands in a desperate struggle for control of the ship.
-
-Returning to the stockade, Jim finds it has been taken over by the pirates, and he is taken hostage by Long John Silver. Silver, ever the opportunist, tries to maintain control of his increasingly rebellious crew while also protecting Jim, recognizing that Jim could be useful. The pirates, led by Silver, eventually reach the site marked on the map, only to find the treasure chests already excavated and empty. This enrages the pirates, who turn on Silver. At this critical moment, Dr. Livesey, Ben Gunn, and the remaining loyalists ambush the pirates, scattering them.
-
-It is revealed that Ben Gunn had discovered Flint's treasure months earlier during his solitude on the island and had moved it to his cave. The loyal crew members load the treasure onto the Hispaniola. Despite his treacherous actions, Long John Silver, with his persuasive charm and quick thinking, manages to escape at their first port of call with a portion of the treasure.
-
-The remaining adventurers sail home safely, wealthy beyond their dreams. Jim Hawkins, deeply affected by the harrowing experience, forever foreswears treasure hunting, haunted by nightmares of the sea and gold coins.
-
-Moral:
-- Greed often leads to ruin, but courage and loyalty can lead to true fortune.
-
-        `;
-
-            // Split content into lines
-            let lines = doc.splitTextToSize(content, 180); // 180 = page width limit
-            doc.text(lines, 10, 10);
-
-            doc.save("Harry_Potter_Summary.pdf");
-        }
-    </script>
-
     <!-- Footer -->
     <footer class="footer-section mt-5 pt-5 pb-3">
         <div class="container">
@@ -292,6 +249,60 @@ Moral:
             </div>
     </footer>
 
+    <script>
+        async function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            let content = `
+Treasure Island
+Author: Robert Louis Stevenson
+
+Full Story Summary:
+The story begins at the Admiral Benbow Inn, run by young Jim Hawkins and his family. A mysterious old seaman named Billy Bones arrives, bringing with him a large sea chest and a constant fear of a "one-legged seafaring man." Bones spends his days drinking rum and singing old sea shanties, but his peace is shattered when two terrifying figures from his past, Black Dog and Blind Pew, track him down. The stress of these encounters eventually leads to Billy Bones' death.
+
+Before he dies, Jim and his mother discover a treasure map in Billy Bones' sea chest, which details the location of Captain Flint's buried treasure on a distant island. Jim takes the map to Dr. Livesey and Squire Trelawney, who are excited by the prospect of adventure and decide to finance an expedition to find the treasure.
+
+They commission a schooner called the Hispaniola and hire a crew. Among them is the charismatic one-legged cook, Long John Silver, who quickly befriends Jim. Jim is initially drawn to Silver's charm and impressive tales of the sea. However, Jim soon overhears Silver plotting a mutiny with a large portion of the crew, revealing that many of them are former pirates from Captain Flint's crew, and Silver himself was Flint's quartermaster. Their plan is to wait until the treasure is found, then seize it for themselves and kill the loyal crew members.
+
+Upon arriving at Treasure Island, tensions escalate. Captain Smollett, the ship's honest and capable captain, is wary of the crew. Jim, driven by curiosity and a desire for adventure, sneaks ashore with the pirates. On the island, he witnesses Silver murder a loyal sailor who refuses to join the mutiny. Fleeing into the dense jungle, Jim stumbles upon Ben Gunn, a wild, half-ccrazed former pirate who was marooned on the island three years prior by Flint's crew. Ben Gunn, yearning to escape the island, offers to help Jim and his allies.
+
+Meanwhile, Dr. Livesey, Squire Trelawney, and Captain Smollett, with a few loyal crewmen, fortify themselves in an old stockade on the island. A series of confrontations and battles ensue between the loyalists and Silver's mutineers. Jim, acting on impulse and courage, undertakes several solo endeavors, including secretly cutting the Hispaniola adrift, which deprives the pirates of their escape route. He even manages to kill a pirate named Israel Hands in a desperate struggle for control of the ship.
+
+Returning to the stockade, Jim finds it has been taken over by the pirates, and he is taken hostage by Long John Silver. Silver, ever the opportunist, tries to maintain control of his increasingly rebellious crew while also protecting Jim, recognizing that Jim could be useful. The pirates, led by Silver, eventually reach the site marked on the map, only to find the treasure chests already excavated and empty. This enrages the pirates, who turn on Silver. At this critical moment, Dr. Livesey, Ben Gunn, and the remaining loyalists ambush the pirates, scattering them.
+
+It is revealed that Ben Gunn had discovered Flint's treasure months earlier during his solitude on the island and had moved it to his cave. The loyal crew members load the treasure onto the Hispaniola. Despite his treacherous actions, Long John Silver, with his persuasive charm and quick thinking, manages to escape at their first port of call with a portion of the treasure.
+
+The remaining adventurers sail home safely, wealthy beyond their dreams. Jim Hawkins, deeply affected by the harrowing experience, forever foreswears treasure hunting, haunted by nightmares of the sea and gold coins.
+
+Moral:
+- Greed often leads to ruin, but courage and loyalty can lead to true fortune.
+
+        `;
+
+            const margin = 10;
+            let currentY = margin;
+            const lineHeight = 7; // Adjust based on your font size for better spacing
+            const pageWidth = doc.internal.pageSize.getWidth(); // Get the width of the page
+            const pageHeight = doc.internal.pageSize.getHeight(); // Get the height of the page
+            const maxWidth = pageWidth - (2 * margin); // Calculate the maximum width available for text // considering margins
+
+            // Split content into lines that fit the page width
+            let lines = doc.splitTextToSize(content, maxWidth);
+
+            lines.forEach(line => {
+                // Check if the current line will exceed the page height
+                if (currentY + lineHeight > pageHeight - margin) {
+                    doc.addPage(); // Add a new page
+                    currentY = margin; // Reset Y position for the new page
+                }
+                doc.text(line, margin, currentY);
+                currentY += lineHeight; // Move down for the next line
+            });
+
+            doc.save("Treasure_Islnd_Summary.pdf");
+        }
+    </script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

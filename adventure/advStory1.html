@@ -133,7 +133,7 @@
         </div>
     </nav>
 
-
+    <!-- Story Section -->
     <div class="container">
         <h1 class="heading-1 text-center">Harry Potter and the Philosopher's Stone</h1>
         <div class="text-center mt-5 story_image">
@@ -241,11 +241,27 @@ Moral:
 
         `;
 
-            // Split content into lines
-            let lines = doc.splitTextToSize(content, 180); // 180 = page width limit
-            doc.text(lines, 10, 10);
+            const margin = 10;
+            let currentY = margin;
+            const lineHeight = 7; // Adjust based on your font size for better spacing
+            const pageWidth = doc.internal.pageSize.getWidth(); // Get the width of the page
+            const pageHeight = doc.internal.pageSize.getHeight(); // Get the height of the page
+            const maxWidth = pageWidth - (2 * margin); // Calculate the maximum width available for text // considering margins
 
-            doc.save("Harry_Potter_Summary.pdf");
+            // Split content into lines that fit the page width
+            let lines = doc.splitTextToSize(content, maxWidth);
+
+            lines.forEach(line => {
+                // Check if the current line will exceed the page height
+                if (currentY + lineHeight > pageHeight - margin) {
+                    doc.addPage(); // Add a new page
+                    currentY = margin; // Reset Y position for the new page
+                }
+                doc.text(line, margin, currentY);
+                currentY += lineHeight; // Move down for the next line
+            });
+
+            doc.save("The_Secret_Garden_Summary.pdf");
         }
     </script>
 

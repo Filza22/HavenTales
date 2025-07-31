@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Read Story || Harry Potter and the Philosopher`s Stone</title>
+    <title>Read Story || Three Men in a Boat</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
@@ -133,7 +133,7 @@
         </div>
     </nav>
 
-
+    <!-- Story Section -->
     <div class="container">
         <h1 class="heading-1 text-center">Three Men in a Boat</h1>
         <div class="text-center mt-5 story_image">
@@ -177,45 +177,10 @@
         </div>
         <div class="text-center mt-5 mb-4">
             <h2 class="heading-2">Moral</h2>
-            <p><strong>Happiness is found not in reaching the destination, but in the laughter and memories made along the journey.</strong></p>
+            <p><strong>Happiness is found not in reaching the destination, but in the laughter and memories made along
+                    the journey.</strong></p>
         </div>
     </div>
-
-
-
-
-
-    <script>
-        async function downloadPDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-
-            let content = `
-Three Men in a Boat
-Author: Jerome K. Jerome
-
-Full Story Summary:
-Three friends—Jerome (the narrator), George, and Harris—living in London feel tired of their daily routine and believe they are suffering from various illnesses. After discussing several holiday options, they decide to take a boating trip up the River Thames for relaxation. They also take Jerome’s mischievous dog, Montmorency, with them.
-
-The journey begins with trouble as the trio struggle to pack their belongings. They argue about what is necessary, end up over-packing, and nearly forget half their essentials. Once on the river, their trip becomes a mixture of fun and chaos. They constantly quarrel over rowing and steering the boat, get lost several times, and struggle with setting up tents. Even cooking simple meals becomes a challenge, as shown in the hilarious scene where they try and fail to open a tin of pineapple without a can opener.
-
-Montmorency, the lively dog, creates further problems by attacking kettles, getting in the way, and causing scenes at every stop. The friends also face unpredictable weather—one moment enjoying sunny skies, the next battling rainstorms. Despite these problems, they share moments of laughter, enjoy the beautiful river scenery, and reflect on England’s history as they pass through villages and landmarks.
-
-After days of mishaps and constant discomfort, the friends finally give up on the trip when the rain becomes unbearable. They decide to head back to London, where they end the journey in the warmth of a comfortable restaurant. Though they laugh about their troubles, they also realize how much they enjoyed each other’s company.
-
-
-Moral:
-- Happiness is found not in reaching the destination, but in the laughter and memories made along the journey.
-
-        `;
-
-            // Split content into lines
-            let lines = doc.splitTextToSize(content, 180); // 180 = page width limit
-            doc.text(lines, 10, 10);
-
-            doc.save("Three_Men_in_a_Boat.pdf");
-        }
-    </script>
 
     <!-- Footer -->
     <footer class="footer-section mt-5 pt-5 pb-3">
@@ -258,6 +223,53 @@ Moral:
             </div>
     </footer>
 
+    <script>
+        async function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            let content = `
+Three Men in a Boat
+Author: Jerome K. Jerome
+
+Full Story Summary:
+Three friends—Jerome (the narrator), George, and Harris—living in London feel tired of their daily routine and believe they are suffering from various illnesses. After discussing several holiday options, they decide to take a boating trip up the River Thames for relaxation. They also take Jerome’s mischievous dog, Montmorency, with them.
+
+The journey begins with trouble as the trio struggle to pack their belongings. They argue about what is necessary, end up over-packing, and nearly forget half their essentials. Once on the river, their trip becomes a mixture of fun and chaos. They constantly quarrel over rowing and steering the boat, get lost several times, and struggle with setting up tents. Even cooking simple meals becomes a challenge, as shown in the hilarious scene where they try and fail to open a tin of pineapple without a can opener.
+
+Montmorency, the lively dog, creates further problems by attacking kettles, getting in the way, and causing scenes at every stop. The friends also face unpredictable weather—one moment enjoying sunny skies, the next battling rainstorms. Despite these problems, they share moments of laughter, enjoy the beautiful river scenery, and reflect on England’s history as they pass through villages and landmarks.
+
+After days of mishaps and constant discomfort, the friends finally give up on the trip when the rain becomes unbearable. They decide to head back to London, where they end the journey in the warmth of a comfortable restaurant. Though they laugh about their troubles, they also realize how much they enjoyed each other’s company.
+
+
+Moral:
+- Happiness is found not in reaching the destination, but in the laughter and memories made along the journey.
+
+        `;
+
+            const margin = 10;
+            let currentY = margin;
+            const lineHeight = 7; // Adjust based on your font size for better spacing
+            const pageWidth = doc.internal.pageSize.getWidth(); // Get the width of the page
+            const pageHeight = doc.internal.pageSize.getHeight(); // Get the height of the page
+            const maxWidth = pageWidth - (2 * margin); // Calculate the maximum width available for text // considering margins
+
+            // Split content into lines that fit the page width
+            let lines = doc.splitTextToSize(content, maxWidth);
+
+            lines.forEach(line => {
+                // Check if the current line will exceed the page height
+                if (currentY + lineHeight > pageHeight - margin) {
+                    doc.addPage(); // Add a new page
+                    currentY = margin; // Reset Y position for the new page
+                }
+                doc.text(line, margin, currentY);
+                currentY += lineHeight; // Move down for the next line
+            });
+
+            doc.save("Three_Men_in_a_Boat_Summary.pdf");
+        }
+    </script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
