@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy || Category</title>
-        <link rel="stylesheet" href="../css/style.css">
+    <title>Kids || Category</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 
-        <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -26,9 +28,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
-<body>
 
-         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="../index.html">
                 <span>H</span>AVEN<span>T</span>ALES
@@ -52,150 +54,84 @@
                                                 Tales of daring quests
                                                 and exploration.</p></a>
                                     </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>Puzzling crimes and
+                                    <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>Puzzling
+                                                crimes and
                                                 enigmatic events.</p></a>
                                     </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>Stories of love, passion,
+                                    <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>Stories
+                                                of love, passion,
                                                 and relationships.</p></a></li>
+                                    <li><a class="dropdown-item mb-0" href="../category/school&learning.html">School &
+                                            Learning<p>Inspire growth, curiosity, and the joy of learning.</p></a>
+                                    </li>
                                 </div>
                                 <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>Stories of magic, myths,
+                                    <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>Stories
+                                                of magic, myths,
                                                 and mythical creatures.</p></a>
                                     </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>Journeys through space,
+                                    <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>Journeys
+                                                through space,
                                                 time, and technology.</p></a>
                                     </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and imaginative stories for
+                                    <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
+                                                imaginative stories for
                                                 children.</p></a>
                                     </li>
+                                    <li><a class="dropdown-item mb-0" href="../category/mindblowing.html">Mind-Blowing
+                                            <p>Unexpected twists that
+                                                leave you amazed.</p>
+                                        </a>
+                                    </li>
                                 </div>
                             </div>
                         </ul>
-
                     </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Emotions
-                        </a>
-                         <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
-                            <div class="row">
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../emotions/scary.html">Scary<p>Stories that thrill and give
-                                                goosebumps.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/peacefull.html">Peaceful<p>Emotional stories that touch
-                                                the heart.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/mindblowing.html">Mind-Blowing<p>Unexpected twists that
-                                                leave you amazed.</p></a></li>
-                                </div>
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../emotions/funny.html">Funny<p>Humorous tales that make you
-                                                laugh.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/sad.html">Sad<p>Emotional stories that touch the
-                                                heart.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/inspiring.html">Inspiring<p>Motivational tales that
-                                                uplift your spirit.</p></a>
-                                    </li>
-                                </div>
-                            </div>
-                        </ul>
-
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="../submit.html">Submit Story</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">SignUp</a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../about.html">About</a>
                     </li>
             </div>
         </div>
         </ul>
         </li>
         </ul>
-        <form class="d-flex">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input class="form-control me-2 search" type="search" placeholder="Search Stories" aria-label="Search">
-            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-        </form>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <button class="signupbtn" data-bs-toggle="modal" data-bs-target="#signupModal">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
         </div>
         </div>
     </nav>
-    <!-- Card Section -->
-    <section>
-        <div class="container pt-5">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="heading-2 text-center mb-3 pt-5">Fantasy</h2>
-                    <p class="text-center mb-5">
-                    Fantasy is a genre of speculative fiction that involves magical elements, mythical creatures, supernatural events, or fantastical worlds that are not bound by the laws of the real world.                 </p>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5" data-aos="fade-right">
-                            <div class="overlay-card" id="bg-fan-1">
-                                <h2 class="overlay-card-title">The Lord of the Rings</h2>
-                                <p class="overlay-card-text">
-                                Set in Middle-earth, the story follows Frodo Baggins on a quest to destroy a powerful ring that could bring darkness to the world. It’s a classic tale of good versus evil.
-                                </p>
-                                <button class="overlay-card-btn"><a href="../adventure/advStory1.html">ReadStory</a></button>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5" data-aos="zoom-in">
-                            <div class="overlay-card" id="bg-fan-2">
-                                <h2 class="overlay-card-title">Harry Potter Series</h2>
-                                <p class="overlay-card-text">
-                               Harry, a young wizard, attends Hogwarts School of Witchcraft and Wizardry and faces the dark wizard Voldemort.
-                                </p>
-                                <button class="overlay-card-btn"><a href="">Read Story</a></button>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5" data-aos="fade-left">
-                            <div class="overlay-card" id="bg-fan-3">
-                                <h2 class="overlay-card-title">TV adaptation: Game of Thrones</h2>
-                                <p class="overlay-card-text">
-                                  Multiple noble families fight for control of the Iron Throne in the Seven Kingdoms. Includes dragons, undead creatures, and prophecy.
-                                </p>
-                                <button class="overlay-card-btn"><a href="">Read Story</a></button>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5" data-aos="fade-right">
-                            <div class="overlay-card" id="bg-fan-4">
-                                <h2 class="overlay-card-title">The Chronicles of Narnia</h2>
-                                <p class="overlay-card-text">
-                                     Children travel to a magical world called Narnia, ruled by a lion named Aslan. They fight evil and help restore peace.
-                                </p>
-                                <button class="overlay-card-btn"><a href="">Read Story</a></button>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5" data-aos="zoom-in">
-                            <div class="overlay-card" id="bg-fan-5">
-                                <h2 class="overlay-card-title">Earthsea Series</h2>
-                                <p class="overlay-card-text">
-                                  Follows the life of a wizard named Ged in the archipelago of Earthsea, exploring themes like power, balance, and identity.
-                                </p>
-                                <button class="overlay-card-btn"><a href="">Read Story</a></button>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5" data-aos="fade-left"      >
-                            <div class="overlay-card" id="bg-fan-6">
-                                <h2 class="overlay-card-title"> The Wheel of Time</h2>
-                                <p class="overlay-card-text">
-                                  A long and complex epic where the Dragon Reborn must stop the Dark One from destroying time itself.
-                                </p>
-                                <button class="overlay-card-btn"><a href="">Read Story</a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+    <!-- Fantasy Corner -->
+    <header class="categoryHeading">
+        <h1 class="heading-1 text-center mt-5">Fantasy Corner</h1>
+    </header>
+
+    <main>
+        <section class="mt-4">
+            <h2 class="heading-2 mb-4 text-center">How are you feeling today?</h2>
+            <div class="emotions-buttons">
+                <button class="btns" data-emotion="confusion">Confusion 🤔</button>
+                <button class="btns" data-emotion="inspiration">Inspiration ✨</button>
+                <button class="btns" data-emotion="bravery">Bravery 💪</button>
             </div>
+        </section>
+
+        <div class="container">
+            <h2 id="emotion-heading" class="heading-2 text-center mt-4"></h2>
+            <p id="emotion-description" class="text-center mb-5 mt-4"></p>
+            <div id="stories-list" class="row g-3"></div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer-section mt-5 pt-5 pb-3" data-aos="fade-up">
@@ -203,7 +139,7 @@
             <div class="row">
 
                 <div class="col-md-4">
-                    <a class="navbar-brand logo" href="./index.html">
+                    <a class="navbar-brand logo" href="../index.html">
                         <span>H</span>AVEN<span>T</span>ALES
                     </a>
                     <p>A Safe Space for Every Story and Every Soul.</p>
@@ -212,9 +148,9 @@
                 <div class="col-md-4 footer-column">
                     <h4 class="heading-4">Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-decoration-none">Home</a></li>
-                        <li><a href="submit.html" class="text-decoration-none">Submit Story</a></li>
-                        <li><a href="about.html" class="text-decoration-none">About</a></li>
+                        <li><a href="../index.html" class="text-decoration-none">Home</a></li>
+                        <li><a href="../submit.html" class="text-decoration-none">Submit Story</a></li>
+                        <li><a href="../about.html" class="text-decoration-none">About</a></li>
                     </ul>
                 </div>
 
@@ -238,20 +174,267 @@
             </div>
     </footer>
 
-     <!-- Go To Top (Button) -->
+    <!-- Signup Section Modal -->
+    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="heading-2 text-center">HavenTales Signup</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password">
+                                <span class="input-group-text" onclick="togglePassword('password', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="passwordError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword">
+                                <span class="input-group-text" onclick="togglePassword('confirmPassword', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btns">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const emotionButtons = document.querySelectorAll('.btns');
+            const storiesList = document.getElementById('stories-list');
+
+            const emotionDetails = {
+                confusion: {
+                    title: 'CONFUSION',
+                    description: 'Fantasy of confusion explores magical worlds where reality twists, rules bend, and nothing is quite what it seems. It lets readers feel lost alongside the characters, sparking wonder, curiosity, and discovery.'
+                },
+                inspiration: {
+                    title: 'INSPIRATION',
+                    description: 'Fantasy of inspiration takes readers on magical journeys where ordinary characters achieve the extraordinary. These stories spark imagination, courage, and hope through wonder-filled adventures and powerful lessons.'
+                },
+                bravery: {
+                    title: 'BRAVERY',
+                    description: 'Fantasy of bravery shows characters facing magical dangers, dark forces, or impossible quests with courage and heart. These stories inspire readers to be fearless, even when the path is unknown or frightening.'
+                }
+            };
+            // Sample data with story links
+            const allStories = [
+
+                {
+                    emotion: 'confusion',
+                    title: 'Alice’s Adventures in Wonderland',
+                    summary: 'Alice stumbles into a bizarre world where nothing makes sense and everything changes shape.',
+                    bgImage: 'url("../image/category/fantasy/confusion1.jpg")',
+                    storyLink: 'homepageStory/card4.html'
+                },
+                {
+                    emotion: 'confusion',
+                    title: 'Through the Looking-Glass',
+                    summary: 'Alice enters a backward world where logic is reversed. Confusion drives the story, especially with the odd rules of the chessboard world.',
+                    bgImage: 'url("../image/category/fantasy/confusion2.jpg")',
+                    storyLink: 'stories/funny/smiling-star.html'
+                },
+                {
+                    emotion: 'confusion',
+                    title: 'The Phantom Tollbooth',
+                    summary: 'Milo drives into a strange land where meanings are mixed and learning comes through confusion.',
+                    bgImage: 'url("../image/category/fantasy/confusion3.jpg")',
+                    storyLink: 'homepageStory/card4.html'
+                },
+                {
+                    emotion: 'confusion',
+                    title: 'The Ocean at the End of the Lane',
+                    summary: 'A man recalls strange childhood memories filled with magical danger and uncertain truth.',
+                    bgImage: 'url("../image/category/fantasy/confusion4.jpg")',
+                    storyLink: 'homepageStory/card4.html'
+                },
+                {
+                    emotion: 'confusion',
+                    title: 'The Night Circus',
+                    summary: 'A magical circus appears at night, full of secrets, illusions, and unclear competition rules.',
+                    bgImage: 'url("../image/category/fantasy/confusion5.jpg")',
+                    storyLink: 'stories/funny/smiling-star.html'
+                },
+                {
+                    emotion: 'confusion',
+                    title: 'Howl’s Moving Castle',
+                    summary: 'Sophie is cursed and transformed into an old woman, walking castle. She struggles to understand the unpredictable Howl and the chaotic magical world.',
+                    bgImage: 'url("../image/category/fantasy/confusion6.jpg")',
+                    storyLink: 'homepageStory/card4.html'
+                },
+                {
+                    emotion: 'inspiration',
+                    title: 'The Neverending Story',
+                    summary: 'A boy reading a magical book learns that he has the power to shape the fate of a fantasy world',
+                    bgImage: 'url("../image/category/fantasy/inspiration1.jpg")',
+                    storyLink: 'stories/sad/lonely-cloud.html'
+                },
+                {
+                    emotion: 'inspiration',
+                    title: 'The Alchemist',
+                    summary: 'A shepherd’s journey across deserts teaches him to follow his dreams and listen to his heart.',
+                    bgImage: 'url("../image/category/fantasy/inspiration2.jpg")',
+                    storyLink: 'stories/sad/lonely-cloud.html'
+                },
+                {
+                    emotion: 'inspiration',
+                    title: 'Peter Pan',
+                    summary: 'An eternal boy teaches that imagination and belief can keep the spirit forever young.',
+                    bgImage: 'url("../image/category/fantasy/inspiration3.jpg")',
+                    storyLink: 'stories/sad/lonely-cloud.html'
+                },
+                {
+                    emotion: 'inspiration',
+                    title: 'Ella Enchanted',
+                    summary: 'Cursed to obey every command, Ella uses inner strength to reclaim her freedom.',
+                    bgImage: 'url("../image/category/fantasy/inspiration4.jpg")',
+                    storyLink: 'stories/sad/lonely-cloud.html'
+                },
+                {
+                    emotion: 'inspiration',
+                    title: 'A Wrinkle in Time',
+                    summary: 'A girl travels through time and space to save her father, powered by love and belief.',
+                    bgImage: 'url("../image/category/fantasy/inspiration5.jpg")',
+                    storyLink: 'stories/sad/lonely-cloud.html'
+                },
+                {
+                    emotion: 'inspiration',
+                    title: 'Eragon',
+                    summary: 'A farm boy becomes a dragon rider and dares to challenge an evil empire.',
+                    bgImage: 'url("../image/category/fantasy/inspiration6.jpg")',
+                    storyLink: 'stories/sad/lonely-cloud.html'
+                },
+                {
+                    emotion: 'bravery',
+                    title: 'Harry Potter and the Goblet of Fire',
+                    summary: 'Harry faces life-threatening magical trials with courage beyond his years.',
+                    bgImage: 'url("../image/category/fantasy/bravery1.jpeg")',
+                    storyLink: 'stories/brave/little-knight.html'
+                },
+                {
+                    emotion: 'bravery',
+                    title: 'Percy Jackson and the Sea of Monsters',
+                    summary: 'Percy and friends risk everything to save their camp and face mythical monsters.',
+                    bgImage: 'url("../image/category/fantasy/bravery2.jpeg")',
+                    storyLink: 'stories/brave/little-knight.html'
+                },
+                {
+                    emotion: 'bravery',
+                    title: 'The Girl Who Drank the Moon',
+                    summary: 'A girl raised by a witch learns to use her powers to stand up for her truth.',
+                    bgImage: 'url("../image/category/fantasy/bravery3.jpeg")',
+                    storyLink: 'stories/brave/little-knight.html'
+                },
+                {
+                    emotion: 'bravery',
+                    title: 'The Princess Bride',
+                    summary: 'A farm boy risks life and limb to rescue his true love from danger.',
+                    bgImage: 'url("../image/category/fantasy/bravery4.jpeg")',
+                    storyLink: 'stories/brave/little-knight.html'
+                },
+                {
+                    emotion: 'bravery',
+                    title: 'The Last Unicorn',
+                    summary: 'A unicorn faces a terrifying journey to find others like her, battling loneliness and fear.',
+                    bgImage: 'url("../image/category/fantasy/bravery5.jpeg")',
+                    storyLink: 'stories/brave/little-knight.html'
+                },
+                {
+                    emotion: 'bravery',
+                    title: 'Gregor the Overlander',
+                    summary: 'Gregor journeys to a hidden world where he must fight to fulfill a prophecy and save lives.',
+                    bgImage: 'url("../image/category/fantasy/bravery6.jpeg")',
+                    storyLink: 'stories/brave/little-knight.html'
+                }
+            ];
+
+            // Function to display stories with working links
+            function displayStories(emotion) {
+                const filteredStories = allStories.filter(story => story.emotion === emotion);
+                storiesList.innerHTML = '';
+
+                // Set heading and description
+                document.getElementById('emotion-heading').textContent = emotionDetails[emotion]?.title || '';
+                document.getElementById('emotion-description').textContent = emotionDetails[emotion]?.description || '';
+
+                if (filteredStories.length > 0) {
+                    filteredStories.forEach((story) => {
+                        const colDiv = document.createElement('div');
+                        colDiv.className = 'col-lg-4 col-md-6 col-sm-12 mb-4';
+
+                        const storyCard = document.createElement('div');
+                        storyCard.className = 'overlay-card';
+                        storyCard.style.backgroundImage = story.bgImage || 'url("https://via.placeholder.com/600x400")';
+
+                        storyCard.innerHTML = `
+                <div class="container pt-5">
+                    <div class="overlay-card-content">
+                        <h2 class="overlay-card-title">${story.title}</h2>
+                        <p class="overlay-card-text">${story.summary}</p>
+                        <button class="overlay-card-btn">
+                            <a href="${story.storyLink}">Read Story</a>
+                        </button>
+                    </div>
+                </div>
+            `;
+
+                        colDiv.appendChild(storyCard);
+                        storiesList.appendChild(colDiv);
+                    });
+                } else {
+                    storiesList.innerHTML = '<p class="col-12 text-center">No stories found for this emotion yet. Try another one!</p>';
+                }
+            }
+
+
+            emotionButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    emotionButtons.forEach(btn => btn.classList.remove('active'));
+                    event.target.classList.add('active');
+                    const selectedEmotion = event.target.getAttribute('data-emotion');
+                    displayStories(selectedEmotion);
+                });
+            });
+
+            storiesList.innerHTML = '<p class="col-12 text-center mt-4 fs-5">Please select an emotion to view stories.</p>';
+        });
+    </script>
+
     <button onclick="topFunction()" id="myBtn" class="top_btn"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <script src="../javascript/script.js"></script>
-
-        <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-
-    <!-- AOS (Animation on Scroll) -->
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script>AOS.init();</script>
 </body>
+
 </html>

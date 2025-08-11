@@ -4,164 +4,467 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Story Generator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Read Story || The Secret Garden</title>
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        :root {
+            --primary-color: #6a1e55;
+            --heading-color: #a64d79;
+            --secondary-color: #c47aaea2;
+            --accent-color: #7d1c4a;
+            --background-color: #fed9ed;
+            --white-color: #fff;
+            --black-color: #000;
+            --box-shadow: 1px 0px 8px var(--secondary-color);
+        }
+
+        ::selection {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        .section {
+            overflow: hidden;
+        }
+
         body {
-            background-color: #f8f9fa;
-            /* Light grey background */
+            font-family: "Literata", serif !important;
+            background-color: var(--background-color) !important;
+            color: var(--primary-color) !important;
+            font-size: 16px;
+            font-weight: 400;
         }
 
-        .container {
-            max-width: 800px;
+        /* heading */
+        .heading-1 {
+            color: var(--heading-color);
+            font-size: 45px;
+            /* margin-top: 90px !important; */
+            /* font-weight: 700; */
+            font-family: "IBM Plex Serif", serif;
         }
 
-        .card {
-            border: none;
+        .heading-2 {
+            color: var(--heading-color);
+            font-weight: 600;
+            font-family: "IBM Plex Serif", serif;
+        }
+
+        .story_image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .story_heading {
+            margin-top: 90px !important;
+        }
+
+        .ur_story {
+            font-family: "Noto Nastaliq Urdu";
+            line-height: 40px;
+            display: none;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .btns {
+            background-color: var(--secondary-color) !important;
+            color: var(--white-color) !important;
+            border-radius: 8px !important;
+            padding: 10px 20px !important;
+            font-size: 16px !important;
+            font-weight: 500 !important;
+            transition: all ease-in-out 0.3s;
+            border: solid 1px var(--primary-color) !important;
+            align-items: center;
+            margin: 10px;
+            text-decoration: none !important;
+        }
+
+        .btns:hover {
+            background-color: var(--heading-color) !important;
+            color: var(--white-color) !important;
+            transform: scale(1.05);
         }
     </style>
+
 </head>
 
 <body>
 
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">AI Story Generator</h1>
-        <div class="card p-4 shadow-sm">
-            <div class="mb-3">
-                <label for="storyInput" class="form-label">Enter a story idea or topic:</label>
-                <input type="text" class="form-control" id="storyInput"
-                    placeholder="e.g., 'A detective solving a mystery in a futuristic city'">
-            </div>
-            <button id="generateBtn" class="btn btn-primary w-100">Generate Story</button>
-        </div>
 
-        <div id="storyResult" class="mt-4 p-4 border rounded bg-light" style="display: none;">
-            <div id="loadingSpinner" class="text-center" style="display: none;">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <p class="mt-2">Generating your story...</p>
-            </div>
-            <h3 class="mb-3">Your AI-Generated Story:</h3>
-            <p id="storyText"></p>
-        </div>
 
-        <div id="errorAlert" class="alert alert-danger mt-3" role="alert" style="display: none;">
-            Something went wrong. Please try again.
+
+    <!-- Story Section -->
+    <div class="container">
+        <h1 class="heading-1 text-center story_heading">The Secret Garden/خفیہ باغ</h1>
+        <!-- <h1 class="heading-1 text-center story_heading" id="story-ur">خفیہ باغ</h1> -->
+        <div class="text-center mt-5 story_image">
+            <img src="../image/homePage/cardStory4.jpg" alt="The Secret Garden image">
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script>
-        const apiKey = "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";
-        document.addEventListener('DOMContentLoaded', () => {
-            const storyInput = document.getElementById('storyInput');
-            const generateBtn = document.getElementById('generateBtn');
-            const storyResult = document.getElementById('storyResult');
-            const storyText = document.getElementById('storyText');
-            const loadingSpinner = document.getElementById('loadingSpinner');
-            const errorAlert = document.getElementById('errorAlert');
-            console.log(apiKey);
+    <!-- Btn -->
+    <div class="container">
+        <div class="text-center mt-3">
+            <button onclick="switchLanguage('en')" class="btns">English</button>
+            <button onclick="switchLanguage('ur')" class="btns">اردو</button>
+        </div>
+    </div>
+    <!-- ENGLISH VERSION -->
+    <div class="container">
+        <div id="story-en" class="mt-5">
+            <div class="text-center mt-5 mb-0">
+                <h2 class="heading-2">Author</h2>
+                <p class="fs-4">Frances Hodgson Burnett </p>
+            </div>
+            <div class="text-center mt-4 mb-0 fs-5">
+                <h2 class="heading-2">The Full Story</h2>
+                <p>
+                    The story begins in India with <strong> Mary Lennox,</strong> a sickly and sour-tempered
+                    ten-year-old
+                    girl. She is a
+                    neglected child of wealthy British parents who are too self-absorbed to care for her. When her
+                    parents
+                    and most of the household staff die in a cholera outbreak, Mary is sent to live with her reclusive
+                    and
+                    hunchbacked uncle,<strong> Archibald Craven,</strong> at his isolated estate, Misselthwaite Manor,
+                    on
+                    the Yorkshire moors
+                    in England.
+                </p>
+                <p>
+                    At first, Mary is as disagreeable as ever, disliking her new home and its inhabitants. She spends
+                    her
+                    time wandering the vast grounds and becomes curious about a walled garden that has been locked for
+                    ten
+                    years. She learns that the garden belonged to her uncle's deceased wife, who died after a tragic
+                    accident there. In his grief, Mr. Craven locked the garden and buried the key.
+                </p>
 
-            generateBtn.addEventListener('click', async () => {
-                const prompt = storyInput.value.trim();
+                <p>
+                    With the help of a friendly robin, Mary discovers the key and a hidden door to the garden. She finds
+                    it
+                    overgrown and neglected but with signs of life. She begins to secretly tend to the garden, and her
+                    health and spirits improve as she works in the fresh air. She befriends Dickon, a local boy with a
+                    deep
+                    connection to nature and animals, who helps her bring the garden back to life.
+                </p>
+                <p>
+                    One night, Mary hears the sound of a child crying and discovers her cousin,<strong> Colin
+                        Craven,</strong> who has been
+                    confined to his room and bed for years. Colin is also sickly and temperamental, convinced that he is
+                    an
+                    invalid and will die young like his mother. He has been largely forgotten by his father, who cannot
+                    bear
+                    the sight of his son because he reminds him of his lost wife.
+                </p>
+                <p>
+                    Mary shares her secret of the garden with Colin and Dickon. The three children begin to meet in the
+                    garden, and the fresh air, sunshine, and companionship work wonders. Colin's health and spirits
+                    improve
+                    dramatically. He learns to stand and walk, keeping his recovery a secret from the household staff.
+                </p>
+                <p>
+                    Meanwhile, <strong>Archibald Craven,</strong> who has been traveling to escape his painful memories,
+                    has
+                    a dream that
+                    prompts him to return home. He is shocked and overjoyed to find the secret garden in full bloom and
+                    his
+                    son, Colin, healthy and running around. The family is reunited, and Misselthwaite Manor, once a
+                    gloomy
+                    and sad place, is filled with new life and hope.
+                </p>
+                <button class="btns" onclick="downloadPDF_en()">Download PDF</button>
+            </div>
+            <div class="text-center mt-5 mb-4">
+                <h2 class="heading-2">Moral</h2>
+                <p><strong>The power of a positive mindset and the healing influence of nature can transform
+                        lives.</strong>
+                </p>
+            </div>
+        </div>
+    </div>
 
-                if (prompt === '') {
-                    alert('Please enter a story idea.');
-                    return;
-                }
+    <!-- URDU VERSION -->
+    <div class="container">
+        <div class="mt-5">
+            <div id="story-ur" class="ur_story">
+                <div class="text-center mt-5 mb-0" style="font-family: 'Noto Nastaliq Urdu', serif;">
+                    <h2 class="heading-2">مصنف</h2>
+                    <p class="fs-4">فرانسس ہڈسن برنیٹ</p>
+                    <h2 class="heading-2">پوری کہانی</h2>
+                    <div class="fs-4">
+                        <p>
+                            یہ کہانی انڈیا سے شروع ہوتی ہے، جہاں ایک دس سال کی بیمار اور بدتمیز لڑکی، <strong> میری
+                                لینوکس</strong>،
+                            رہتی
+                            ہے۔ اس کے امیر انگریز والدین اسے نظرانداز کرتے ہیں اور اس کی پرواہ نہیں کرتے۔ جب ایک ہیضے کی
+                            وبا
+                            میں اس کے والدین اور زیادہ تر نوکر مر جاتے ہیں، تو میری کو انگلینڈ کے ایک ویران علاقے میں
+                            موجود
+                            اپنے چچا آرچیبالڈ کریون</strong> کے گھر بھیج دیا جاتا ہے۔ اس کا چچا ایک تنہا اور کبڑا شخص
+                            ہے، جو
+                            <strong>مسل ویتھ مینر</strong> نامی حویلی میں رہتا ہے۔
+                        </p>
+                        <p>
+                            شروع میں، میری وہاں بھی ناراض اور ناپسندیدہ ہی رہتی ہے اور گھر کے لوگوں کو پسند نہیں کرتی۔
+                            وہ
+                            حویلی کے بڑے میدانوں میں گھومتی رہتی ہے اور ایک <strong>بند باغ</strong> کے بارے میں جانتی
+                            ہے جو دس سال
+                            سے
+                            تالہ لگا ہوا ہے۔ اُسے پتہ چلتا ہے کہ یہ باغ اس کی چچی کا تھا، جو ایک حادثے میں مر گئی تھیں۔
+                            دکھ
+                            کی حالت میں، اس کے چچا نے باغ کو بند کروا دیا تھا اور چابی زمین میں دفن کر دی تھی۔
+                        </p>
+                        <p>
+                            ایک دن، ایک <strong>دوستانہ چڑیا (روبن)</strong> کی مدد سے میری کو چابی اور باغ کا دروازہ مل
+                            جاتا ہے۔ باغ
+                            بے
+                            حد اُجڑا ہوا ہوتا ہے، لیکن کچھ زندگی کے آثار موجود ہوتے ہیں۔ وہ چپکے چپکے باغ کو سنوارنا
+                            شروع کر
+                            دیتی ہے، جس سے اس کی صحت اور مزاج بہتر ہو جاتا ہے۔ وہ ایک مقامی لڑکے <strong>ڈکن</strong> سے
+                            دوستی کرتی
+                            ہے،
+                            جو جانوروں اور قدرت سے خاص تعلق رکھتا ہے، اور وہ بھی باغ کو دوبارہ زندہ کرنے میں مدد کرتا
+                            ہے۔
+                        </p>
+                        <p>
+                            ایک رات میری کو کسی بچے کے رونے کی آواز آتی ہے۔ وہ اپنے کزن <strong>کولن کریون</strong> کو
+                            ڈھونڈ لیتی ہے،
+                            جو
+                            سالوں سے اپنے کمرے اور بستر تک محدود ہے۔ کولن بھی بیمار اور چڑچڑا ہے، اور اسے یقین ہے کہ وہ
+                            بھی
+                            اپنی ماں کی طرح کم عمری میں مر جائے گا۔ اس کا باپ اسے دیکھنے نہیں آتا، کیونکہ کولن کی شکل
+                            اسے
+                            اپنی مرنے والی بیوی کی یاد دلاتی ہے۔
+                        </p>
+                        <p>
+                            میری اپنے باغ کا راز کولن اور ڈکن سے شیئر کرتی ہے۔ اب تینوں بچے روز باغ میں ملتے ہیں۔ تازہ
+                            ہوا،
+                            دھوپ اور دوستی کے اثر سے کولن کی صحت اور مزاج میں بہتری آتی ہے۔ وہ کھڑا ہونا اور چلنا سیکھتا
+                            ہے،
+                            لیکن یہ سب گھر کے باقی لوگوں سے چھپاتا ہے۔
+                        </p>
+                        <p>
+                            ادھر کولن کا والد، **مسٹر کریون**، جو اپنی بیوی کی یاد سے بچنے کے لیے سفر پر نکلا ہوتا ہے،
+                            ایک
+                            خواب دیکھتا ہے جو اسے واپس گھر لوٹنے پر مجبور کرتا ہے۔ جب وہ آتا ہے تو وہ باغ کو مکمل کھلا
+                            ہوا
+                            اور اپنے بیٹے کولن کو صحت مند اور دوڑتا ہوا دیکھ کر حیران اور خوش ہو جاتا ہے۔
+                        </p>
+                        <p>
+                            کہانی کا اختتام خوشی سے ہوتا ہے۔ خاندان دوبارہ مل جاتا ہے اور <strong>مسل ویتھ مینر</strong>
+                            جو کبھی
+                            ویران
+                            اور اداس جگہ تھی، اب خوشی اور اُمید سے بھر جاتی ہے۔
+                        </p>
+                        <p>
+                            ---
 
-                // Show loading state and hide previous results/errors
-                storyResult.style.display = 'block';
-                storyText.textContent = '';
-                loadingSpinner.style.display = 'block';
-                errorAlert.style.display = 'none';
-                generateBtn.disabled = true;
-                
-                
+                            <strong>سادہ خلاصہ</strong>
+                            یہ کہانی ایک بیمار اور تنہا بچی کے بارے میں ہے جو ایک بند باغ کو دوبارہ زندہ کرتی ہے۔ اس باغ
+                            کے
+                            ذریعے وہ نہ صرف خود صحت مند ہو جاتی ہے بلکہ اپنے بیمار کزن اور غمزدہ چچا کی زندگی میں بھی
+                            خوشی
+                            واپس لے آتی ہے۔
+                            ...
+                        </p>
+                    </div>
+                    <button class="btns" onclick="downloadPDF_ur()">Download PDF</button>
+                    <button class="btns" onclick="downloadUrduTxt()">Download Urdu Story (TXT)</button>
 
-                try {
-                    // Aise sahi API key daalein
-                    // const apiKey = "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"; // Yeh ek example hai, isko use na karein
+                </div>
+                <div class="text-center mt-5 mb-4 fs-4">
+                    <h2 class="heading-2">اخلاق</h2>
+                    <p><strong>ایک مثبت ذہنیت کی طاقت اور فطرت کا شفا بخش اثر زندگی کو بدل سکتا ہے۔</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    // Aise na chodein
-                    // const apiKey = "YOUR_OPENAI_API_KEY"; 
 
-                    const response = await fetch('https://api.openai.com/v1/completions', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Authorization': `Bearer ${apiKey}`
-                        },
-                        body: JSON.stringify({
-                            model: "gpt-3.5-turbo-instruct", // You can use other models like "text-davinci-003"
-                            prompt: `Write a short story about: "${prompt}".`,
-                            max_tokens: 500, // Adjust the length of the story
-                            temperature: 0.7 // Higher values make the output more random
-                        })
-                    });
 
-                    if (!response.ok) {
-                        throw new Error(`API error: ${response.statusText}`);
-                    }
 
-                    const data = await response.json();
-                    const generatedStory = data.choices[0].text.trim();
-                    storyText.textContent = generatedStory;
-
-                } catch (error) {
-                    console.error('Error:', error);
-                    errorAlert.style.display = 'block';
-                } finally {
-                    // Hide loading state and re-enable button
-                    loadingSpinner.style.display = 'none';
-                    generateBtn.disabled = false;
-                }
-            });
-        });
-    </script> -->
     <script>
-        const apiKey = "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"; // Replace with your actual API key
 
-        document.getElementById('generateBtn').addEventListener('click', async () => {
-            const prompt = document.getElementById('storyInput').value.trim();
-            const storyResult = document.getElementById('storyResult');
-            const storyText = document.getElementById('storyText');
-
-            if (!prompt) {
-                alert('Please enter a story idea.');
-                return;
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('story-en').style.display = 'block';
+                document.getElementById('story-ur').style.display = 'none';
+            } else if (lang === 'ur') {
+                document.getElementById('story-en').style.display = 'none';
+                document.getElementById('story-ur').style.display = 'block';
             }
+        }
 
-            storyResult.style.display = 'block';
-            storyText.textContent = 'Generating...';
 
-            try {
-                const response = await fetch('https://api.openai.com/v1/completions', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${apiKey}`
-                    },
-                    body: JSON.stringify({
-                        model: "text-davinci-003",
-                        prompt: `Write a short story about: "${prompt}".`,
-                        max_tokens: 500,
-                        temperature: 0.7
-                    })
-                });
+        // For English Story
+        async function downloadPDF_en() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
 
-                const data = await response.json();
-                const generatedStory = data.choices[0].text.trim();
-                storyText.textContent = generatedStory;
+            let content = `
+The Secret Garden
+Author:  Frances Hodgson Burnett 
 
-            } catch (err) {
-                console.error(err);
-                storyText.textContent = "Something went wrong. Please try again.";
-            }
-        });
+Full Story Summary:
+The story begins in India with Mary Lennox, a sickly and sour-tempered ten-year-old girl. She is a neglected child of wealthy British parents who are too self-absorbed to care for her. When her parents and most of the household staff die in a cholera outbreak, Mary is sent to live with her reclusive and hunchbacked uncle, Archibald Craven, at his isolated estate, Misselthwaite Manor, on the Yorkshire moors in England.
+
+At first, Mary is as disagreeable as ever, disliking her new home and its inhabitants. She spends her time wandering the vast grounds and becomes curious about a walled garden that has been locked for ten years. She learns that the garden belonged to her uncle's deceased wife, who died after a tragic accident there. In his grief, Mr. Craven locked the garden and buried the key.
+
+With the help of a friendly robin, Mary discovers the key and a hidden door to the garden. She finds it overgrown and neglected but with signs of life. She begins to secretly tend to the garden, and her health and spirits improve as she works in the fresh air. She befriends Dickon, a local boy with a deep connection to nature and animals, who helps her bring the garden back to life.
+
+One night, Mary hears the sound of a child crying and discovers her cousin, Colin Craven, who has been confined to his room and bed for years. Colin is also sickly and temperamental, convinced that he is an invalid and will die young like his mother. He has been largely forgotten by his father, who cannot bear the sight of his son because he reminds him of his lost wife.
+
+Mary shares her secret of the garden with Colin and Dickon. The three children begin to meet in the garden, and the fresh air, sunshine, and companionship work wonders. Colin's health and spirits improve dramatically. He learns to stand and walk, keeping his recovery a secret from the household staff.
+
+Meanwhile, Archibald Craven, who has been traveling to escape his painful memories, has a dream that prompts him to return home. He is shocked and overjoyed to find the secret garden in full bloom and his son, Colin, healthy and running around. The family is reunited, and Misselthwaite Manor, once a gloomy and sad place, is filled with new life and hope.
+
+Moral:
+- The power of a positive mindset and the healing influence of nature can transform lives.
+
+        `;
+
+            const margin = 10;
+            let currentY = margin;
+            const lineHeight = 7; // Adjust based on your font size for better spacing
+            const pageWidth = doc.internal.pageSize.getWidth(); // Get the width of the page
+            const pageHeight = doc.internal.pageSize.getHeight(); // Get the height of the page
+            const maxWidth = pageWidth - (2 * margin); // Calculate the maximum width available for text // considering margins
+
+            // Split content into lines that fit the page width
+            let lines = doc.splitTextToSize(content, maxWidth);
+
+            lines.forEach(line => {
+                // Check if the current line will exceed the page height
+                if (currentY + lineHeight > pageHeight - margin) {
+                    doc.addPage(); // Add a new page
+                    currentY = margin; // Reset Y position for the new page
+                }
+                doc.text(line, margin, currentY);
+                currentY += lineHeight; // Move down for the next line
+            });
+
+            doc.save("The_Secret_Garden_Summary.pdf");
+        }
+
+
+
+        // For Urdu Story
+        async function downloadPDF_ur() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({ orientation: "p", unit: "mm", format: "a4" });
+
+            // Use 'Times' font for better Unicode/Urdu support (not perfect, but better than Helvetica)
+            doc.setFont("times", "normal");
+            doc.setFontSize(16);
+
+            let content = `
+خفیہ باغ
+مصنف:  فرانسس ہڈسن برنیٹ 
+
+پوری کہانی
+یہ کہانی انڈیا سے شروع ہوتی ہے، جہاں ایک دس سال کی بیمار اور بدتمیز لڑکی، میری لینوکس، رہتی ہے۔ اس کے امیر انگریز والدین اسے نظرانداز کرتے ہیں اور اس کی پرواہ نہیں کرتے۔ جب ایک ہیضے کی وبا میں اس کے والدین اور زیادہ تر نوکر مر جاتے ہیں، تو میری کو انگلینڈ کے ایک ویران علاقے میں موجود اپنے چچا آرچیبالڈ کریون کے گھر بھیج دیا جاتا ہے۔ اس کا چچا ایک تنہا اور کبڑا شخص ہے، جو مسل ویتھ مینر نامی حویلی میں رہتا ہے۔
+
+شروع میں، میری وہاں بھی ناراض اور ناپسندیدہ ہی رہتی ہے اور گھر کے لوگوں کو پسند نہیں کرتی۔ وہ حویلی کے بڑے میدانوں میں گھومتی رہتی ہے اور ایک بند باغ کے بارے میں جانتی ہے جو دس سال سے تالہ لگا ہوا ہے۔ اُسے پتہ چلتا ہے کہ یہ باغ اس کی چچی کا تھا، جو ایک حادثے میں مر گئی تھیں۔ دکھ کی حالت میں، اس کے چچا نے باغ کو بند کروا دیا تھا اور چابی زمین میں دفن کر دی تھی۔
+
+ایک دن، ایک دوستانہ چڑیا (روبن) کی مدد سے میری کو چابی اور باغ کا دروازہ مل جاتا ہے۔ باغ بے حد اُجڑا ہوا ہوتا ہے، لیکن کچھ زندگی کے آثار موجود ہوتے ہیں۔ وہ چپکے چپکے باغ کو سنوارنا شروع کر دیتی ہے، جس سے اس کی صحت اور مزاج بہتر ہو جاتا ہے۔ وہ ایک مقامی لڑکے ڈکن سے دوستی کرتی ہے، جو جانوروں اور قدرت سے خاص تعلق رکھتا ہے، اور وہ بھی باغ کو دوبارہ زندہ کرنے میں مدد کرتا ہے۔
+
+ایک رات میری کو کسی بچے کے رونے کی آواز آتی ہے۔ وہ اپنے کزن کولن کریون کو ڈھونڈ لیتی ہے، جو سالوں سے اپنے کمرے اور بستر تک محدود ہے۔ کولن بھی بیمار اور چڑچڑا ہے، اور اسے یقین ہے کہ وہ بھی اپنی ماں کی طرح کم عمری میں مر جائے گا۔ اس کا باپ اسے دیکھنے نہیں آتا، کیونکہ کولن کی شکل اسے اپنی مرنے والی بیوی کی یاد دلاتی ہے۔
+
+میری اپنے باغ کا راز کولن اور ڈکن سے شیئر کرتی ہے۔ اب تینوں بچے روز باغ میں ملتے ہیں۔ تازہ ہوا، دھوپ اور دوستی کے اثر سے کولن کی صحت اور مزاج میں بہتری آتی ہے۔ وہ کھڑا ہونا اور چلنا سیکھتا ہے، لیکن یہ سب گھر کے باقی لوگوں سے چھپاتا ہے۔
+
+ادھر کولن کا والد، مسٹر کریون، جو اپنی بیوی کی یاد سے بچنے کے لیے سفر پر نکلا ہوتا ہے، ایک خواب دیکھتا ہے جو اسے واپس گھر لوٹنے پر مجبور کرتا ہے۔ جب وہ آتا ہے تو وہ باغ کو مکمل کھلا ہوا اور اپنے بیٹے کولن کو صحت مند اور دوڑتا ہوا دیکھ کر حیران اور خوش ہو جاتا ہے۔
+
+کہانی کا اختتام خوشی سے ہوتا ہے۔ خاندان دوبارہ مل جاتا ہے اور مسل ویتھ مینر جو کبھی ویران اور اداس جگہ تھی، اب خوشی اور اُمید سے بھر جاتی ہے۔
+
+Moral:
+- ایک مثبت ذہنیت کی طاقت اور فطرت کا شفا بخش اثر زندگی کو بدل سکتا ہے۔
+
+        `;
+
+            const margin = 10;
+            let currentY = margin;
+            const lineHeight = 7; // Adjust based on your font size for better spacing
+            const pageWidth = doc.internal.pageSize.getWidth(); // Get the width of the page
+            const pageHeight = doc.internal.pageSize.getHeight(); // Get the height of the page
+            const maxWidth = pageWidth - (2 * margin); // Calculate the maximum width available for text // considering margins
+
+            // Split content into lines that fit the page width
+            let lines = doc.splitTextToSize(content, maxWidth);
+
+            lines.forEach(line => {
+                if (currentY + lineHeight > pageHeight - margin) {
+                    doc.addPage();
+                    currentY = margin;
+                }
+                doc.text(line, pageWidth - margin, currentY, { align: "right" }); // align right for Urdu
+                currentY += lineHeight;
+            });
+
+            doc.save("The_Secret_Garden_Summary_UR.pdf");
+        }
+
+        function downloadUrduTxt() {
+            var urduText = document.getElementById('story-ur').innerText;
+            var blob = new Blob([urduText], { type: 'text/plain;charset=utf-8' });
+            var link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = 'urdu_story.txt';
+            link.click();
+        }
+
     </script>
 
+    <!-- Go To Top (Button) -->
+    <button onclick="topFunction()" id="myBtn" class="top_btn"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="../javascript/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- AOS (Animation on Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
