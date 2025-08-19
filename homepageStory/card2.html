@@ -3,20 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Read Story || The Murder on the Links</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+     <!-- favIcon -->
+    <link rel="shortcut icon" href="../image/homePage/logo.png" type="image/x-icon">
 
+    <!-- Css -->
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -27,22 +27,38 @@
     <!-- AOS (Animate on Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
     <!-- jsPDF library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="../index.html">
                 <span>H</span>AVEN<span>T</span>ALES
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div class="d-flex align-items-center ms-auto order-lg-2">
+                <!-- Signup Button -->
+                <button class="signupbtn me-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Collapse NavBar -->
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -51,202 +67,292 @@
                         </a>
                         <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
                             <div class="row">
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
-                                                Tales of daring quests
-                                                and exploration.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>Puzzling
-                                                crimes and
-                                                enigmatic events.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>Stories
-                                                of love, passion,
-                                                and relationships.</p></a></li>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
+                                                    Tales
+                                                    of daring quests
+                                                    and exploration.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>
+                                                    Puzzling
+                                                    crimes and
+                                                    enigmatic events.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>
+                                                    Stories
+                                                    of love, passion,
+                                                    and relationships.</p></a></li>
+                                        <li><a class="dropdown-item mb-0" href="../category/school&learning.html">School
+                                                &
+                                                Learning<p>Inspire growth, curiosity, and the joy of learning.
+                                                </p></a>
+                                        </li>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>Stories
-                                                of magic, myths,
-                                                and mythical creatures.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>Journeys
-                                                through space,
-                                                time, and technology.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
-                                                imaginative stories for
-                                                children.</p></a>
-                                    </li>
-                                </div>
-                            </div>
-                        </ul>
-
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Emotions
-                        </a>
-                        <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
-                            <div class="row">
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../emotions/scary.html">Scary<p>Stories that
-                                                thrill and give
-                                                goosebumps.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/peacefull.html">Peaceful<p>
-                                                Emotional stories that touch
-                                                the heart.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/mindblowing.html">Mind-Blowing
-                                            <p>Unexpected twists that
-                                                leave you amazed.</p></a></li>
-                                </div>
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../emotions/funny.html">Funny<p>Humorous
-                                                tales that make you
-                                                laugh.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/sad.html">Sad<p>Emotional
-                                                stories that touch the
-                                                heart.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/inspiring.html">Inspiring<p>
-                                                Motivational tales that
-                                                uplift your spirit.</p></a>
-                                    </li>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>
+                                                    Stories
+                                                    of magic, myths,
+                                                    and mythical creatures.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>
+                                                    Journeys
+                                                    through space,
+                                                    time, and technology.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
+                                                    imaginative stories for
+                                                    children.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0"
+                                                href="../category/mindblowing.html">Mind-Blowing<p>
+                                                    Fun and
+                                                    Unexpected twists that
+                                                    leave you amazed.</p></a>
+                                        </li>
+                                    </div>
                                 </div>
                             </div>
                         </ul>
-
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../submit.html">Submit Story</a>
+                        <a class="nav-link" aria-current="page" href="../about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">SignUp</a>
+                        <a class="nav-link" aria-current="page" href="../submit.html">Submit Story</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../about.html">About</a>
-                    </li>
+                </ul>
             </div>
-        </div>
-        </ul>
-        </li>
-        </ul>
-        <form class="d-flex">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input class="form-control me-2 search" type="search" placeholder="Search Stories" aria-label="Search">
-            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-        </form>
-        </div>
         </div>
     </nav>
 
     <!-- Story Section -->
     <div class="container">
-        <h1 class="heading-1 text-center story_heading">The Murder on the Links</h1>
+        <h1 class="heading-1 text-center story_heading">The Murder on the Links/لنکس پر قتل</h1>
         <div class="text-center mt-5 story_image">
-            <img src="../image/homePage/cardStory2.jpg" alt="The Murder on the Links image">
+            <img src="../image/homePage/cardStory2.jpg" alt="The Secret Garden image">
         </div>
-        <div class="text-center mt-5 mb-0">
-            <h2 class="heading-2">Author</h2>
-            <p class="fs-4">Agatha Christie</p>
-        </div>
-        <div class="text-center mt-4 mb-0 fs-5">
-            <h2 class="heading-2">The Full Story</h2>
-            <p>
-                The story begins with Hercule Poirot receiving an urgent letter from a wealthy Frenchman,<strong> Paul
-                    Renauld,</strong>
-                living in the seaside resort of Merlinville-sur-Mer, France. Renauld claims his life is in danger and
-                desperately requests Poirot's assistance, stating he cannot trust the local police. Poirot, accompanied
-                by Captain Hastings, immediately travels to France.
-            </p>
-            <p>
-                However, upon their arrival, they are met with grim news: Paul Renauld has been found murdered. His body
-                is discovered stabbed in the back with a letter opener, lying face down in a freshly dug grave on his
-                newly constructed golf course. The local police, led by the arrogant and dismissive Inspector Giraud,
-                are already on the scene. Giraud, a proponent of <strong>"scientific"</strong> detection, quickly
-                dismisses Poirot's
-                <strong>"psychological"</strong> methods, leading to a rivalry between the two detectives.
-            </p>
+    </div>
 
-            <p>
-                Renauld's wife, <strong> Eloise Renauld,</strong> claims that two masked men broke into their villa in
-                the early hours of
-                the morning, tied her up, and abducted her husband. She insists she heard them threaten him before they
-                took him away. However, Poirot immediately suspects her story.
-            </p>
-            <p>
-                As Poirot investigates, a baffling array of clues and suspects emerge:
-            <ul class=" text-start">
-                <li>
-                    <strong> Paul Renauld's past:</strong> It's revealed that Renauld, originally Georges Conneau, had a
-                    criminal past in
-                    France. Years ago, he and his lover, Madame Beroldy, had conspired to murder Madame Beroldy's
-                    husband. Conneau escaped justice and fled to South America, where he amassed his fortune and married
-                    Eloise.
-                </li>
-                <li>
-                    <strong> A second body:</strong> To further complicate matters, another body is found, stabbed
-                    identically. This
-                    second victim is initially identified as a tramp, but Poirot's keen eye notes inconsistencies. It is
-                    later revealed that the tramp died of an epileptic seizure before Renauld's murder and was merely
-                    used to stage a complex deception.
-                </li>
-                <li>
-                    <strong> Madame Daubreuil:</strong> Renauld's neighbor, a mysterious and elegant woman named Madame
-                    Daubreuil, is
-                    recognized by Poirot as the former Madame Beroldy, Renauld's accomplice from his past. She had been
-                    blackmailing Renauld, and her daughter, Marthe Daubreuil, is romantically involved with Renauld's
-                    son, Jack.
-                </li>
-                <li>
-                    <strong> Jack Renauld:</strong> Paul Renauld's son, Jack, had a contentious relationship with his
-                    father and is
-                    initially the prime suspect for Inspector Giraud, especially after it's discovered Paul had
-                    disinherited him just two weeks before his death.
-                </li>
-                <li>
-                    <strong> "Cinderella" and Bella Duveen:</strong> Captain Hastings becomes infatuated with a young
-                    stage performer
-                    named Bella Duveen, whom he nicknames "Cinderella." She appears to have some connection to the case,
-                    and her sister, Dulcie Duveen, is also involved in the convoluted events.
-                </li>
-            </ul>
-            </p>
-            <p>
-                Poirot meticulously examines every detail, from the position of a hearth rug to the specific type of
-                cigarette smoked. He realizes that Renauld had concocted an elaborate plan to fake his own death to
-                escape Madame Daubreuil's blackmail. He planned to use the tramp's body to stage the murder, bury it on
-                the golf course, and then disappear. However, his plan was intercepted.
-            </p>
-            <p>
-                The truth, as uncovered by Poirot, is incredibly complex: Paul Renauld was indeed trying to fake his
-                death. He had dug the grave and was preparing to dispose of the tramp's body when he was murdered. The
-                real killer is <strong> Marthe Daubreuil,</strong> the daughter of Madame Daubreuil. Marthe, driven by
-                greed and a desire
-                to secure her future with Jack, knew of Renauld's plan and saw an opportunity. She followed Renauld to
-                the golf course and stabbed him after he had already dug the grave for the tramp's body, making it
-                appear as if he had been killed by an unknown assailant and left in a prepared grave.
-            </p>
-            <p>
-                Marthe's motive was to ensure that Jack would inherit his father's fortune upon his mother's death, as
-                she believed this would lead to her own financial security. She also tried to implicate others to throw
-                off the scent.
-            </p>
-            <p>
-                In the end, Poirot exposes Marthe's cunning scheme, much to the chagrin of Inspector Giraud, who had
-                consistently underestimated the Belgian detective. The novel also features a romantic subplot as Captain
-                Hastings finds love with Bella Duveen.
-            </p>
-            <button class="btns" onclick="downloadPDF()">Download PDF</button>
+    <!-- Btn -->
+    <div class="container">
+        <div class="text-center mt-3">
+            <button onclick="switchLanguage('en')" class="btns">English</button>
+            <button onclick="switchLanguage('ur')" class="btns">اردو</button>
         </div>
-        <div class="text-center mt-5 mb-4">
-            <h2 class="heading-2">Moral</h2>
-            <p><strong>Appearances are deceiving; a master of deception can use truth itself as a tool for
-                    lies.</strong></p>
+    </div>
+    <!-- ENGLISH VERSION -->
+    <div class="container">
+        <div id="story-en" class="mt-5">
+            <div class="text-center mt-5 mb-0">
+                <h2 class="heading-2">Author</h2>
+                <p class="fs-4">Agatha Christie</p>
+            </div>
+            <div class="text-center mt-4 mb-0 fs-5">
+                <h2 class="heading-2">The Full Story</h2>
+                <p>
+                    The story begins with Hercule Poirot receiving an urgent letter from a wealthy Frenchman,<strong>
+                        Paul
+                        Renauld,</strong>
+                    living in the seaside resort of Merlinville-sur-Mer, France. Renauld claims his life is in danger
+                    and
+                    desperately requests Poirot's assistance, stating he cannot trust the local police. Poirot,
+                    accompanied
+                    by Captain Hastings, immediately travels to France.
+                </p>
+                <p>
+                    However, upon their arrival, they are met with grim news: Paul Renauld has been found murdered. His
+                    body
+                    is discovered stabbed in the back with a letter opener, lying face down in a freshly dug grave on
+                    his
+                    newly constructed golf course. The local police, led by the arrogant and dismissive Inspector
+                    Giraud,
+                    are already on the scene. Giraud, a proponent of <strong>"scientific"</strong> detection, quickly
+                    dismisses Poirot's
+                    <strong>"psychological"</strong> methods, leading to a rivalry between the two detectives.
+                </p>
+
+                <p>
+                    Renauld's wife, <strong> Eloise Renauld,</strong> claims that two masked men broke into their villa
+                    in
+                    the early hours of
+                    the morning, tied her up, and abducted her husband. She insists she heard them threaten him before
+                    they
+                    took him away. However, Poirot immediately suspects her story.
+                </p>
+                <p>
+                    As Poirot investigates, a baffling array of clues and suspects emerge:
+                <ul class=" text-start">
+                    <li>
+                        <strong> Paul Renauld's past:</strong> It's revealed that Renauld, originally Georges Conneau,
+                        had a
+                        criminal past in
+                        France. Years ago, he and his lover, Madame Beroldy, had conspired to murder Madame Beroldy's
+                        husband. Conneau escaped justice and fled to South America, where he amassed his fortune and
+                        married
+                        Eloise.
+                    </li>
+                    <li>
+                        <strong> A second body:</strong> To further complicate matters, another body is found, stabbed
+                        identically. This
+                        second victim is initially identified as a tramp, but Poirot's keen eye notes inconsistencies.
+                        It is
+                        later revealed that the tramp died of an epileptic seizure before Renauld's murder and was
+                        merely
+                        used to stage a complex deception.
+                    </li>
+                    <li>
+                        <strong> Madame Daubreuil:</strong> Renauld's neighbor, a mysterious and elegant woman named
+                        Madame
+                        Daubreuil, is
+                        recognized by Poirot as the former Madame Beroldy, Renauld's accomplice from his past. She had
+                        been
+                        blackmailing Renauld, and her daughter, Marthe Daubreuil, is romantically involved with
+                        Renauld's
+                        son, Jack.
+                    </li>
+                    <li>
+                        <strong> Jack Renauld:</strong> Paul Renauld's son, Jack, had a contentious relationship with
+                        his
+                        father and is
+                        initially the prime suspect for Inspector Giraud, especially after it's discovered Paul had
+                        disinherited him just two weeks before his death.
+                    </li>
+                    <li>
+                        <strong> "Cinderella" and Bella Duveen:</strong> Captain Hastings becomes infatuated with a
+                        young
+                        stage performer
+                        named Bella Duveen, whom he nicknames "Cinderella." She appears to have some connection to the
+                        case,
+                        and her sister, Dulcie Duveen, is also involved in the convoluted events.
+                    </li>
+                </ul>
+                </p>
+                <p>
+                    Poirot meticulously examines every detail, from the position of a hearth rug to the specific type of
+                    cigarette smoked. He realizes that Renauld had concocted an elaborate plan to fake his own death to
+                    escape Madame Daubreuil's blackmail. He planned to use the tramp's body to stage the murder, bury it
+                    on
+                    the golf course, and then disappear. However, his plan was intercepted.
+                </p>
+                <p>
+                    The truth, as uncovered by Poirot, is incredibly complex: Paul Renauld was indeed trying to fake his
+                    death. He had dug the grave and was preparing to dispose of the tramp's body when he was murdered.
+                    The
+                    real killer is <strong> Marthe Daubreuil,</strong> the daughter of Madame Daubreuil. Marthe, driven
+                    by
+                    greed and a desire
+                    to secure her future with Jack, knew of Renauld's plan and saw an opportunity. She followed Renauld
+                    to
+                    the golf course and stabbed him after he had already dug the grave for the tramp's body, making it
+                    appear as if he had been killed by an unknown assailant and left in a prepared grave.
+                </p>
+                <p>
+                    Marthe's motive was to ensure that Jack would inherit his father's fortune upon his mother's death,
+                    as
+                    she believed this would lead to her own financial security. She also tried to implicate others to
+                    throw
+                    off the scent.
+                </p>
+                <p>
+                    In the end, Poirot exposes Marthe's cunning scheme, much to the chagrin of Inspector Giraud, who had
+                    consistently underestimated the Belgian detective. The novel also features a romantic subplot as
+                    Captain
+                    Hastings finds love with Bella Duveen.
+                </p>
+            </div>
+            <div class="text-center mt-5 mb-4">
+                <h2 class="heading-2">Moral</h2>
+                <p><strong>Greed and deception may hide behind love, but truth will always find its way to the
+                    surface.</strong>
+                </p>
+                <button class="btns" onclick="downloadPDF()">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Urdu Version -->
+    <div class="container">
+        <div class="mt-5">
+            <div id="story-ur" class="ur_story">
+                <div id="urduContent">
+                    <h2 class="heading-2 text-center">مصنف</h2>
+                    <p class="fs-4 text-center mb-3">اگاتھا کرسٹی</p>
+                    <h1 class="heading-1 fs-1 mb-3 fw-bold text-center">پوری کہانی</h1>
+                    <p>
+                        کہانی کی شروعات اس وقت ہوتی ہے جب ہرکیول پوآرو کو ایک امیر فرانسیسی شخص، پال رینالڈ، کی طرف سے
+                        ایک فوری خط ملتا ہے۔ وہ فرانس کے ساحلی مقام مرلن وِل-سر-میر میں رہ رہا ہوتا ہے۔ رینالڈ اپنے خط
+                        میں لکھتا ہے کہ اس کی جان کو خطرہ ہے اور وہ مقامی پولیس پر بھروسہ نہیں کر سکتا، اس لیے پوآرو کی
+                        مدد چاہتا ہے۔ پوآرو اور کیپٹن ہیٹنگز فوراً فرانس روانہ ہو جاتے ہیں۔
+                    </p>
+                    <p>
+                        لیکن وہاں پہنچنے پر انہیں افسوسناک خبر ملتی ہے کہ پال رینالڈ قتل ہو چکا ہے۔ اس کی لاش پیٹھ میں
+                        لیٹر اوپنر سے چھپی ہوئی ملتی ہے اور وہ اپنے نئے بنے گالف کورس پر ایک تازہ کھودی گئی قبر میں
+                        اوندھے منہ پڑا ہوتا ہے۔ مقامی پولیس کے سربراہ، مغرور اور سخت مزاج انسپکٹر جرو، موقع پر موجود
+                        ہوتے ہیں۔ وہ پوآرو کے "نفسیاتی" طریقوں کو مسترد کرتے ہیں اور صرف "سائنسی" تفتیش پر یقین رکھتے
+                        ہیں، جس سے دونوں کے درمیان مقابلہ شروع ہو جاتا ہے۔
+                    </p>
+                    <p>
+                        رینالڈ کی بیوی، ایلوئیز رینالڈ، دعویٰ کرتی ہے کہ دو نقاب پوش آدمی صبح سویرے ان کے گھر آئے، اسے
+                        باندھ دیا اور اس کے شوہر کو اغوا کر کے لے گئے۔ وہ کہتی ہے کہ اس نے انہیں دھمکیاں دیتے سنا۔ لیکن
+                        پوآرو فوراً اس کی بات پر شک کرتا ہے۔
+                    </p>
+
+                    <p>
+                        تحقیقات کے دوران کئی الجھے ہوئے سراغ اور مشتبہ افراد سامنے آتے ہیں۔ پتا چلتا ہے کہ پال رینالڈ
+                        دراصل جارج کونو تھا، جس کا ماضی مجرمانہ تھا۔ برسوں پہلے اس نے اپنی محبوبہ میڈم بیروڈی کے ساتھ مل
+                        کر اس کے شوہر کا قتل کیا تھا۔ کونو بچ نکلنے میں کامیاب ہو گیا اور جنوبی امریکہ فرار ہو گیا، جہاں
+                        اس نے دولت کمائی اور ایلوئیز سے شادی کی۔
+                    </p>
+                    <p>
+                        پھر ایک دوسری لاش ملتی ہے، جو بالکل اسی طرح چھپی گئی ہوتی ہے۔ شروع میں اسے ایک آوارہ سمجھا جاتا
+                        ہے، لیکن پوآرو کو پتا چلتا ہے کہ یہ شخص مرنے سے پہلے مرگی کے دورے سے مرا تھا اور اسے صرف دھوکہ
+                        دینے کے لیے استعمال کیا گیا تھا۔
+                    </p>
+                    <p>
+                        رینالڈ کی ہمسایہ، پرکشش اور پراسرار میڈم ڈوبریل، دراصل میڈم بیروڈی نکلتی ہے، جو ماضی میں رینالڈ
+                        کی ساتھی رہ چکی تھی اور اب اسے بلیک میل کر رہی تھی۔ اس کی بیٹی مارٹھ ڈوبریل، رینالڈ کے بیٹے جیک
+                        کے ساتھ محبت میں تھی۔
+                    </p>
+                    <p>
+                        جیک رینالڈ کا اپنے والد سے تعلق اچھا نہیں تھا اور پولیس پہلے اسے ہی مشتبہ سمجھتی ہے، خاص طور پر
+                        - پتا چلتا ہے کہ پال نے دو ہفتے پہلے جیک کو اپنی وراثت سے محروم کر دیا تھا
+                    </p>
+                    <p>
+                        کیپٹن ہیٹنگز ایک اسٹیج اداکارہ بیلا ڈووین کو پسند کرنے لگتا ہے، جسے وہ "سنڈریلا" کہتا ہے۔ بیلا
+                        کا بھی کیس سے کچھ تعلق نکلتا ہے اور اس کی بہن ڈلسی ڈووین بھی واقعات میں شامل ہو جاتی ہے۔
+                    </p>
+                    <p>
+                        پوآرو ہر چھوٹی بات پر غور کرتا ہے، حتیٰ کہ قالین کی پوزیشن اور سگریٹ کی قسم تک۔ اسے سمجھ آتا ہے
+                        کہ رینالڈ نے اپنی موت کا ڈرامہ رچانے کا منصوبہ بنایا تھا تاکہ میڈم ڈوبریل کی بلیک میلنگ سے بچ
+                        سکے۔ وہ آوارہ شخص کی لاش سے قتل کا منظر بنا کر خود غائب ہونا چاہتا تھا، مگر اس کا منصوبہ ناکام
+                        ہو گیا۔
+                    </p>
+                    <p>
+                        اصل قاتل مارٹھ ڈوبریل نکلتی ہے۔ اس نے لالچ اور اپنے مستقبل کو محفوظ کرنے کے لیے رینالڈ کو اس وقت
+                        قتل کیا جب وہ قبر کھود چکا تھا۔ مارٹھ چاہتی تھی کہ جیک اپنی ماں کے مرنے کے بعد باپ کی دولت کا
+                        وارث بن جائے اور اس طرح وہ بھی امیر ہو جائے۔
+
+                    </p>
+                    <p>
+                        آخر میں پوآرو مارٹھ کا منصوبہ سب کے سامنے ظاہر کر دیتا ہے اور انسپکٹر جرو کو اپنی غلطی کا احساس
+                        دلا دیتا ہے۔ کہانی میں ایک رومانی موڑ بھی آتا ہے جب کیپٹن ہیٹنگز بیلا ڈووین کے ساتھ محبت میں
+                        کامیاب ہو جاتا ہے۔
+                    </p>
+
+                    <div class="text-center">
+                        <h2 class="heading-2 mb-4">سبق</h2>
+                        <strong>
+                            لالچ اور فریب چاہت کے پردے میں چھپ سکتے ہیں، مگر سچ ہمیشہ سامنے آ جاتا ہے۔
+                        </strong>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button onclick="downloadPDF()" class="btns">Download PDF</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -265,9 +371,9 @@
                 <div class="col-md-4 footer-column">
                     <h4 class="heading-4">Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-decoration-none">Home</a></li>
-                        <li><a href="submit.html" class="text-decoration-none">Submit Story</a></li>
-                        <li><a href="about.html" class="text-decoration-none">About</a></li>
+                        <li><a href="../index.html" class="text-decoration-none">Home</a></li>
+                        <li><a href="../submit.html" class="text-decoration-none">Submit Story</a></li>
+                        <li><a href="../about.html" class="text-decoration-none">About</a></li>
                     </ul>
                 </div>
 
@@ -291,46 +397,60 @@
             </div>
     </footer>
 
-
     <script>
-        async function downloadPDF() {
+
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('story-en').style.display = 'block';
+                document.getElementById('story-ur').style.display = 'none';
+            } else if (lang === 'ur') {
+                document.getElementById('story-en').style.display = 'none';
+                document.getElementById('story-ur').style.display = 'block';
+            }
+        }
+
+
+        // For English Story
+        async function downloadPDF_en() {
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
 
             let content = `
-    The Murder on the Links
-    Author: Agatha Christie
-    
-    Full Story Summary:
-    The story begins with Hercule Poirot receiving an urgent letter from a wealthy Frenchman, Paul Renauld, living in the seaside resort of Merlinville-sur-Mer, France. Renauld claims his life is in danger and desperately requests Poirot's assistance, stating he cannot trust the local police. Poirot, accompanied by Captain Hastings, immediately travels to France.
-    
-    However, upon their arrival, they are met with grim news: Paul Renauld has been found murdered. His body is discovered stabbed in the back with a letter opener, lying face down in a freshly dug grave on his newly constructed golf course. The local police, led by the arrogant and dismissive Inspector Giraud, are already on the scene. Giraud, a proponent of "scientific" detection, quickly dismisses Poirot's "psychological" methods, leading to a rivalry between the two detectives.
-    
-    Renauld's wife, Eloise Renauld, claims that two masked men broke into their villa in the early hours of the morning, tied her up, and abducted her husband. She insists she heard them threaten him before they took him away. However, Poirot immediately suspects her story.
-    
-    As Poirot investigates, a baffling array of clues and suspects emerge:
-    
-    Paul Renauld's past: It's revealed that Renauld, originally Georges Conneau, had a criminal past in France. Years ago, he and his lover, Madame Beroldy, had conspired to murder Madame Beroldy's husband. Conneau escaped justice and fled to South America, where he amassed his fortune and married Eloise.
-    
-    A second body: To further complicate matters, another body is found, stabbed identically. This second victim is initially identified as a tramp, but Poirot's keen eye notes inconsistencies. It is later revealed that the tramp died of an epileptic seizure before Renauld's murder and was merely used to stage a complex deception.
-    
-    Madame Daubreuil: Renauld's neighbor, a mysterious and elegant woman named Madame Daubreuil, is recognized by Poirot as the former Madame Beroldy, Renauld's accomplice from his past. She had been blackmailing Renauld, and her daughter, Marthe Daubreuil, is romantically involved with Renauld's son, Jack.
-    
-    Jack Renauld: Paul Renauld's son, Jack, had a contentious relationship with his father and is initially the prime suspect for Inspector Giraud, especially after it's discovered Paul had disinherited him just two weeks before his death.
-    
-    "Cinderella" and Bella Duveen: Captain Hastings becomes infatuated with a young stage performer named Bella Duveen, whom he nicknames "Cinderella." She appears to have some connection to the case, and her sister, Dulcie Duveen, is also involved in the convoluted events.
-    
-    Poirot meticulously examines every detail, from the position of a hearth rug to the specific type of cigarette smoked. He realizes that Renauld had concocted an elaborate plan to fake his own death to escape Madame Daubreuil's blackmail. He planned to use the tramp's body to stage the murder, bury it on the golf course, and then disappear. However, his plan was intercepted.
-    
-    The truth, as uncovered by Poirot, is incredibly complex: Paul Renauld was indeed trying to fake his death. He had dug the grave and was preparing to dispose of the tramp's body when he was murdered. The real killer is Marthe Daubreuil, the daughter of Madame Daubreuil. Marthe, driven by greed and a desire to secure her future with Jack, knew of Renauld's plan and saw an opportunity. She followed Renauld to the golf course and stabbed him after he had already dug the grave for the tramp's body, making it appear as if he had been killed by an unknown assailant and left in a prepared grave.
-    
-    Marthe's motive was to ensure that Jack would inherit his father's fortune upon his mother's death, as she believed this would lead to her own financial security. She also tried to implicate others to throw off the scent.
-    
-    In the end, Poirot exposes Marthe's cunning scheme, much to the chagrin of Inspector Giraud, who had consistently underestimated the Belgian detective. The novel also features a romantic subplot as Captain Hastings finds love with Bella Duveen.
-    
-    Moral:
-    - Appearances are deceiving; a master of deception can use truth itself as a tool for lies.
-            `;
+The Murder on the Links
+Author: Agatha Christie
+
+Full Story Summary:
+The story begins with Hercule Poirot receiving an urgent letter from a wealthy Frenchman, Paul Renauld, living in the seaside resort of Merlinville-sur-Mer, France. Renauld claims his life is in danger and desperately requests Poirot's assistance, stating he cannot trust the local police. Poirot, accompanied by Captain Hastings, immediately travels to France.
+
+However, upon their arrival, they are met with grim news: Paul Renauld has been found murdered. His body is discovered stabbed in the back with a letter opener, lying face down in a freshly dug grave on his newly constructed golf course. The local police, led by the arrogant and dismissive Inspector Giraud, are already on the scene. Giraud, a proponent of "scientific" detection, quickly dismisses Poirot's "psychological" methods, leading to a rivalry between the two detectives.
+
+Renauld's wife, Eloise Renauld, claims that two masked men broke into their villa in the early hours of the morning, tied her up, and abducted her husband. She insists she heard them threaten him before they took him away. However, Poirot immediately suspects her story.
+
+As Poirot investigates, a baffling array of clues and suspects emerge:
+
+Paul Renauld's past: It's revealed that Renauld, originally Georges Conneau, had a criminal past in France. Years ago, he and his lover, Madame Beroldy, had conspired to murder Madame Beroldy's husband. Conneau escaped justice and fled to South America, where he amassed his fortune and married Eloise.
+
+A second body: To further complicate matters, another body is found, stabbed identically. This second victim is initially identified as a tramp, but Poirot's keen eye notes inconsistencies. It is later revealed that the tramp died of an epileptic seizure before Renauld's murder and was merely used to stage a complex deception.
+
+Madame Daubreuil: Renauld's neighbor, a mysterious and elegant woman named Madame Daubreuil, is recognized by Poirot as the former Madame Beroldy, Renauld's accomplice from his past. She had been blackmailing Renauld, and her daughter, Marthe Daubreuil, is romantically involved with Renauld's son, Jack.
+
+Jack Renauld: Paul Renauld's son, Jack, had a contentious relationship with his father and is initially the prime suspect for Inspector Giraud, especially after it's discovered Paul had disinherited him just two weeks before his death.
+
+"Cinderella" and Bella Duveen: Captain Hastings becomes infatuated with a young stage performer named Bella Duveen, whom he nicknames "Cinderella." She appears to have some connection to the case, and her sister, Dulcie Duveen, is also involved in the convoluted events.
+
+Poirot meticulously examines every detail, from the position of a hearth rug to the specific type of cigarette smoked. He realizes that Renauld had concocted an elaborate plan to fake his own death to escape Madame Daubreuil's blackmail. He planned to use the tramp's body to stage the murder, bury it on the golf course, and then disappear. However, his plan was intercepted.
+
+The truth, as uncovered by Poirot, is incredibly complex: Paul Renauld was indeed trying to fake his death. He had dug the grave and was preparing to dispose of the tramp's body when he was murdered. The real killer is Marthe Daubreuil, the daughter of Madame Daubreuil. Marthe, driven by greed and a desire to secure her future with Jack, knew of Renauld's plan and saw an opportunity. She followed Renauld to the golf course and stabbed him after he had already dug the grave for the tramp's body, making it appear as if he had been killed by an unknown assailant and left in a prepared grave.
+
+Marthe's motive was to ensure that Jack would inherit his father's fortune upon his mother's death, as she believed this would lead to her own financial security. She also tried to implicate others to throw off the scent.
+
+In the end, Poirot exposes Marthe's cunning scheme, much to the chagrin of Inspector Giraud, who had consistently underestimated the Belgian detective. The novel also features a romantic subplot as Captain Hastings finds love with Bella Duveen.
+
+
+Moral:
+- Greed leads to downfall.
+
+        `;
 
             const margin = 10;
             let currentY = margin;
@@ -352,14 +472,74 @@
                 currentY += lineHeight; // Move down for the next line
             });
 
-            doc.save("The_Murder_on_the_Links_Summary.pdf");
+            doc.save("The_Murder_on_the_Links.pdf");
+        }
+
+        // For Urdu
+        function downloadPDF() {
+            const element = document.getElementById('urduContent');
+            const opt = {
+                margin: [0, 5, 0, 5], // [top, left, bottom, right] — top ko 0 rakho
+                filename: 'لنکس پر قتل.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
         }
     </script>
 
-     <!-- Go To Top (Button) -->
-    <button onclick="topFunction()" id="myBtn" class="top_btn"><i class="fa-solid fa-arrow-up"></i></button>
+    <!--Signup Modal -->
+    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="heading-2 text-center">HavenTales Signup</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password">
+                                <span class="input-group-text" onclick="togglePassword('password', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="passwordError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword">
+                                <span class="input-group-text" onclick="togglePassword('confirmPassword', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btns">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="../javascript/script.js"></script>
+    <script src="javascript/script.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids || Category</title>
+    <title>School & Learning || Category</title>
+     <!-- favIcon -->
+    <link rel="shortcut icon" href="../image/homePage/logo.png" type="image/x-icon">
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
@@ -30,17 +33,28 @@
 </head>
 
 <body>
-     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="../index.html">
                 <span>H</span>AVEN<span>T</span>ALES
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div class="d-flex align-items-center ms-auto order-lg-2">
+                <!-- Signup Button -->
+                <button class="signupbtn me-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Collapse NavBar -->
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -49,65 +63,64 @@
                         </a>
                         <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
                             <div class="row">
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
-                                                Tales of daring quests
-                                                and exploration.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>Puzzling
-                                                crimes and
-                                                enigmatic events.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>Stories
-                                                of love, passion,
-                                                and relationships.</p></a></li>
-                                    <li><a class="dropdown-item mb-0" href="../category/school&learning.html">School &
-                                            Learning<p>Inspire growth, curiosity, and the joy of learning.</p></a>
-                                    </li>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
+                                                    Tales
+                                                    of daring quests
+                                                    and exploration.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>
+                                                    Puzzling
+                                                    crimes and
+                                                    enigmatic events.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>
+                                                    Stories
+                                                    of love, passion,
+                                                    and relationships.</p></a></li>
+                                        <li><a class="dropdown-item mb-0" href="../category/school&learning.html">School
+                                                &
+                                                Learning<p>Inspire growth, curiosity, and the joy of learning.
+                                                </p></a>
+                                        </li>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>Stories
-                                                of magic, myths,
-                                                and mythical creatures.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>Journeys
-                                                through space,
-                                                time, and technology.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
-                                                imaginative stories for
-                                                children.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/mindblowing.html">Mind-Blowing
-                                            <p>Unexpected twists that
-                                                leave you amazed.</p>
-                                        </a>
-                                    </li>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>
+                                                    Stories
+                                                    of magic, myths,
+                                                    and mythical creatures.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>
+                                                    Journeys
+                                                    through space,
+                                                    time, and technology.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
+                                                    imaginative stories for
+                                                    children.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0"
+                                                href="../category/mindblowing.html">Mind-Blowing<p>
+                                                    Fun and
+                                                    Unexpected twists that
+                                                    leave you amazed.</p></a>
+                                        </li>
+                                    </div>
                                 </div>
                             </div>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../about.html">About</a>
+                        <a class="nav-link" aria-current="page" href="../about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../submit.html">Submit Story</a>
+                        <a class="nav-link" aria-current="page" href="../submit.html">Submit Story</a>
                     </li>
+                </ul>
             </div>
-        </div>
-        </ul>
-        </li>
-        </ul>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <button class="signupbtn" data-bs-toggle="modal" data-bs-target="#signupModal">
-                        <i class="fa-solid fa-user"></i>
-                    </button>
-                </li>
-            </ul>
-        </div>
-        </div>
         </div>
     </nav>
 
@@ -196,84 +209,84 @@
                     title: 'Thank You, Mr. Falker',
                     summary: 'A young girl learns to read with her teacher’s help and discovers her true potential.',
                     bgImage: 'url("../image/category/school&learning/proud1.jpg")',
-                    storyLink: 'homepageStory/card4.html'
+                    storyLink: '../school&learning/proud1.html'
                 },
                 {
                     emotion: 'proud',
                     title: 'The Girl Who Never Made Mistakes',
                     summary: 'A perfectionist learns that it’s okay to make mistakes—and even laugh at them!',
                     bgImage: 'url("../image/category/school&learning/proud2.jpg")',
-                    storyLink: 'stories/funny/smiling-star.html'
+                    storyLink: '../school&learning/proud2.html'
                 },
                 {
                     emotion: 'proud',
                     title: 'The Story of Ruby Bridges',
                     summary: 'Ruby proudly walks into a segregated school, changing history with her bravery.',
                     bgImage: 'url("../image/category/school&learning/proud3.jpg")',
-                    storyLink: 'homepageStory/card4.html'
+                    storyLink: '../school&learning/proud3.html'
                 },
                 {
                     emotion: 'proud',
                     title: 'Salt in His Shoes',
                     summary: 'Young Michael learns that success in basketball takes patience, practice, and hard work.',
                     bgImage: 'url("../image/category/school&learning/proud4.jpg")',
-                    storyLink: 'homepageStory/card4.html'
+                    storyLink: '../school&learning/proud4.html'
                 },
                 {
                     emotion: 'proud',
                     title: 'The Paper Bag Princess',
                     summary: 'A smart princess saves the prince and learns to value herself more than anyone’s opinion.',
                     bgImage: 'url("../image/category/school&learning/proud5.jpg")',
-                    storyLink: 'stories/funny/smiling-star.html'
+                    storyLink: '../school&learning/proud5.html'
                 },
                 {
                     emotion: 'proud',
                     title: 'Your Name Is a Song',
                     summary: 'A girl learns to be proud of her unique name and identity after a tough day at school.',
                     bgImage: 'url("../image/category/school&learning/proud6.jpg")',
-                    storyLink: 'homepageStory/card4.html'
+                    storyLink: '../school&learning/proud6.html'
                 },
                 {
                     emotion: 'nervous',
                     title: 'Wemberly Worried',
                     summary: 'A little mouse worries about everything, especially the first day of school.',
                     bgImage: 'url("../image/category/school&learning/nervous1.jpeg")',
-                    storyLink: 'stories/sad/lonely-cloud.html'
+                    storyLink: '../school&learning/nervous1.html'
                 },
                 {
                     emotion: 'nervous',
                     title: 'First Day Jitters',
                     summary: 'Sarah Jane is so nervous about going to a new school that she refuses to get out of bed.In a funny twist, we learn she’s actually the new teacher! ',
                     bgImage: 'url("../image/category/school&learning/nervous2.jpeg")',
-                    storyLink: 'stories/sad/lonely-cloud.html'
+                    storyLink: '../school&learning/nervous2.html'
                 },
                 {
                     emotion: 'nervous',
                     title: 'Chrysanthemum',
                     summary: 'Chrysanthemum loves her name—until classmates tease her and she starts to feel insecure.Her confidence returns when a teacher shows her how special she truly is.',
                     bgImage: 'url("../image/category/school&learning/nervous3.jpeg")',
-                    storyLink: 'stories/sad/lonely-cloud.html'
+                    storyLink: '../school&learning/nervous3.html'
                 },
                 {
                     emotion: 'nervous',
                     title: 'Lilly’s Purple Plastic Purse',
                     summary: 'Lilly is excited to share her new purse, but when she interrupts class, she gets in trouble.She feels nervous and ashamed—until she finds a way to make things right.',
                     bgImage: 'url("../image/category/school&learning/nervous4.jpeg")',
-                    storyLink: 'stories/sad/lonely-cloud.html'
+                    storyLink: '../school&learning/nervous4.html'
                 },
                 {
                     emotion: 'nervous',
                     title: 'David Goes to School',
                     summary: 'David keeps breaking the rules at school and struggles to behave.Though nervous at first, he slowly learns how to do better with encouragement.',
                     bgImage: 'url("../image/category/school&learning/nervous5.jpeg")',
-                    storyLink: 'stories/sad/lonely-cloud.html'
+                    storyLink: '../school&learning/nervous5.html'
                 },
                 {
                     emotion: 'nervous',
                     title: 'I Don’t Want to Go to School!',
                     summary: ' Simon the bunny says “No way!” to school and hides his fear behind anger.He soon realizes school is not so scary—and even fun',
                     bgImage: 'url("../image/category/school&learning/nervous6.jpeg")',
-                    storyLink: 'stories/sad/lonely-cloud.html'
+                    storyLink: '../school&learning/nervous6.html'
                 },
                 
             ];

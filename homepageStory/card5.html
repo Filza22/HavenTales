@@ -3,20 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Read Story || Cinderella</title>
-    <!-- CSS -->
+     <!-- favIcon -->
+    <link rel="shortcut icon" href="../image/homePage/logo.png" type="image/x-icon">
+    <!-- Css -->
     <link rel="stylesheet" href="../css/style.css">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -27,22 +26,38 @@
     <!-- AOS (Animate on Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
     <!-- jsPDF library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="../index.html">
                 <span>H</span>AVEN<span>T</span>ALES
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div class="d-flex align-items-center ms-auto order-lg-2">
+                <!-- Signup Button -->
+                <button class="signupbtn me-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Collapse NavBar -->
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -51,148 +66,192 @@
                         </a>
                         <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
                             <div class="row">
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
-                                                Tales of daring quests
-                                                and exploration.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>Puzzling
-                                                crimes and
-                                                enigmatic events.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>Stories
-                                                of love, passion,
-                                                and relationships.</p></a></li>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
+                                                    Tales
+                                                    of daring quests
+                                                    and exploration.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>
+                                                    Puzzling
+                                                    crimes and
+                                                    enigmatic events.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>
+                                                    Stories
+                                                    of love, passion,
+                                                    and relationships.</p></a></li>
+                                        <li><a class="dropdown-item mb-0" href="../category/school&learning.html">School
+                                                &
+                                                Learning<p>Inspire growth, curiosity, and the joy of learning.
+                                                </p></a>
+                                        </li>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>Stories
-                                                of magic, myths,
-                                                and mythical creatures.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>Journeys
-                                                through space,
-                                                time, and technology.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
-                                                imaginative stories for
-                                                children.</p></a>
-                                    </li>
-                                </div>
-                            </div>
-                        </ul>
-
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Emotions
-                        </a>
-                        <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
-                            <div class="row">
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../emotions/scary.html">Scary<p>Stories that
-                                                thrill and give
-                                                goosebumps.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/peacefull.html">Peaceful<p>
-                                                Emotional stories that touch
-                                                the heart.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/mindblowing.html">Mind-Blowing
-                                            <p>Unexpected twists that
-                                                leave you amazed.</p></a></li>
-                                </div>
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../emotions/funny.html">Funny<p>Humorous
-                                                tales that make you
-                                                laugh.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/sad.html">Sad<p>Emotional
-                                                stories that touch the
-                                                heart.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/inspiring.html">Inspiring<p>
-                                                Motivational tales that
-                                                uplift your spirit.</p></a>
-                                    </li>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>
+                                                    Stories
+                                                    of magic, myths,
+                                                    and mythical creatures.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>
+                                                    Journeys
+                                                    through space,
+                                                    time, and technology.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
+                                                    imaginative stories for
+                                                    children.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0"
+                                                href="../category/mindblowing.html">Mind-Blowing<p>
+                                                    Fun and
+                                                    Unexpected twists that
+                                                    leave you amazed.</p></a>
+                                        </li>
+                                    </div>
                                 </div>
                             </div>
                         </ul>
-
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../submit.html">Submit Story</a>
+                        <a class="nav-link" aria-current="page" href="../about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">SignUp</a>
+                        <a class="nav-link" aria-current="page" href="../submit.html">Submit Story</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../about.html">About</a>
-                    </li>
+                </ul>
             </div>
         </div>
-        </ul>
-        </li>
-        </ul>
-        <form class="d-flex">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input class="form-control me-2 search" type="search" placeholder="Search Stories" aria-label="Search">
-            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-        </form>
-        </div>
-        </div>
     </nav>
-
     <!-- Story Section -->
     <div class="container">
-        <h1 class="heading-1 text-center story_heading">Cinderella</h1>
+        <h1 class="heading-1 text-center story_heading">Cinderella/سنڈریلا</h1>
         <div class="text-center mt-5 story_image">
-            <img src="../image/homePage/cardStory5.jpg" alt="Cinderella image">
+            <img src="../image/homePage/cardStory5.jpg" alt="The Secret Garden image">
         </div>
-        <div class="text-center mt-5 mb-0">
-            <h2 class="heading-2">Author</h2>
-            <p class="fs-4">Charles Perrault</p>
-        </div>
-        <div class="text-center mt-4 mb-0 fs-5">
-            <h2 class="heading-2">The Full Story</h2>
-            <p>
-                A kind and beautiful young woman, known as Cinderella, is forced to live a life of servitude by her
-                wicked stepmother and two vain stepsisters after her father's death. She performs all the household
-                chores, sleeps by the fireplace, and is constantly covered in cinders, which is how she gets her
-                nickname.
-            </p>
-            <p>
-                One day, the king's son announces a royal ball, inviting all the eligible young women in the kingdom in
-                hopes of finding a bride. Cinderella's stepsisters are thrilled and spend days preparing, but they
-                forbid Cinderella from attending, giving her a mountain of work to do. After they leave for the ball, a
-                distraught Cinderella is visited by her Fairy Godmother. With a wave of her magic wand, the Fairy
-                Godmother transforms a pumpkin into a magnificent coach, mice into horses, a rat into a coachman, and
-                lizards into footmen. She then turns Cinderella's rags into a beautiful gown and provides her with a
-                pair of exquisite glass slippers. The Fairy Godmother gives Cinderella a strict warning: she must return
-                home by midnight, or the magic will wear off.
-            </p>
+    </div>
 
-            <p>
-                Cinderella arrives at the ball and is the most beautiful woman there. The prince is captivated by her
-                and dances with no one else. As the clock strikes midnight, Cinderella flees the palace, forgetting to
-                tell the prince her name. In her haste, she loses one of her glass slippers on the grand staircase. The
-                prince, determined to find her, declares that he will marry the woman whose foot fits the slipper.
-            </p>
-            <p>
-                The next day, the prince's emissaries go from house to house. When they arrive at Cinderella's home, the
-                stepsisters try desperately to fit into the small shoe, but their feet are too big. Cinderella asks for
-                a turn, and to everyone's amazement, the slipper fits her perfectly. She then reveals the matching
-                slipper, and the prince recognizes her. He takes her to the palace, where they are soon married, and
-                Cinderella, in her kindness, forgives her stepfamily and finds them husbands as well.
-            </p>
-            <button class="btns" onclick="downloadPDF()">Download PDF</button>
+    <!-- Btn -->
+    <div class="container">
+        <div class="text-center mt-3">
+            <button onclick="switchLanguage('en')" class="btns">English</button>
+            <button onclick="switchLanguage('ur')" class="btns">اردو</button>
         </div>
-        <div class="text-center mt-5 mb-4">
-            <h2 class="heading-2">Moral</h2>
-            <p><strong>Kindness, patience, and a pure heart will ultimately be rewarded over vanity and
-                    cruelty.</strong>
-            </p>
+    </div>
+    <!-- ENGLISH VERSION -->
+    <div class="container">
+        <div id="story-en" class="mt-5">
+            <div class="text-center mt-5 mb-0">
+                <h2 class="heading-2">Author</h2>
+                <p class="fs-4">Charles Perrault </p>
+            </div>
+            <div class="text-center mt-4 mb-0 fs-5">
+                <h2 class="heading-2">The Full Story</h2>
+                <p>
+                    A kind and beautiful young woman, known as Cinderella, is forced to live a life of servitude by her
+                    wicked stepmother and two vain stepsisters after her father's death. She performs all the household
+                    chores, sleeps by the fireplace, and is constantly covered in cinders, which is how she gets her
+                    nickname.
+                </p>
+                <p>
+                    One day, the king's son announces a royal ball, inviting all the eligible young women in the kingdom
+                    in hopes of finding a bride. Cinderella's stepsisters are thrilled and spend days preparing, but
+                    they forbid Cinderella from attending, giving her a mountain of work to do. After they leave for the
+                    ball, a
+                    distraught Cinderella is visited by her Fairy Godmother. With a wave of her magic wand, the Fairy
+                    Godmother transforms a umpkin into a magnificent coach, mice into horses, a rat into a coachman, and
+                    lizards into footmen. She then turns Cinderella's rags into a beautiful gown and provides her with a
+                    pair of exquisite glass slippers. The Fairy Godmother gives Cinderella a strict warning: she must
+                    return home by midnight, or the magic will wear off.
+                </p>
+
+                <p>
+                    Cinderella arrives at the ball and is the most beautiful woman there. The prince is captivated by
+                    her and dances with no one else. As the clock strikes midnight, Cinderella flees the palace,
+                    forgetting to tell the prince her name. In her haste, she loses one of her glass slippers on the
+                    rand staircase. The rince, determined to find her, declares that he will marry the woman whose foot
+                    fits the slipper.
+                </p>
+                <p>
+                    The next day, the prince's emissaries go from house to house. When they arrive at Cinderella's home,
+                    the tepsisters try desperately to fit into the small shoe, but their feet are too big. Cinderella
+                    asks for a turn, and to everyone's amazement, the slipper fits her perfectly. She then reveals the
+                    matching slipper, and the prince recognizes her. He takes her to the palace, where they are soon
+                    married, and Cinderella, in her kindness, forgives her stepfamily and finds them husbands as well.
+                </p>
+
+            </div>
+            <div class="text-center mt-5 mb-4">
+                <h2 class="heading-2">Moral</h2>
+                <p><strong>Kindness and patience will always be rewarded.</strong>
+                </p>
+                <button class="btns" onclick="downloadPDF_en()">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Urdu Version -->
+    <div class="container">
+        <div class="mt-5">
+            <div id="story-ur" class="ur_story">
+                <div id="urduContent">
+                    <h2 class="heading-2 text-center">مصنف</h2>
+                    <p class="fs-4 text-center mb-5"> چارلس پیرولٹ</p>
+                    <h1 class="heading-1 fs-1 mb-6 text-center">پوری کہانی</h1>
+                    <p>
+                        ایک نیک دل اور خوبصورت جوان لڑکی، جسے سنڈریلا کہا جاتا تھا، اپنے والد کی موت کے بعد اپنی ظالم
+                        سوتیلی ماں اور دو مغرور سوتیلی بہنوں کے ساتھ نوکری کی زندگی گزارنے پر مجبور ہو گئی۔ وہ گھر کے
+                        سارے کام کرتی، چولہے کے پاس سوتی اور ہر وقت راکھ سے اٹی رہتی تھی، اسی وجہ سے اس کا نام سنڈریلا
+                        پڑ گیا۔
+                    </p>
+                    <p>
+                        ایک دن بادشاہ کا بیٹا اعلان کرتا ہے کہ محل میں ایک بڑی دعوت ہوگی، اور سلطنت کی سب جوان لڑکیوں کو
+                        بلایا جاتا ہے تاکہ وہ اپنی دلہن ڈھونڈ سکے۔ سنڈریلا کی سوتیلی بہنیں خوشی سے تیاری کرنے لگتی ہیں،
+                        لیکن سنڈریلا کو جانے سے روک دیتی ہیں اور اس کے ذمے ڈھیر سارا کام لگا دیتی ہیں۔ جب وہ سب دعوت پر
+                        چلی جاتی ہیں تو اداس سنڈریلا کے پاس اس کی پری گڈ مدر آتی ہے۔ وہ جادو کی چھڑی ہلا کر کدو کو
+                        شاندار گاڑی، چوہوں کو گھوڑے، ایک چوہے کو کوچوان اور چھپکلیوں کو نوکر بنا دیتی ہے۔ پھر سنڈریلا کے
+                        پرانے کپڑوں کو خوبصورت لباس میں بدل دیتی ہے اور اسے شیشے کے جوتے دیتی ہے۔ وہ اسے سختی سے سمجھاتی
+                        ہے کہ آدھی رات سے پہلے واپس آ جانا، ورنہ جادو ختم ہو جائے گا۔
+                    </p>
+                    <p>
+                        سنڈریلا دعوت میں پہنچتی ہے اور سب سے زیادہ حسین لگتی ہے۔ شہزادہ اس پر فریفتہ ہو جاتا ہے اور کسی
+                        اور کے ساتھ نہیں ناچتا۔ جیسے ہی گھڑی آدھی رات کا وقت بتاتی ہے، سنڈریلا محل سے بھاگ جاتی ہے اور
+                        اپنا نام بتانا بھول جاتی ہے۔ جلدی میں اس کا ایک جوتا سیڑھیوں پر گر جاتا ہے۔ شہزادہ اعلان کرتا ہے
+                        کہ وہ اسی لڑکی سے شادی کرے گا جس کا پاؤں اس جوتے میں فٹ آئے گا۔
+                    </p>
+                    <p>
+                        گلے دن شہزادے کے آدمی ہر گھر جاتے ہیں۔ جب وہ سنڈریلا کے گھر پہنچتے ہیں تو سوتیلی بہنیں جوتا
+                        پہننے کی کوشش کرتی ہیں لیکن ان کے پاؤں بڑے ہوتے ہیں۔ سنڈریلا جوتا پہنتی ہے اور سب حیران رہ جاتے
+                        ہیں کیونکہ وہ اسے بالکل فٹ آتا ہے۔ پھر وہ دوسرا جوتا بھی نکال کر دکھاتی ہے، اور شہزادہ اسے پہچان
+                        لیتا ہے۔ وہ اسے محل لے جاتا ہے، دونوں کی شادی ہو جاتی ہے اور سنڈریلا اپنی نرمی سے سوتیلی ماں اور
+                        بہنوں کو معاف کر دیتی ہے اور ان کے لیے بھی شوہر ڈھونڈ دیتی ہے۔
+                    </p>
+                    <p>
+                        میری اپنے باغ کا راز کولن اور ڈکن سے شیئر کرتی ہے۔ اب تینوں بچے روز باغ میں ملتے ہیں۔ تازہ ہوا،
+                        دھوپ اور
+                        دوستی
+                        کے اثر سے کولن کی صحت اور مزاج میں بہتری آتی ہے۔ وہ کھڑا ہونا اور چلنا سیکھتا ہے، لیکن یہ سب گھر
+                        کے باقی
+                        لوگوں
+                        سے چھپاتا ہے۔
+                    </p>
+                    <div class="text-center">
+                        <h2 class="heading-2 mb-4">سبق</h2>
+                        <strong>
+                            نیکی اور صبر کا پھل ہمیشہ میٹھا ہوتا ہے۔
+                        </strong>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button onclick="downloadPDF()" class="btns">Download PDF</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -211,9 +270,9 @@
                 <div class="col-md-4 footer-column">
                     <h4 class="heading-4">Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-decoration-none">Home</a></li>
-                        <li><a href="submit.html" class="text-decoration-none">Submit Story</a></li>
-                        <li><a href="about.html" class="text-decoration-none">About</a></li>
+                        <li><a href="../index.html" class="text-decoration-none">Home</a></li>
+                        <li><a href="../submit.html" class="text-decoration-none">Submit Story</a></li>
+                        <li><a href="../about.html" class="text-decoration-none">About</a></li>
                     </ul>
                 </div>
 
@@ -238,24 +297,36 @@
     </footer>
 
     <script>
-        async function downloadPDF() {
+
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('story-en').style.display = 'block';
+                document.getElementById('story-ur').style.display = 'none';
+            } else if (lang === 'ur') {
+                document.getElementById('story-en').style.display = 'none';
+                document.getElementById('story-ur').style.display = 'block';
+            }
+        }
+
+
+        // For English Story
+        async function downloadPDF_en() {
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
 
             let content = `
 Cinderella
-Author: Charles Perrault
+Author:  Charles Perrault
 
 Full Story Summary:
-A kind and beautiful young woman, known as Cinderella, is forced to live a life of servitude by her wicked stepmother and two vain stepsisters after her father's death. She performs all the household chores, sleeps by the fireplace, and is constantly covered in cinders, which is how she gets her nickname.
+ A kind and beautiful young woman, known as Cinderella, is forced to live a life of servitude by her wicked stepmother and two vain stepsisters after her father's death. She performs all the household chores, sleeps by the fireplace, and is constantly covered in cinders, which is how she gets her nickname.
+One day, the king's son announces a royal ball, inviting all the eligible young women in the kingdom in hopes of finding a bride. Cinderella's stepsisters are thrilled and spend days preparing, but they forbid Cinderella from attending, giving her a mountain of work to do. After they leave for the ball, a
+distraught Cinderella is visited by her Fairy Godmother. With a wave of her magic wand, the Fairy Godmother transforms a umpkin into a magnificent coach, mice into horses, a rat into a coachman, and lizards into footmen. She then turns Cinderella's rags into a beautiful gown and provides her with a pair of exquisite glass slippers. The Fairy Godmother gives Cinderella a strict warning: she must return home by midnight, or the magic will wear off.
+Cinderella arrives at the ball and is the most beautiful woman there. The prince is captivated by her and dances with no one else. As the clock strikes midnight, Cinderella flees the palace, forgetting to tell the prince her name. In her haste, she loses one of her glass slippers on the rand staircase. The rince, determined to find her, declares that he will marry the woman whose foot fits the slipper.
+ The next day, the prince's emissaries go from house to house. When they arrive at Cinderella's home, the tepsisters try desperately to fit into the small shoe, but their feet are too big. Cinderella asks for a turn, and to everyone's amazement, the slipper fits her perfectly. She then reveals the matching slipper, and the prince recognizes her. He takes her to the palace, where they are soon married, and Cinderella, in her kindness, forgives her stepfamily and finds them husbands as well
 
-One day, the king's son announces a royal ball, inviting all the eligible young women in the kingdom in hopes of finding a bride. Cinderella's stepsisters are thrilled and spend days preparing, but they forbid Cinderella from attending, giving her a mountain of work to do. After they leave for the ball, a distraught Cinderella is visited by her Fairy Godmother. With a wave of her magic wand, the Fairy Godmother transforms a pumpkin into a magnificent coach, mice into horses, a rat into a coachman, and lizards into footmen. She then turns Cinderella's rags into a beautiful gown and provides her with a pair of exquisite glass slippers. The Fairy Godmother gives Cinderella a strict warning: she must return home by midnight, or the magic will wear off.
-
-Cinderella arrives at the ball and is the most beautiful woman there. The prince is captivated by her and dances with no one else. As the clock strikes midnight, Cinderella flees the palace, forgetting to tell the prince her name. In her haste, she loses one of her glass slippers on the grand staircase. The prince, determined to find her, declares that he will marry the woman whose foot fits the slipper.
-
-The next day, the prince's emissaries go from house to house. When they arrive at Cinderella's home, the stepsisters try desperately to fit into the small shoe, but their feet are too big. Cinderella asks for a turn, and to everyone's amazement, the slipper fits her perfectly. She then reveals the matching slipper, and the prince recognizes her. He takes her to the palace, where they are soon married, and Cinderella, in her kindness, forgives her stepfamily and finds them husbands as well.
 Moral:
-- Kindness, patience, and a pure heart will ultimately be rewarded over vanity and cruelty.
+- Kindness and patience will always be rewarded.
 
         `;
 
@@ -281,10 +352,70 @@ Moral:
 
             doc.save("Cinderella_Summary.pdf");
         }
+
+        // For Urdu
+        function downloadPDF() {
+            const element = document.getElementById('urduContent');
+            const opt = {
+                margin: [0, 5, 0, 5], // [top, left, bottom, right] — top ko 0 rakho
+                filename: 'سنڈریلا.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
     </script>
 
-     <!-- Go To Top (Button) -->
-    <button onclick="topFunction()" id="myBtn" class="top_btn"><i class="fa-solid fa-arrow-up"></i></button>
+    <!--Signup Modal -->
+    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="heading-2 text-center">HavenTales Signup</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password">
+                                <span class="input-group-text" onclick="togglePassword('password', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="passwordError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword">
+                                <span class="input-group-text" onclick="togglePassword('confirmPassword', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btns">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="../javascript/script.js"></script>
 

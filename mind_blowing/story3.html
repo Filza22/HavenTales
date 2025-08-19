@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Read Story || Dark Matter</title>
+     <!-- favIcon -->
+    <link rel="shortcut icon" href="../image/homePage/logo.png" type="image/x-icon">
+    <!-- Css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+    <!-- jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="../index.html">
+                <span>H</span>AVEN<span>T</span>ALES
+            </a>
+
+            <div class="d-flex align-items-center ms-auto order-lg-2">
+                <!-- Signup Button -->
+                <button class="signupbtn me-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Collapse NavBar -->
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
+                                                    Tales
+                                                    of daring quests
+                                                    and exploration.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>
+                                                    Puzzling
+                                                    crimes and
+                                                    enigmatic events.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>
+                                                    Stories
+                                                    of love, passion,
+                                                    and relationships.</p></a></li>
+                                        <li><a class="dropdown-item mb-0" href="../category/school&learning.html">School
+                                                &
+                                                Learning<p>Inspire growth, curiosity, and the joy of learning.
+                                                </p></a>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>
+                                                    Stories
+                                                    of magic, myths,
+                                                    and mythical creatures.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>
+                                                    Journeys
+                                                    through space,
+                                                    time, and technology.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
+                                                    imaginative stories for
+                                                    children.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0"
+                                                href="../category/mindblowing.html">Mind-Blowing<p>
+                                                    Fun and
+                                                    Unexpected twists that
+                                                    leave you amazed.</p></a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../submit.html">Submit Story</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Story Section -->
+    <div class="container">
+        <h1 class="heading-1 text-center story_heading">Dark Matter/ڈارک میٹر</h1>
+        <div class="text-center mt-5 story_image">
+            <img src="../image/category/mind_blowing/bgMb3.png" alt="The Secret Garden image">
+        </div>
+    </div>
+
+    <!-- Btn -->
+    <div class="container">
+        <div class="text-center mt-3">
+            <button onclick="switchLanguage('en')" class="btns">English</button>
+            <button onclick="switchLanguage('ur')" class="btns">اردو</button>
+        </div>
+    </div>
+    <!-- ENGLISH VERSION -->
+    <div class="container">
+        <div id="story-en" class="mt-5">
+            <div class="text-center mt-5 mb-0">
+                <h2 class="heading-2">Author</h2>
+                <p class="fs-4">Matt Haig</p>
+            </div>
+            <div class="text-center mt-4 mb-0 fs-5">
+                <h2 class="heading-2">The Full Story</h2>
+                <p>
+                    A deeply unhappy woman, weighed down by regret and loss—her best friend distant in Australia,
+                    estranged family, a dead cat, a failed music teaching job—believes there is no purpose left in her
+                    life and attempts to end it. Instead of death, she awakens in a strange, infinite library bathed in
+                    perpetual midnight, where each book offers a life she might have lived had she made different
+                    choices.
+                </p>
+                <p>
+                    Guided by her kind former school librarian, Mrs. Elm, she is shown the “Book of Regrets,” listing
+                    every mistake and “what if” she has carried throughout her years, each chapter a different age in
+                    her life. She’s then free to open any other book and experience an alternate life—perhaps as a
+                    glaciologist, an Olympic swimmer, a rock star, or a pub owner—in hopes of finding one that feels
+                    truly fulfilling.
+                </p>
+
+                <p>
+                    She dives into these parallel lives one after another: a successful athlete, the glamorous life of a
+                    musician, adventurous paths abroad, even a grounded existence as a family woman. Yet in each
+                    version, she uncovers unexpected sorrow, hidden challenges, or the realization that perfection can
+                    be hollow. Even the most enviable life—married, with a child and stability—feels unsettling when she
+                    sees the ripple effects of her absence on others she loves.
+                </p>
+                <p>
+                    As the Midnight Library begins to dissolve—its transient nature warning her that the journey must
+                    end—she understands that no alternate reality guarantees happiness. Embracing her imperfect,
+                    original life, she wills herself to live by writing in the book that charts her root life: “I AM
+                    ALIVE”. She awakens in a hospital, alive, determined, and ready to reconnect—with her brother, her
+                    friend, small joys, and the life she once rejected.
+                </p>
+
+            </div>
+            <div class="text-center mt-5 mb-4">
+                <h2 class="heading-2">Moral</h2>
+                <p><strong>Life’s value isn’t in the endless “what-ifs,” but in embracing the one life we have, flaws
+                    and all.</strong>
+                </p>
+                <button class="btns" onclick="downloadPDF_en()">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Urdu Version -->
+    <div class="container">
+        <div class="mt-5">
+            <div id="story-ur" class="ur_story">
+                <div id="urduContent">
+                    <h2 class="heading-2 text-center">مصنف</h2>
+                    <p class="fs-3 text-center mb-5">میٹ ہائیگ</p>
+                    <h1 class="heading-1 fs-1 mb-6 text-center">پوری کہانی</h1>
+                    <p>
+                        ایک انتہائی مایوس خاتون، جو دوستوں، خاندان، نوکری اور یہاں تک کہ اپنے پیارے بلی کے نقصان کے بوجھ
+                        سے تھک چکی ہوتی ہے، خودکشی کی کوشش کرتی ہے۔ لیکن مرنے کی بجائے وہ ایک پراسرار، بے وقت لائبریری
+                        میں جاگ اٹھتی ہے جہاں ہر کتاب ایکج زندگی میں بدلنے کا امکان رکھتی ہے—وہ زندگی جو وہ مختلف انتخاب
+                        کی صورت میں جی سکتی تھی۔
+
+                    </p>
+                    <p>
+                        وہ اپنی پرانی کتابدار، مسز ایلم، کی رہنمائی میں "کتابِ افسوس" دیکھتی ہے، جس میں اس کی زندگی کی
+                        ہر غلطی یا ادھوری خواہش درج ہوتی ہے—ہر باب ایک عمر کی علامت۔ پھر وہ دوسرے کتابیں کھول کر مختلف
+                        زندگیوں میں سفر کرتی ہے—گلیسیولوجسٹ، اولمپک تیراک، راک اسٹار یا ایک پب کی مالک—یہ سوچتے ہوئے کہ
+                        شاید کوئی زندگی اسے حقیقی خوشی دے۔
+                    </p>
+                    <p>
+                        وہ کئی زندگیوں میں قدم رکھتی ہے: کھیل میں کامیاب، موسیقی کی شہرت، باہر ملک میں جذبے بھری زندگی،
+                        یا خاندان کے ساتھ پرسکون گھریلو زندگی۔ لیکن ہر زندگی میں اسے کوئی نہ کوئی دکھ، چیلنج یا یہ احساس
+                        ہوتا ہے کہ کامل زندگی بھی خالی پن لے کر آ سکتی ہے۔ یہاں تک کہ مستحکم خاندان والی زندگی بھی اسے
+                        بے چین کرتی ہے جب اسے اندازہ ہوتا ہے کہ اس کی غیر موجودگی سے دوسروں کی زندگی پر کیا اثر پڑے گا۔
+
+                    </p>
+                    <p>
+                        جب مڈنائٹ لائبریری ٹوٹنے لگتی ہے—اس کی عارضیت واضح ہوتی ہے—تو وہ سمجھ جاتی ہے کہ کسی بھی دوسری
+                        زندگی میں خوشی کی ضمانت نہیں۔ وہ اپنی حقیقی، نامکمل زندگی کو قبول کرتی ہے، اور اپنی 'اصل زندگی'
+                        کی کتاب میں بڑے حروف سے لکھتی ہے: "میں زندہ ہوں"۔ وہ ہسپتال میں جاگتی ہے، زندہ اور عزم سے لبریز،
+                        اپنے بھائی، دوست اور چھوٹی خوشیوں سے دوبارہ جُڑنے کو تیار۔
+                    </p>
+                    <div class="text-center">
+                        <h2 class="heading-2 mb-4">سبق</h2>
+                        <strong>
+                        
+                            ۔زندگی کی حقیقت “اگر ہوتے…” میں نہیں، بلکہ اپنی فقط ایک زندگی کو خوبیاں اور خامیاں سب کے ساتھ قبول کرنے میں پنہاں ہے
+                        </strong>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button onclick="downloadPDF()" class="btns">Download PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section mt-5 pt-5 pb-3" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <a class="navbar-brand logo" href="./index.html">
+                        <span>H</span>AVEN<span>T</span>ALES
+                    </a>
+                    <p>A Safe Space for Every Story and Every Soul.</p>
+                </div>
+
+                <div class="col-md-4 footer-column">
+                    <h4 class="heading-4">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-decoration-none">Home</a></li>
+                        <li><a href="../submit.html" class="text-decoration-none">Submit Story</a></li>
+                        <li><a href="../about.html" class="text-decoration-none">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-column">
+                    <h4 class="heading-4">Contact Us</h4>
+                    <p>Email: <a href="#" class="text-decoration-none">support@haventales.com</a></p>
+                    <div class="mt-3">
+                        <h4 class="heading-4">Follow Us</h4>
+                        <div class="social-icons d-flex gap-3">
+                            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center mt-3">
+                    <small>&copy; 2025 HavenTales. Powered by Team Aptech 2501E1</small>
+                </div>
+            </div>
+    </footer>
+
+    <script>
+
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('story-en').style.display = 'block';
+                document.getElementById('story-ur').style.display = 'none';
+            } else if (lang === 'ur') {
+                document.getElementById('story-en').style.display = 'none';
+                document.getElementById('story-ur').style.display = 'block';
+            }
+        }
+
+
+        // For English Story
+        async function downloadPDF_en() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            let content = `
+Dark Matter
+Author: Matt Haig
+
+Full Story Summary:
+A deeply unhappy woman, weighed down by regret and loss—her best friend distant in Australia, estranged family, a dead cat, a failed music teaching job—believes there is no purpose left in her life and attempts to end it. Instead of death, she awakens in a strange, infinite library bathed in perpetual midnight, where each book offers a life she might have lived had she made different choices.
+
+Guided by her kind former school librarian, Mrs. Elm, she is shown the “Book of Regrets,” listing every mistake and “what if” she has carried throughout her years, each chapter a different age in her life. She’s then free to open any other book and experience an alternate life—perhaps as a glaciologist, an Olympic swimmer, a rock star, or a pub owner—in hopes of finding one that feels truly fulfilling.
+
+She dives into these parallel lives one after another: a successful athlete, the glamorous life of a musician, adventurous paths abroad, even a grounded existence as a family woman. Yet in each version, she uncovers unexpected sorrow, hidden challenges, or the realization that perfection can be hollow. Even the most enviable life—married, with a child and stability—feels unsettling when she sees the ripple effects of her absence on others she loves.
+
+As the Midnight Library begins to dissolve—its transient nature warning her that the journey must end—she understands that no alternate reality guarantees happiness. Embracing her imperfect, original life, she wills herself to live by writing in the book that charts her root life: “I AM ALIVE”. She awakens in a hospital, alive, determined, and ready to reconnect—with her brother, her friend, small joys, and the life she once rejected.
+
+Moral:
+- In the end, Winston is completely broken, both physically and mentally. He accepts the Party’s control and genuinely comes to love Big Brother, losing all sense of personal freedom and truth.
+
+        `;
+
+            const margin = 10;
+            let currentY = margin;
+            const lineHeight = 7; // Adjust based on your font size for better spacing
+            const pageWidth = doc.internal.pageSize.getWidth(); // Get the width of the page
+            const pageHeight = doc.internal.pageSize.getHeight(); // Get the height of the page
+            const maxWidth = pageWidth - (2 * margin); // Calculate the maximum width available for text // considering margins
+
+            // Split content into lines that fit the page width
+            let lines = doc.splitTextToSize(content, maxWidth);
+
+            lines.forEach(line => {
+                // Check if the current line will exceed the page height
+                if (currentY + lineHeight > pageHeight - margin) {
+                    doc.addPage(); // Add a new page
+                    currentY = margin; // Reset Y position for the new page
+                }
+                doc.text(line, margin, currentY);
+                currentY += lineHeight; // Move down for the next line
+            });
+
+            doc.save("Dark_Matter_Summary.pdf");
+        }
+
+        // For Urdu
+        function downloadPDF() {
+            const element = document.getElementById('urduContent');
+            const opt = {
+                margin: [0, 5, 0, 5], // [top, left, bottom, right] — top ko 0 rakho
+                filename: 'ڈارک میٹر.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+
+    <!--Signup Modal -->
+    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="heading-2 text-center">HavenTales Signup</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password">
+                                <span class="input-group-text" onclick="togglePassword('password', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="passwordError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword">
+                                <span class="input-group-text" onclick="togglePassword('confirmPassword', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btns">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javascript/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- AOS (Animation on Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

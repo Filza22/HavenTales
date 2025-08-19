@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Read Story || First Day Jitters</title>
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="../image/homePage/logo.png" type="image/x-icon">
+    <!-- Css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+    <!-- jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="../index.html">
+                <span>H</span>AVEN<span>T</span>ALES
+            </a>
+
+            <div class="d-flex align-items-center ms-auto order-lg-2">
+                <!-- Signup Button -->
+                <button class="signupbtn me-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Collapse NavBar -->
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
+                                                    Tales
+                                                    of daring quests
+                                                    and exploration.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>
+                                                    Puzzling
+                                                    crimes and
+                                                    enigmatic events.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>
+                                                    Stories
+                                                    of love, passion,
+                                                    and relationships.</p></a></li>
+                                        <li><a class="dropdown-item mb-0" href="../category/school&learning.html">School
+                                                &
+                                                Learning<p>Inspire growth, curiosity, and the joy of learning.
+                                                </p></a>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>
+                                                    Stories
+                                                    of magic, myths,
+                                                    and mythical creatures.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>
+                                                    Journeys
+                                                    through space,
+                                                    time, and technology.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
+                                                    imaginative stories for
+                                                    children.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0"
+                                                href="../category/mindblowing.html">Mind-Blowing<p>
+                                                    Fun and
+                                                    Unexpected twists that
+                                                    leave you amazed.</p></a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../submit.html">Submit Story</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Story Section -->
+    <div class="container">
+        <h1 class="heading-1 text-center story_heading">First Day Jitters/نوٹ بک</h1>
+        <div class="text-center mt-5 story_image">
+            <img src="../image/category/romance/bgRom1.jpg" alt="The Secret Garden image">
+        </div>
+    </div>
+
+    <!-- Btn -->
+    <div class="container">
+        <div class="text-center mt-3">
+            <button onclick="switchLanguage('en')" class="btns">English</button>
+            <button onclick="switchLanguage('ur')" class="btns">اردو</button>
+        </div>
+    </div>
+    <!-- ENGLISH VERSION -->
+    <div class="container">
+        <div id="story-en" class="mt-5">
+            <div class="text-center mt-5 mb-0">
+                <h2 class="heading-2">Author</h2>
+                <p class="fs-4">Julie Danneberg</p>
+            </div>
+            <div class="text-center mt-4 mb-0 fs-5">
+                <h2 class="heading-2">The Full Story</h2>
+                <p>
+                    Sarah Jane Hartwell did not want to get out of bed. The first day at a new school had arrived, and
+                    she was feeling nervous, shy, and full of dread. Her stomach churned, and she imagined all the
+                    things that could go wrong—what if the kids didn’t like her, what if she got lost, what if she
+                    didn’t fit in?
+                </p>
+                <p>
+                    Mr. Hartwell, her husband, tried to encourage her. “Come on, you’ll do just fine,” he said gently.
+                    But Sarah buried her head under the covers and refused to move. He reminded her that everyone feels
+                    nervous on their first day, and that once she got there, she’d feel better.
+                </p>
+
+                <p>
+                    After much convincing, Sarah finally got out of bed, dressed, and headed to the car. The drive to
+                    school felt too short for her liking—her worries only grew. When they reached the building, the
+                    principal greeted her warmly and led her inside.
+                </p>
+                <p>
+                    The principal walked her down the hall, opening the door to her new classroom. All the children
+                    turned to look. And then came the surprise twist—Sarah Jane Hartwell wasn’t a new student at all…
+                    she was the new teacher!
+                </p>
+
+            </div>
+            <div class="text-center mt-5 mb-4">
+                <h2 class="heading-2">Moral</h2>
+                <p><strong>No matter how old or experienced we are, new beginnings can make us nervous—but facing them
+                    often leads to growth and joy.</strong>
+                </p>
+                <button class="btns" onclick="downloadPDF_en()">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Urdu Version -->
+    <div class="container">
+        <div class="mt-5">
+            <div id="story-ur" class="ur_story">
+                <div id="urduContent">
+                    <h2 class="heading-2 text-center">مصنف</h2>
+                    <p class="fs-4 text-center mb-5">جولی ڈینبرگ</p>
+                    <h1 class="heading-1 fs-1 mb-6 text-center">پوری کہانی</h1>
+                    <p>
+                        سارہ جین ہارٹ ویل بستر سے نکلنا نہیں چاہتی تھی۔ نئے اسکول میں پہلا دن تھا اور وہ گھبراہٹ،
+                        شرمندگی اور خوف سے بھری ہوئی تھی۔ اس کا پیٹ مروڑ رہا تھا اور وہ سوچ رہی تھی کہ اگر بچے اسے پسند
+                        نہ کریں تو کیا ہوگا؟ اگر وہ راستہ بھول جائے تو؟ اگر وہ اس ماحول میں گھل نہ سکے تو؟
+
+                    </p>
+                    <p>
+                        مسٹر ہارٹ ویل، اس کے شوہر، نے حوصلہ دینے کی کوشش کی۔ "آؤ، سب ٹھیک ہو جائے گا،" انہوں نے نرمی سے
+                        کہا۔ لیکن سارہ نے اپنا سر کمبل کے اندر چھپا لیا اور ہلنے سے انکار کر دیا۔ اس کے شوہر نے یاد
+                        دلایا کہ ہر کوئی پہلے دن گھبراتا ہے، اور ایک بار اسکول پہنچنے کے بعد سب بہتر لگتا ہے۔
+                    </p>
+                    <p>
+                        بہت منانے کے بعد، سارہ آخرکار بستر سے نکلی، کپڑے پہنے اور کار میں بیٹھ گئی۔ اسکول کا سفر اسے بہت
+                        مختصر لگا—اس کی پریشانی بڑھتی جا رہی تھی۔ جب وہ اسکول پہنچے تو پرنسپل نے مسکراتے ہوئے اس کا
+                        استقبال کیا اور اندر لے گئے۔
+
+                    </p>
+                    <p>
+                        پرنسپل اسے راہداری سے گزارتے ہوئے ایک کمرے کے سامنے رکی اور دروازہ کھولا۔ سب بچے مڑ کر دیکھنے
+                        لگے۔ اور پھر اصل حقیقت سامنے آئی—سارہ جین ہارٹ ویل کوئی نئی طالبہ نہیں تھی… وہ تو نئی ٹیچر تھی!
+                    </p>
+                    <div class="text-center">
+                        <h2 class="heading-2 mb-4">سبق</h2>
+                        <strong>
+                            چاہے ہم کتنے ہی بڑے یا تجربہ کار کیوں نہ ہوں، نیا آغاز ہمیشہ گھبراہٹ پیدا کرتا ہے، لیکن اس
+                            کا سامنا کرنا ہی کامیابی اور خوشی کی طرف لے جاتا ہے۔
+                        </strong>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button onclick="downloadPDF()" class="btns">Download PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section mt-5 pt-5 pb-3" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <a class="navbar-brand logo" href="./index.html">
+                        <span>H</span>AVEN<span>T</span>ALES
+                    </a>
+                    <p>A Safe Space for Every Story and Every Soul.</p>
+                </div>
+
+                <div class="col-md-4 footer-column">
+                    <h4 class="heading-4">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-decoration-none">Home</a></li>
+                        <li><a href="../submit.html" class="text-decoration-none">Submit Story</a></li>
+                        <li><a href="../about.html" class="text-decoration-none">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-column">
+                    <h4 class="heading-4">Contact Us</h4>
+                    <p>Email: <a href="#" class="text-decoration-none">support@haventales.com</a></p>
+                    <div class="mt-3">
+                        <h4 class="heading-4">Follow Us</h4>
+                        <div class="social-icons d-flex gap-3">
+                            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center mt-3">
+                    <small>&copy; 2025 HavenTales. Powered by Team Aptech 2501E1</small>
+                </div>
+            </div>
+    </footer>
+
+    <script>
+
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('story-en').style.display = 'block';
+                document.getElementById('story-ur').style.display = 'none';
+            } else if (lang === 'ur') {
+                document.getElementById('story-en').style.display = 'none';
+                document.getElementById('story-ur').style.display = 'block';
+            }
+        }
+
+
+        // For English Story
+        async function downloadPDF_en() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            let content = `
+First Day Jitters
+Author: Julie Danneberg
+
+Full Story Summary:
+Sarah Jane Hartwell did not want to get out of bed. The first day at a new school had arrived, and she was feeling nervous, shy, and full of dread. Her stomach churned, and she imagined all the things that could go wrong—what if the kids didn’t like her, what if she got lost, what if she didn’t fit in?
+
+Mr. Hartwell, her husband, tried to encourage her. “Come on, you’ll do just fine,” he said gently. But Sarah buried her head under the covers and refused to move. He reminded her that everyone feels nervous on their first day, and that once she got there, she’d feel better.
+
+After much convincing, Sarah finally got out of bed, dressed, and headed to the car. The drive to school felt too short for her liking—her worries only grew. When they reached the building, the principal greeted her warmly and led her inside.
+
+The principal walked her down the hall, opening the door to her new classroom. All the children turned to look. And then came the surprise twist—Sarah Jane Hartwell wasn’t a new student at all… she was the new teacher!
+
+Moral:
+- No matter how old or experienced we are, new beginnings can make us nervous—but facing them often leads to growth and joy.
+
+        `;
+
+            const margin = 10;
+            let currentY = margin;
+            const lineHeight = 7; // Adjust based on your font size for better spacing
+            const pageWidth = doc.internal.pageSize.getWidth(); // Get the width of the page
+            const pageHeight = doc.internal.pageSize.getHeight(); // Get the height of the page
+            const maxWidth = pageWidth - (2 * margin); // Calculate the maximum width available for text // considering margins
+
+            // Split content into lines that fit the page width
+            let lines = doc.splitTextToSize(content, maxWidth);
+
+            lines.forEach(line => {
+                // Check if the current line will exceed the page height
+                if (currentY + lineHeight > pageHeight - margin) {
+                    doc.addPage(); // Add a new page
+                    currentY = margin; // Reset Y position for the new page
+                }
+                doc.text(line, margin, currentY);
+                currentY += lineHeight; // Move down for the next line
+            });
+
+            doc.save("First_Day_Jitters_Summary.pdf");
+        }
+
+        // For Urdu
+        function downloadPDF() {
+            const element = document.getElementById('urduContent');
+            const opt = {
+                margin: [0, 5, 0, 5], // [top, left, bottom, right] — top ko 0 rakho
+                filename: 'ویمبرلی پریشان.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+
+    <!--Signup Modal -->
+    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="heading-2 text-center">HavenTales Signup</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password">
+                                <span class="input-group-text" onclick="togglePassword('password', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="passwordError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword">
+                                <span class="input-group-text" onclick="togglePassword('confirmPassword', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btns">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javascript/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- AOS (Animation on Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HavenTales || A Safe Space for Every Story and Every Soul</title>
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="./image/homePage/logo.png" type="image/x-icon">
+
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -30,18 +33,28 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="./index.html">
                 <span>H</span>AVEN<span>T</span>ALES
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div class="d-flex align-items-center ms-auto order-lg-2">
+                <!-- Signup Button -->
+                <button class="signupbtn me-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Collapse NavBar -->
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -50,67 +63,64 @@
                         </a>
                         <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
                             <div class="row">
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="./category/adventure.html">Adventure<p>Tales
-                                                of daring quests
-                                                and exploration.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="./category/mystery.html">Mystery<p>Puzzling
-                                                crimes and
-                                                enigmatic events.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="./category/romance.html">Romance<p>Stories
-                                                of love, passion,
-                                                and relationships.</p></a></li>
-                                    <li><a class="dropdown-item mb-0" href="./category/school&learning.html">School &
-                                            Learning<p>Inspire growth, curiosity, and the joy of learning.
-                                            </p></a>
-                                    </li>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="./category/adventure.html">Adventure<p>
+                                                    Tales
+                                                    of daring quests
+                                                    and exploration.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="./category/mystery.html">Mystery<p>
+                                                    Puzzling
+                                                    crimes and
+                                                    enigmatic events.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="./category/romance.html">Romance<p>
+                                                    Stories
+                                                    of love, passion,
+                                                    and relationships.</p></a></li>
+                                        <li><a class="dropdown-item mb-0" href="./category/school&learning.html">School
+                                                &
+                                                Learning<p>Inspire growth, curiosity, and the joy of learning.
+                                                </p></a>
+                                        </li>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="./category/fantacy.html">Fantasy<p>Stories
-                                                of magic, myths,
-                                                and mythical creatures.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="./category/sci-fi.html">Sci-Fi<p>Journeys
-                                                through space,
-                                                time, and technology.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="./category/kids.html">Kids<p>Fun and
-                                                imaginative stories for
-                                                children.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="./category/mindblowing.html">Mind-Blowing<p>
-                                                Fun and
-                                                Unexpected twists that
-                                                leave you amazed.</p></a>
-                                    </li>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="./category/fantacy.html">Fantasy<p>
+                                                    Stories
+                                                    of magic, myths,
+                                                    and mythical creatures.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="./category/sci-fi.html">Sci-Fi<p>
+                                                    Journeys
+                                                    through space,
+                                                    time, and technology.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="./category/kids.html">Kids<p>Fun and
+                                                    imaginative stories for
+                                                    children.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0"
+                                                href="./category/mindblowing.html">Mind-Blowing<p>
+                                                    Fun and
+                                                    Unexpected twists that
+                                                    leave you amazed.</p></a>
+                                        </li>
+                                    </div>
                                 </div>
                             </div>
                         </ul>
-
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./about.html">About</a>
+                        <a class="nav-link" aria-current="page" href="./about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./submit.html">Submit Story</a>
+                        <a class="nav-link" aria-current="page" href="./submit.html">Submit Story</a>
                     </li>
+                </ul>
             </div>
-        </div>
-        </ul>
-        </li>
-        </ul>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <button class="signupbtn" data-bs-toggle="modal" data-bs-target="#signupModal">
-                        <i class="fa-solid fa-user"></i>
-                    </button>
-                </li>
-            </ul>
-        </div>
-        </div>
         </div>
     </nav>
 
@@ -136,7 +146,7 @@
         <div class="container">
             <h2 class="heading-2 text-center mt-4 mb-3">FEATURED STORIES</h2>
             <div class="row align-items-center card-section h-25">
-                <div class="col-lg-6 col-md-12" data-aos="fade-right">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 ps-0" data-aos="fade-right">
                     <h2 class="card-title">Treasure Island</h2>
                     <a href="./category/adventure.html" class="card-category">Adventure</a>
                     <p class="card-text">
@@ -147,17 +157,17 @@
                                 class="fa-solid fa-arrow-right"></i></a>
                     </button>
                 </div>
-                <div class="col-lg-6 col-md-12 ps-0" data-aos="fade-left">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 ps-0" data-aos="fade-left">
                     <div class="card-img">
                         <img src="./image/homePage/card1.jpg" alt="Treasure Island">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 pe-0" data-aos="fade-right">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-0" data-aos="fade-right">
                     <div class="card-img">
                         <img src="./image/homePage/card2.jpg" alt="The Murder on the Links">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12" data-aos="fade-left">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4" data-aos="fade-left">
                     <h2 class="card-title">The Murder on the Links</h2>
                     <a href="./category/mystery.html" class="card-category">Mystery</a>
                     <p class="card-text">
@@ -168,9 +178,9 @@
                                 class="fa-solid fa-arrow-right"></i></a>
                     </button>
                 </div>
-                <div class="col-lg-6 col-md-12" data-aos="fade-right">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4" data-aos="fade-right">
                     <h2 class="card-title">Three Men in a Boat</h2>
-                    <a href="./category/kids.html" class="card-category">Kids</a>
+                    <a href="./emotions/funny.html" class="card-category">Funny</a>
                     <p class="card-text">
                         Three friends (and a dog) take a disastrous boating trip on the Thames.
                     </p>
@@ -179,19 +189,19 @@
                                 class="fa-solid fa-arrow-right"></i></a>
                     </button>
                 </div>
-                <div class="col-lg-6 col-md-12 ps-0" data-aos="fade-left">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 ps-0" data-aos="fade-left">
                     <div class="card-img">
                         <img src="./image/homePage/card3.jpg" alt="Three Men in a Boat">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 pe-0" data-aos="fade-right">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 pe-0" data-aos="fade-right">
                     <div class="card-img">
                         <img src="./image/homePage/card4.jpg" alt="IThe Secret Garden">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12" data-aos="fade-left">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4" data-aos="fade-left">
                     <h2 class="card-title">The Secret Garden</h2>
-                    <a href="./category/fantacy.html" class="card-category">Fantasy</a>
+                    <a href="./emotions/inspiring.html" class="card-category">Inspiring</a>
                     <p class="card-text">
                         A lonely orphan girl discovers a hidden, magical garden that brings healing and joy to everyone
                         it touches.
@@ -201,7 +211,7 @@
                                 class="fa-solid fa-arrow-right"></i></a>
                     </button>
                 </div>
-                <div class="col-lg-6 col-md-12" data-aos="fade-right">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4" data-aos="fade-right">
                     <h2 class="card-title">Cinderella</h2>
                     <a href="./category/kids.html" class="card-category">Kids</a>
                     <p class="card-text">
@@ -212,7 +222,7 @@
                                 class="fa-solid fa-arrow-right"></i></a>
                     </button>
                 </div>
-                <div class="col-lg-6 col-md-12 ps-0" data-aos="fade-left">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4 ps-0" data-aos="fade-left">
                     <div class="card-img">
                         <img src="./image/homePage/card5.jpg" alt="Cinderella">
                     </div>
@@ -227,31 +237,37 @@
         <div class="container">
             <h2 class="heading-2 text-center mt-5 mb-3">FAMOUS AUTHORS</h2>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center author-card" data-aos="fade-right">
-                    <div class="author-img">
-                        <img src="./image/homePage/author1.jpg" alt="Author Image">
-                    </div>
-                    <div>
-                        <h3 class="author-name">Jules Verne</h3>
-                        <p class="author-desc">The Father of Science-Adventure.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center author-card" data-aos="zoom-in">
-                    <div class="author-img">
-                        <img src="./image/homePage/author2.jpg" alt="Author Image">
-                    </div>
-                    <div>
-                        <h3 class="author-name">Agatha Christie</h3>
-                        <p class="author-desc">The Queen of Crime.</p>
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center my-2" data-aos="fade-right">
+                    <div class="author-card">
+                        <div class="author-img">
+                            <img src="./image/homePage/author1.jpg" alt="Author Image">
+                        </div>
+                        <div>
+                            <h3 class="author-name">Jules Verne</h3>
+                            <p class="author-desc">The Father of Science-Adventure.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center author-card" data-aos="fade-left">
-                    <div class="author-img">
-                        <img src="./image/homePage/author3.jpg" alt="Author Image">
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center my-2" data-aos="zoom-in">
+                    <div class="author-card">
+                        <div class="author-img">
+                            <img src="./image/homePage/author2.jpg" alt="Author Image">
+                        </div>
+                        <div>
+                            <h3 class="author-name">Agatha Christie</h3>
+                            <p class="author-desc">The Queen of Crime.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="author-name">Douglas Adams</h3>
-                        <p class="author-desc">The Hitchhiker's Guide to Absurdity.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center my-2" data-aos="fade-left">
+                    <div class="author-card">
+                        <div class="author-img">
+                            <img src="./image/homePage/author3.jpg" alt="Author Image">
+                        </div>
+                        <div>
+                            <h3 class="author-name">Douglas Adams</h3>
+                            <p class="author-desc">The Hitchhiker's Guide to Absurdity.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -300,7 +316,25 @@
             </div>
     </footer>
 
-    <!-- Signup Section Modal -->
+    <!-- AI Chat -->
+    <!-- Floating Button -->
+    <button class="chat-btn" onclick="toggleChat()">💬</button>
+
+    <!-- Chatbox -->
+    <div class="chatbox" id="chatbox">
+        <div class="chat-header">
+            CHAT BOT
+            <button onclick="toggleChat()">×</button>
+        </div>
+        <div class="chat-messages" id="messages"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message..." />
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
     <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
@@ -349,12 +383,8 @@
             </div>
         </div>
     </div>
-    
+
     <script src="javascript/script.js"></script>
-
-    <!-- Go To Top (Button) -->
-    <button onclick="topFunction()" id="myBtn" class="top_btn"><i class="fa-solid fa-arrow-up"></i></button>
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

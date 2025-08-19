@@ -3,20 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Read Story || Treasure Island</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="../image/homePage/logo.png" type="image/x-icon">
 
+    <!-- Css -->
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -27,22 +27,38 @@
     <!-- AOS (Animate on Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
     <!-- jsPDF library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="../index.html">
                 <span>H</span>AVEN<span>T</span>ALES
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div class="d-flex align-items-center ms-auto order-lg-2">
+                <!-- Signup Button -->
+                <button class="signupbtn me-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Collapse NavBar -->
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -51,172 +67,182 @@
                         </a>
                         <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
                             <div class="row">
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
-                                                Tales of daring quests
-                                                and exploration.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>Puzzling
-                                                crimes and
-                                                enigmatic events.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>Stories
-                                                of love, passion,
-                                                and relationships.</p></a></li>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
+                                                    Tales
+                                                    of daring quests
+                                                    and exploration.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>
+                                                    Puzzling
+                                                    crimes and
+                                                    enigmatic events.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>
+                                                    Stories
+                                                    of love, passion,
+                                                    and relationships.</p></a></li>
+                                        <li><a class="dropdown-item mb-0" href="../category/school&learning.html">School
+                                                &
+                                                Learning<p>Inspire growth, curiosity, and the joy of learning.
+                                                </p></a>
+                                        </li>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>Stories
-                                                of magic, myths,
-                                                and mythical creatures.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>Journeys
-                                                through space,
-                                                time, and technology.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
-                                                imaginative stories for
-                                                children.</p></a>
-                                    </li>
-                                </div>
-                            </div>
-                        </ul>
-
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Emotions
-                        </a>
-                        <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
-                            <div class="row">
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../emotions/scary.html">Scary<p>Stories that
-                                                thrill and give
-                                                goosebumps.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/peacefull.html">Peaceful<p>
-                                                Emotional stories that touch
-                                                the heart.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/mindblowing.html">Mind-Blowing
-                                            <p>Unexpected twists that
-                                                leave you amazed.</p>
-                                        </a></li>
-                                </div>
-                                <div class="col-md-6 categorys">
-                                    <li><a class="dropdown-item mb-0" href="../emotions/funny.html">Funny<p>Humorous
-                                                tales that make you
-                                                laugh.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/sad.html">Sad<p>Emotional
-                                                stories that touch the
-                                                heart.</p></a>
-                                    </li>
-                                    <li><a class="dropdown-item mb-0" href="../emotions/inspiring.html">Inspiring<p>
-                                                Motivational tales that
-                                                uplift your spirit.</p></a>
-                                    </li>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>
+                                                    Stories
+                                                    of magic, myths,
+                                                    and mythical creatures.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>
+                                                    Journeys
+                                                    through space,
+                                                    time, and technology.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
+                                                    imaginative stories for
+                                                    children.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0"
+                                                href="../category/mindblowing.html">Mind-Blowing<p>
+                                                    Fun and
+                                                    Unexpected twists that
+                                                    leave you amazed.</p></a>
+                                        </li>
+                                    </div>
                                 </div>
                             </div>
                         </ul>
-
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../submit.html">Submit Story</a>
+                        <a class="nav-link" aria-current="page" href="../about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">SignUp</a>
+                        <a class="nav-link" aria-current="page" href="../submit.html">Submit Story</a>
                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../about.html">About</a>
-                    </li>
+                </ul>
             </div>
-        </div>
-        </ul>
-        </li>
-        </ul>
-        <form class="d-flex">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input class="form-control me-2 search" type="search" placeholder="Search Stories" aria-label="Search">
-            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-        </form>
-        </div>
         </div>
     </nav>
 
     <!-- Story Section -->
     <div class="container">
-        <h1 class="heading-1 text-center story_heading">Treasure Island</h1>
+        <h1 class="heading-1 text-center story_heading">Treasure Island/خزانہ جزیرہ</h1>
         <div class="text-center mt-5 story_image">
-            <img src="../image/homePage/cardStory1.jpg" alt="Treasure Island image">
+            <img src="../image/homePage/cardStory1.jpg" alt="The Secret Garden image">
         </div>
-        <div class="text-center mt-5 mb-0">
-            <h2 class="heading-2">Author</h2>
-            <p class="fs-4">Robert Louis Stevenson</p>
-        </div>
-        <div class="text-center mt-4 mb-0 fs-5">
-            <h2 class="heading-2">The Full Story</h2>
-            <p>The story begins at the Admiral Benbow Inn, run by young Jim Hawkins and his family. A mysterious old
-                seaman named Billy Bones arrives, bringing with him a large sea chest and a constant fear of a
-                "one-legged seafaring man." Bones spends his days drinking rum and singing old sea shanties, but his
-                peace is shattered when two terrifying figures from his past, Black Dog and Blind Pew, track him down.
-                The stress of these encounters eventually leads to Billy Bones' death.
-            </p>
-            <p>
-                Before he dies, Jim and his mother discover a treasure map in Billy Bones' sea chest, which details the
-                location of Captain Flint's buried treasure on a distant island. Jim takes the map to Dr. Livesey and
-                Squire Trelawney, who are excited by the prospect of adventure and decide to finance an expedition to
-                find the treasure.
-            </p>
+    </div>
 
-            <p>
-                They commission a schooner called the Hispaniola and hire a crew. Among them is the charismatic
-                one-legged cook, Long John Silver, who quickly befriends Jim. Jim is initially drawn to Silver's charm
-                and impressive tales of the sea. However, Jim soon overhears Silver plotting a mutiny with a large
-                portion of the crew, revealing that many of them are former pirates from Captain Flint's crew, and
-                Silver himself was Flint's quartermaster. Their plan is to wait until the treasure is found, then seize
-                it for themselves and kill the loyal crew members.
-            </p>
-            <p>
-                Upon arriving at Treasure Island, tensions escalate. Captain Smollett, the ship's honest and capable
-                captain, is wary of the crew. Jim, driven by curiosity and a desire for adventure, sneaks ashore with
-                the pirates. On the island, he witnesses Silver murder a loyal sailor who refuses to join the mutiny.
-                Fleeing into the dense jungle, Jim stumbles upon Ben Gunn, a wild, half-ccrazed former pirate who was
-                marooned on the island three years prior by Flint's crew. Ben Gunn, yearning to escape the island,
-                offers to help Jim and his allies.
-            </p>
-            <p>
-                Meanwhile, Dr. Livesey, Squire Trelawney, and Captain Smollett, with a few loyal crewmen, fortify
-                themselves in an old stockade on the island. A series of confrontations and battles ensue between the
-                loyalists and Silver's mutineers. Jim, acting on impulse and courage, undertakes several solo endeavors,
-                including secretly cutting the Hispaniola adrift, which deprives the pirates of their escape route. He
-                even manages to kill a pirate named Israel Hands in a desperate struggle for control of the ship.
-            </p>
-            <p>
-                Returning to the stockade, Jim finds it has been taken over by the pirates, and he is taken hostage by
-                Long John Silver. Silver, ever the opportunist, tries to maintain control of his increasingly rebellious
-                crew while also protecting Jim, recognizing that Jim could be useful. The pirates, led by Silver,
-                eventually reach the site marked on the map, only to find the treasure chests already excavated and
-                empty. This enrages the pirates, who turn on Silver. At this critical moment, Dr. Livesey, Ben Gunn, and
-                the remaining loyalists ambush the pirates, scattering them.
-            </p>
-            <p>
-                It is revealed that Ben Gunn had discovered Flint's treasure months earlier during his solitude on the
-                island and had moved it to his cave. The loyal crew members load the treasure onto the Hispaniola.
-                Despite his treacherous actions, Long John Silver, with his persuasive charm and quick thinking, manages
-                to escape at their first port of call with a portion of the treasure.
-            </p>
-            <p>
-                The remaining adventurers sail home safely, wealthy beyond their dreams. Jim Hawkins, deeply affected by
-                the harrowing experience, forever foreswears treasure hunting, haunted by nightmares of the sea and gold
-                coins.
-            </p>
-            <button class="btns" onclick="downloadPDF()">Download PDF</button>
+    <!-- Btn -->
+    <div class="container">
+        <div class="text-center mt-3">
+            <button onclick="switchLanguage('en')" class="btns">English</button>
+            <button onclick="switchLanguage('ur')" class="btns">اردو</button>
         </div>
-        <div class="text-center mt-5 mb-4">
-            <h2 class="heading-2">Moral</h2>
-            <p><strong>Greed often leads to ruin, but courage and loyalty can lead to true fortune.</strong></p>
+    </div>
+    <!-- ENGLISH VERSION -->
+    <div class="container">
+        <div id="story-en" class="mt-5">
+            <div class="text-center mt-5 mb-0">
+                <h2 class="heading-2">Author</h2>
+                <p class="fs-4">Robert Louis Stevenson</p>
+            </div>
+            <div class="text-center mt-4 mb-0 fs-5">
+                <h2 class="heading-2">The Full Story</h2>
+                <p>
+                    "Treasure Island" is a thrilling tale of pirates, treasure maps, and courage. Jim Hawkins, a young
+                    boy, lives with his parents at the Admiral Benbow Inn. One day, a mysterious old sailor named Billy
+                    Bones arrives, carrying a sea chest. Before dying from illness, Billy gives Jim a treasure map
+                    showing the location of Captain Flint’s buried gold.
+                </p>
+                <p>
+                    Jim shares the map with Dr. Livesey and Squire Trelawney. They hire a ship, Hispaniola, to sail to
+                    the island. Unknowingly, they also hire some of Captain Flint’s old pirate crew, led by the cunning
+                    Long John Silver.
+                </p>
+
+                <p>
+                    During the journey, Jim overhears Silver plotting to take over the ship once they find the treasure.
+                    Jim warns the loyal crew, and they prepare for the fight ahead.
+                </p>
+                <p>
+                    Reaching the island, the pirates revolt. Jim escapes and meets Ben Gunn, a marooned ex-pirate who
+                    secretly moved the treasure years ago. Fierce battles take place between the loyal crew and Silver’s
+                    pirates.
+                </p>
+                <p>
+                    Jim captures the ship from the pirates and returns to help his friends. In a tense twist, Silver
+                    helps protect Jim, showing that his character is a mix of good and bad.
+                </p>
+                <p>
+                    The loyal crew discovers the treasure hidden in Ben Gunn’s cave. They load it onto the ship, but
+                    Silver escapes with a small share. Jim returns to England, richer in both wealth and life lessons,
+                    but haunted by dreams of the island.
+                </p>
+            </div>
+            <div class="text-center mt-5 mb-4">
+                <h2 class="heading-2">Moral</h2>
+                <p><strong>Greed leads to downfall.</strong>
+                </p>
+                <button class="btns" onclick="downloadPDF_en()">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Urdu Version -->
+    <div class="container">
+        <div class="mt-5">
+            <div id="story-ur" class="ur_story">
+                <div id="urduContent">
+                    <h2 class="heading-2 text-center">مصنف</h2>
+                    <p class="fs-4 text-center mb-3">رابرٹ لوئس اسٹیونسن</p>
+                    <h1 class="heading-1 fs-1 mb-3 fw-bold text-center">پوری کہانی</h1>
+                    <p>
+                        "ٹریژر آئی لینڈ" ایک سنسنی خیز کہانی ہے جس میں قزاقوں، خزانے کے نقشے اور بہادری کی داستان شامل
+                        ہے۔ جم ہاکنز ایک نوجوان لڑکا ہے جو اپنے والدین کے ساتھ "ایڈمرل بین بو" نامی سرائے میں رہتا ہے۔
+                        ایک دن ایک پراسرار بوڑھا ملاح، بیلی بونز، وہاں آتا ہے۔ مرنے سے پہلے وہ جم کو ایک خزانے کا نقشہ
+                        دیتا ہے جو کیپٹن فلنٹ کے دفن شدہ سونے کا مقام دکھاتا ہے۔
+                    </p>
+                    <p>
+                        جم یہ نقشہ ڈاکٹر لیوسی اور اسکوائر ٹریلاونی کو دکھاتا ہے۔ وہ ہسپانیولا نامی جہاز پر جزیرے کی طرف
+                        روانہ ہوتے ہیں۔ انہیں معلوم نہیں ہوتا کہ انہوں نے کیپٹن فلنٹ کے پرانے قزاق ساتھی بھی رکھ لیے
+                        ہیں، جن کا لیڈر چالاک لانگ جان سلور ہے۔
+                    </p>
+                    <p>
+                        سفر کے دوران، جم سنتا ہے کہ سلور خزانے کے بعد جہاز پر قبضہ کرنے کا منصوبہ بنا رہا ہے۔ جم وفادار
+                        عملے کو خبردار کرتا ہے، اور وہ لڑائی کے لیے تیار ہو جاتے ہیں۔
+                    </p>
+                    <p>
+                        جزیرے پر پہنچ کر قزاق بغاوت کر دیتے ہیں۔ جم بھاگ کر بین گن سے ملتا ہے، جو ایک پرانا قزاق ہے اور
+                        برسوں پہلے خزانہ ایک غار میں منتقل کر چکا ہوتا ہے۔ وفادار عملہ اور قزاقوں میں شدید لڑائیاں ہوتی
+                        ہیں۔
+                    </p>
+                    <p>
+                        جم قزاقوں سے جہاز چھین لیتا ہے اور اپنے دوستوں کے پاس واپس آتا ہے۔ ایک نازک موقع پر سلور جم کی
+                        حفاظت کرتا ہے، جس سے ظاہر ہوتا ہے کہ اس کے اندر اچھائی اور برائی دونوں موجود ہیں۔
+                    </p>
+                    <p>
+                        وفادار عملہ بین گن کے غار میں خزانہ ڈھونڈ لیتا ہے۔ وہ اسے جہاز میں لادتے ہیں، مگر سلور ایک چھوٹا
+                        حصہ لے کر بھاگ جاتا ہے۔ جم انگلینڈ واپس آتا ہے—مالدار ہونے کے ساتھ ساتھ زندگی کے قیمتی سبق بھی
+                        سیکھ کر، مگر جزیرے کے خواب اسے اب بھی آتے ہیں۔
+                    </p>
+                    <div class="text-center">
+                        <h2 class="heading-2 mb-4">سبق</h2>
+                        <strong>
+                            لالچ تباہی کا باعث بنتا ہے۔
+                        </strong>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button onclick="downloadPDF()" class="btns">Download PDF</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -235,9 +261,9 @@
                 <div class="col-md-4 footer-column">
                     <h4 class="heading-4">Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-decoration-none">Home</a></li>
-                        <li><a href="submit.html" class="text-decoration-none">Submit Story</a></li>
-                        <li><a href="about.html" class="text-decoration-none">About</a></li>
+                        <li><a href="../index.html" class="text-decoration-none">Home</a></li>
+                        <li><a href="../submit.html" class="text-decoration-none">Submit Story</a></li>
+                        <li><a href="../about.html" class="text-decoration-none">About</a></li>
                     </ul>
                 </div>
 
@@ -261,39 +287,42 @@
             </div>
     </footer>
 
-    <!-- Go To Top (Button) -->
-    <button onclick="topFunction()" id="myBtn" class="top_btn"><i class="fa-solid fa-arrow-up"></i></button>
-
-    <script src="../javascript/script.js"></script>
-
     <script>
-        async function downloadPDF() {
+
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('story-en').style.display = 'block';
+                document.getElementById('story-ur').style.display = 'none';
+            } else if (lang === 'ur') {
+                document.getElementById('story-en').style.display = 'none';
+                document.getElementById('story-ur').style.display = 'block';
+            }
+        }
+
+
+        // For English Story
+        async function downloadPDF_en() {
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
 
             let content = `
 Treasure Island
-Author: Robert Louis Stevenson
+Author:  Robert Louis Stevenson 
 
 Full Story Summary:
-The story begins at the Admiral Benbow Inn, run by young Jim Hawkins and his family. A mysterious old seaman named Billy Bones arrives, bringing with him a large sea chest and a constant fear of a "one-legged seafaring man." Bones spends his days drinking rum and singing old sea shanties, but his peace is shattered when two terrifying figures from his past, Black Dog and Blind Pew, track him down. The stress of these encounters eventually leads to Billy Bones' death.
+"Treasure Island" is a thrilling tale of pirates, treasure maps, and courage. Jim Hawkins, a young boy, lives with his parents at the Admiral Benbow Inn. One day, a mysterious old sailor named Billy Bones arrives, carrying a sea chest. Before dying from illness, Billy gives Jim a treasure map showing the location of Captain Flint’s buried gold.
 
-Before he dies, Jim and his mother discover a treasure map in Billy Bones' sea chest, which details the location of Captain Flint's buried treasure on a distant island. Jim takes the map to Dr. Livesey and Squire Trelawney, who are excited by the prospect of adventure and decide to finance an expedition to find the treasure.
+Jim shares the map with Dr. Livesey and Squire Trelawney. They hire a ship, Hispaniola, to sail to the island. Unknowingly, they also hire some of Captain Flint’s old pirate crew, led by the cunning Long John Silver.
 
-They commission a schooner called the Hispaniola and hire a crew. Among them is the charismatic one-legged cook, Long John Silver, who quickly befriends Jim. Jim is initially drawn to Silver's charm and impressive tales of the sea. However, Jim soon overhears Silver plotting a mutiny with a large portion of the crew, revealing that many of them are former pirates from Captain Flint's crew, and Silver himself was Flint's quartermaster. Their plan is to wait until the treasure is found, then seize it for themselves and kill the loyal crew members.
+During the journey, Jim overhears Silver plotting to take over the ship once they find the treasure. Jim warns the loyal crew, and they prepare for the fight ahead.
 
-Upon arriving at Treasure Island, tensions escalate. Captain Smollett, the ship's honest and capable captain, is wary of the crew. Jim, driven by curiosity and a desire for adventure, sneaks ashore with the pirates. On the island, he witnesses Silver murder a loyal sailor who refuses to join the mutiny. Fleeing into the dense jungle, Jim stumbles upon Ben Gunn, a wild, half-ccrazed former pirate who was marooned on the island three years prior by Flint's crew. Ben Gunn, yearning to escape the island, offers to help Jim and his allies.
+Reaching the island, the pirates revolt. Jim escapes and meets Ben Gunn, a marooned ex-pirate who secretly moved the treasure years ago. Fierce battles take place between the loyal crew and Silver’s pirates.
 
-Meanwhile, Dr. Livesey, Squire Trelawney, and Captain Smollett, with a few loyal crewmen, fortify themselves in an old stockade on the island. A series of confrontations and battles ensue between the loyalists and Silver's mutineers. Jim, acting on impulse and courage, undertakes several solo endeavors, including secretly cutting the Hispaniola adrift, which deprives the pirates of their escape route. He even manages to kill a pirate named Israel Hands in a desperate struggle for control of the ship.
+Jim captures the ship from the pirates and returns to help his friends. In a tense twist, Silver helps protect Jim, showing that his character is a mix of good and bad.
 
-Returning to the stockade, Jim finds it has been taken over by the pirates, and he is taken hostage by Long John Silver. Silver, ever the opportunist, tries to maintain control of his increasingly rebellious crew while also protecting Jim, recognizing that Jim could be useful. The pirates, led by Silver, eventually reach the site marked on the map, only to find the treasure chests already excavated and empty. This enrages the pirates, who turn on Silver. At this critical moment, Dr. Livesey, Ben Gunn, and the remaining loyalists ambush the pirates, scattering them.
-
-It is revealed that Ben Gunn had discovered Flint's treasure months earlier during his solitude on the island and had moved it to his cave. The loyal crew members load the treasure onto the Hispaniola. Despite his treacherous actions, Long John Silver, with his persuasive charm and quick thinking, manages to escape at their first port of call with a portion of the treasure.
-
-The remaining adventurers sail home safely, wealthy beyond their dreams. Jim Hawkins, deeply affected by the harrowing experience, forever foreswears treasure hunting, haunted by nightmares of the sea and gold coins.
-
+The loyal crew discovers the treasure hidden in Ben Gunn’s cave. They load it onto the ship, but Silver escapes with a small share. Jim returns to England, richer in both wealth and life lessons, but haunted by dreams of the island.
 Moral:
-- Greed often leads to ruin, but courage and loyalty can lead to true fortune.
+- Greed leads to downfall.
 
         `;
 
@@ -317,9 +346,74 @@ Moral:
                 currentY += lineHeight; // Move down for the next line
             });
 
-            doc.save("Treasure_Islnd_Summary.pdf");
+            doc.save("Treasure_Island.pdf");
+        }
+
+        // For Urdu
+        function downloadPDF() {
+            const element = document.getElementById('urduContent');
+            const opt = {
+                margin: [0, 5, 0, 5], // [top, left, bottom, right] — top ko 0 rakho
+                filename: 'خزانہ جزیرہ.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
         }
     </script>
+
+    <!--Signup Modal -->
+    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="heading-2 text-center">HavenTales Signup</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password">
+                                <span class="input-group-text" onclick="togglePassword('password', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="passwordError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword">
+                                <span class="input-group-text" onclick="togglePassword('confirmPassword', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btns">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

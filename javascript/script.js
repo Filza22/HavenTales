@@ -23,7 +23,7 @@ function checkSignupBeforeSubmit() {
 
     // Show message in a guaranteed visible place
     let msg = document.createElement("div");
-    msg.className = "thankyou-message mt-5";
+    msg.className = "thankyou-message";
     msg.innerHTML = `<h2 class=\"heading-2\">Please sign up to submit your story.</h2>
       <a href=\"signup.html\" class=\"btns mt-5\">Go to Signup</a>`;
 
@@ -143,28 +143,6 @@ if (window.location.pathname.includes("submit.html")) {
   });
 }
 
-// Get the button
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
 // Singup Page
 function togglePassword(fieldId, iconSpan) {
   let input = document.getElementById(fieldId);
@@ -237,3 +215,68 @@ document
       window.location.href = "index.html";
     }
   });
+
+
+
+  // AI Chat Bot
+   const API_KEY = "AIzaSyA0m5vNEcTg6CWVjoojUU71nR_l2j7q05Q"; // apni key yahan dalna
+    const MODEL = "gemini-1.5-flash";
+
+    const messagesEl = document.getElementById('messages');
+    const inputEl = document.getElementById('user-input');
+    const sendBtn = document.getElementById('sendBtn');
+
+    sendBtn.addEventListener('click', sendMessage);
+    inputEl.addEventListener('keypress', e => { if (e.key === 'Enter') sendMessage(); });
+
+    function toggleChat() {
+      const chatbox = document.getElementById('chatbox');
+      chatbox.style.display = (chatbox.style.display === 'flex') ? 'none' : 'flex';
+      chatbox.style.flexDirection = 'column';
+    }
+
+    async function sendMessage() {
+      const userMessage = inputEl.value.trim();
+      if (!userMessage) return;
+
+      appendMessage('You', userMessage, 'user-msg');
+      inputEl.value = '';
+
+      const botReply = await getBotReply(userMessage);
+      appendMessage('Bot', botReply, 'bot-msg');
+    }
+
+    function appendMessage(sender, text, className) {
+      const msgEl = document.createElement('div');
+      msgEl.className = `message ${className}`;
+      msgEl.innerHTML = `<strong>${sender}:</strong> ${text}`;
+      messagesEl.appendChild(msgEl);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    async function getBotReply(message) {
+      try {
+        const response = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ role: 'user', parts: [{ text: message }] }]
+            })
+          }
+        );
+
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error("API Error:", errorText);
+          return `Error: ${response.status} - Check API key or model name.`;
+        }
+
+        const data = await response.json();
+        return data.candidates?.[0]?.content?.parts?.[0]?.text || "No reply from AI.";
+      } catch (err) {
+        console.error(err);
+        return "Sorry, something went wrong.";
+      }
+    }
