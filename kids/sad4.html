@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Story || The Velveteen Rabbit </title>
+     <!-- favIcon -->
+    <link rel="shortcut icon" href="../image/homePage/logo.png" type="image/x-icon">
+    <!-- Css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+    <!-- jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="../index.html">
+                <span>H</span>AVEN<span>T</span>ALES
+            </a>
+
+            <div class="d-flex align-items-center ms-auto order-lg-2">
+                <!-- Signup Button -->
+                <button class="signupbtn me-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Collapse NavBar -->
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" style="width: 700px;" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/adventure.html">Adventure<p>
+                                                    Tales
+                                                    of daring quests
+                                                    and exploration.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="./category/mystery.html">Mystery<p>
+                                                    Puzzling
+                                                    crimes and
+                                                    enigmatic events.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/romance.html">Romance<p>
+                                                    Stories
+                                                    of love, passion,
+                                                    and relationships.</p></a></li>
+                                        <li><a class="dropdown-item mb-0" href="../category/school&learning.html">School
+                                                &
+                                                Learning<p>Inspire growth, curiosity, and the joy of learning.
+                                                </p></a>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="categorys">
+                                        <li><a class="dropdown-item mb-0" href="../category/fantacy.html">Fantasy<p>
+                                                    Stories
+                                                    of magic, myths,
+                                                    and mythical creatures.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/sci-fi.html">Sci-Fi<p>
+                                                    Journeys
+                                                    through space,
+                                                    time, and technology.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0" href="../category/kids.html">Kids<p>Fun and
+                                                    imaginative stories for
+                                                    children.</p></a>
+                                        </li>
+                                        <li><a class="dropdown-item mb-0"
+                                                href="../category/mindblowing.html">Mind-Blowing<p>
+                                                    Fun and
+                                                    Unexpected twists that
+                                                    leave you amazed.</p></a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../submit.html">Submit Story</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Story Section -->
+    <div class="container">
+        <h1 class="heading-1 text-center story_heading">The Velveteen Rabbit/مخملی خرگوش</h1>
+        <div class="text-center mt-5 story_image">
+            <img src="../image/category/kids/bgsad4.jpg" alt="The Velveteen Rabbit image">
+        </div>
+    </div>
+
+    <!-- Btn -->
+    <div class="container">
+        <div class="text-center mt-3">
+            <button onclick="switchLanguage('en')" class="btns">English</button>
+            <button onclick="switchLanguage('ur')" class="btns">اردو</button>
+        </div>
+    </div>
+    <!-- ENGLISH VERSION -->
+    <div class="container">
+        <div id="story-en" class="mt-5">
+            <div class="text-center mt-5 mb-0">
+                <h2 class="heading-2">Author</h2>
+                <p class="fs-4">Margery Williams</p>
+            </div>
+            <div class="text-center mt-4 mb-0 fs-5">
+                <h2 class="heading-2">The Full Story</h2>
+                <p>
+                    There was once a Velveteen Rabbit, and in the beginning, he was really splendid.
+                    He was fat and bunchy, as a rabbit should be; his coat was spotted brown and white,
+                    he had real thread whiskers, and his ears were lined with pink sateen.
+                    For at least two hours the Boy loved him, and then his cousins came for a visit,
+                    and in the excitement of looking at all the new presents, the Velveteen Rabbit was forgotten.
+                    He lived in the nursery cupboard, and no one thought very much about him. He was naturally shy,
+                    and being only made of velveteen, some of the more expensive toys looked down upon him.
+                </p>
+                <p>
+                    One day, the Skin Horse, the wisest toy in the nursery,
+                    told the Velveteen Rabbit about becoming Real. “Real isn’t how you are made,”
+                    he said. “It’s a thing that happens to you when a child loves you for a long, long time.”
+                    The Velveteen Rabbit wished with all his heart to become Real. Every night, he dreamed of running
+                    through
+                    the woods with real rabbits. Then, one night, the Boy couldn’t find his usual toy and was given the
+                    Velveteen Rabbit to sleep with.
+                </p>
+
+                <p>
+                    From then on, the Rabbit became the Boy’s favorite. He went with him everywhere – to bed,
+                    to the garden, on picnics. The Rabbit was so happy, he forgot he was made of velveteen.
+                    Seasons passed. The Rabbit's fur became shabby, his whiskers fell out, and he began to look very
+                    worn.
+                    But the Boy still loved him deeply. One day, the Boy became very ill, and the doctor said everything
+                    he touched must be burned—including the Velveteen Rabbit.
+                </p>
+                <p>
+                    The Rabbit was placed in a sack outside to be burned. He felt very sad and lonely.
+                    A tear fell from his eye to the ground, and suddenly, a magical fairy appeared.
+                    “You were Real to the Boy,” she said. “Now you shall be Real to everyone.”
+                    She touched him with her wand, and the Velveteen Rabbit felt himself change.
+                    He was no longer stuffed – he had hind legs, soft fur, and could jump and run like the real rabbits
+                    in the woods.
+                </p>
+                <p>
+                Later that spring, the Boy saw a rabbit in the woods that looked oddly familiar. It had the same
+                eyes and soft fur. He didn’t know it, but it was his Velveteen Rabbit, now truly Real.
+                    </p>
+                </div>
+                <div class="text-center mt-5 mb-4">
+                    <h2 class="heading-2">Moral</h2>
+                    <p><strong>“Real isn’t how you are made; it’s what happens when you are truly loved.”</strong>
+                    </p>
+                    <button class="btns" onclick="downloadPDF_en()">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Urdu Version -->
+    <div class="container">
+        <div class="mt-5">
+            <div id="story-ur" class="ur_story">
+                <div id="urduContent">
+                    <h2 class="heading-2 text-center">مصنف</h2>
+                    <p class="fs-4 text-center mb-5"> جیروم کے جیروم</p>
+                    <h1 class="heading-1 fs-1 mb-6 text-center">پوری کہانی</h1>
+                    <p>
+                    <p>
+                        ایک دفعہ کا ذکر ہے کہ ایک ویلویٹین خرگوش تھا، اور شروع میں وہ واقعی شاندار تھا۔
+                        وہ موٹا اور گول مٹول تھا، جیسا کہ خرگوش ہونا چاہیے؛ اس کی کھال بھورے اور سفید دھبوں والی تھی،
+                        اس کے مونچھیں دھاگے سے بنی ہوئی تھیں، اور اس کے کان اندر سے گلابی ساٹن کے تھے۔
+                        کم از کم دو گھنٹے تک بچے نے اسے بہت چاہا، لیکن پھر اس کے کزنز ملنے آئے،
+                        اور نئے تحفوں کے جوش میں ویلویٹین خرگوش کو بھلا دیا گیا۔
+                        وہ نرسری کی الماری میں رہنے لگا، اور کوئی زیادہ اس کے بارے میں نہیں سوچتا تھا۔
+                        وہ فطری طور پر شرمیلا تھا، اور چونکہ وہ صرف ویلویٹین سے بنا ہوا تھا،
+                        اس لیے کچھ قیمتی کھلونے اس پر فخر کرتے تھے۔
+                    </p>
+                    <p>
+                        ایک دن، نرسری کا سب سے عقلمند کھلونا، اسکن ہارس، نے ویلویٹین خرگوش کو "حقیقی"
+                        بننے کے بارے میں بتایا۔ "حقیقی وہ نہیں ہوتا جیسا کہ تم بنائے جاتے ہو،" اس نے کہا۔
+                        یہ وہ چیز ہے جو تمہارے ساتھ ہوتی ہے جب کوئی بچہ تم سے بہت، بہت عرصے تک محبت کرتا ہے۔"
+                        ویلویٹین خرگوش نے دل سے چاہا کہ وہ حقیقی بن جائے۔ ہر رات وہ خواب دیکھتا کہ وہ جنگل میں اصلی
+                        خرگوشوں کے ساتھ دوڑ رہا ہے۔ پھر ایک رات، بچے کو اس کا عام کھلونا نہیں ملا، تو اسے
+                        ویلویٹین خرگوش کے ساتھ سونے کے لیے دیا گیا۔
+
+                    </p>
+                    <p>
+                        اس کے بعد سے، خرگوش بچے کا پسندیدہ بن گیا۔ وہ ہر جگہ اس کے ساتھ جاتا – بستر پر، باغ میں،
+                        پکنک پر۔ خرگوش اتنا خوش تھا کہ وہ بھول گیا کہ وہ صرف ویلویٹین سے بنا ہے۔
+                        موسم بدلتے گئے۔ خرگوش کی کھال خراب ہو گئی، اس کی مونچھیں جھڑ گئیں، اور وہ بہت پرانا
+                        لگنے لگا۔ لیکن بچہ اب بھی اس سے بہت محبت کرتا تھا۔ ایک دن بچہ شدید بیمار ہو گیا،
+                        اور ڈاکٹر نے کہا کہ جس چیز کو بھی وہ چھو چکا ہے، اسے جلا دیا جائے –
+                        جن میں ویلویٹین خرگوش بھی شامل تھا۔
+                    </p>
+                    <p>
+                        خرگوش کو جلانے کے لیے باہر ایک بوری میں رکھا گیا۔ وہ بہت غمگین اور تنہا محسوس کر رہا تھا۔
+                        اس کی آنکھ سے ایک آنسو زمین پر گرا، اور اچانک ایک جادوی پری نمودار ہوئی۔
+                        " تم بچے کے لیے حقیقی تھے،" اس نے کہا۔ "اب تم سب کے لیے حقیقی بنو گے۔"
+                        اس نے اپنی چھڑی سے اسے چھوا، اور ویلویٹین خرگوش نے محسوس کیا کہ وہ بدل رہا ہے۔
+                        اب وہ کپڑے سے بھرا ہوا کھلونا نہیں تھا – اس کے پچھلے پاؤں تھے، نرم کھال تھی،
+                        اور وہ اصلی خرگوشوں کی طرح دوڑ اور چھلانگ لگا سکتا تھا۔
+                        اس کے بعد اس بہار میں، بچے نے جنگل میں ایک خرگوش دیکھا جو کچھ عجیب سا جانا پہچانا لگا۔
+                        اس کی آنکھیں اور کھال ویسی ہی تھیں۔ بچہ نہیں جانتا تھا، مگر وہی اس کا ویلویٹین خرگوش تھا –
+                        اب ایک حقیقی خرگوش بن چکا تھا۔
+                    </p>
+                    <h2 class="heading-2 text-center  mb-4">سبق</h2>
+                    <strong>
+                        "حقیقی وہ نہیں ہوتا جیسے آپ بنائے جاتے ہیں؛ بلکہ یہ وہ ہوتا ہے جب آپ سے سچی محبت کی جاتی ہے۔"
+                    </strong>
+                    </p>
+                </div>
+                <div class="text-center">
+                    <button onclick="downloadPDF()" class="btns">Download PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section mt-5 pt-5 pb-3" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <a class="navbar-brand logo" href="../index.html">
+                        <span>H</span>AVEN<span>T</span>ALES
+                    </a>
+                    <p>A Safe Space for Every Story and Every Soul.</p>
+                </div>
+
+                <div class="col-md-4 footer-column">
+                    <h4 class="heading-4">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-decoration-none">Home</a></li>
+                        <li><a href="../submit.html" class="text-decoration-none">Submit Story</a></li>
+                        <li><a href="../about.html" class="text-decoration-none">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-column">
+                    <h4 class="heading-4">Contact Us</h4>
+                    <p>Email: <a href="#" class="text-decoration-none">support@haventales.com</a></p>
+                    <div class="mt-3">
+                        <h4 class="heading-4">Follow Us</h4>
+                        <div class="social-icons d-flex gap-3">
+                            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center mt-3">
+                    <small>&copy; 2025 HavenTales. Powered by Team Aptech 2501E1</small>
+                </div>
+            </div>
+    </footer>
+
+    <script>
+
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('story-en').style.display = 'block';
+                document.getElementById('story-ur').style.display = 'none';
+            } else if (lang === 'ur') {
+                document.getElementById('story-en').style.display = 'none';
+                document.getElementById('story-ur').style.display = 'block';
+            }
+        }
+
+
+        // For English Story
+        async function downloadPDF_en() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            let content = `
+The Velveteen Rabbit
+Author: Margery Williams
+
+Full Story Summary:
+There was once a Velveteen Rabbit, and in the beginning, he was really splendid.He was fat and bunchy, as a rabbit should be; his coat was spotted brown and white,he had real thread whiskers, and his ears were lined with pink sateen.For at least two hours the Boy loved him, and then his cousins came for a visit,and in the excitement of looking at all the new presents, the Velveteen Rabbit was forgotten.He lived in the nursery cupboard, and no one thought very much about him. He was naturally shy,and being only made of velveteen, some of the more expensive toys looked down upon him.
+
+One day, the Skin Horse, the wisest toy in the nursery,told the Velveteen Rabbit about becoming Real. “Real isn’t how you are made,”he said. “It’s a thing that happens to you when a child loves you for a long, long time.”The Velveteen Rabbit wished with all his heart to become Real. Every night, he dreamed of running through the woods with real rabbits. Then, one night, the Boy couldn’t find his usual toy and was given the Velveteen Rabbit to sleep with.
+
+From then on, the Rabbit became the Boy’s favorite. He went with him everywhere – to bed,to the garden, on picnics. The Rabbit was so happy, he forgot he was made of velveteen.Seasons passed. The Rabbit's fur became shabby, his whiskers fell out, and he began to look very worn.But the Boy still loved him deeply. One day, the Boy became very ill, and the doctor said everything he touched must be burned—including the Velveteen Rabbit.
+
+The Rabbit was placed in a sack outside to be burned. He felt very sad and lonely.A tear fell from his eye to the ground, and suddenly, a magical fairy appeared.“You were Real to the Boy,” she said. “Now you shall be Real to everyone.”She touched him with her wand, and the Velveteen Rabbit felt himself change.He was no longer stuffed – he had hind legs, soft fur, and could jump and run like the real rabbits in the woods.
+
+Later that spring, the Boy saw a rabbit in the woods that looked oddly familiar. It had the same eyes and soft fur. He didn’t know it, but it was his Velveteen Rabbit, now truly Real.
+
+Moral:
+Real isn't how you're made; it's what happens when you're truly loved.”
+
+        `;
+
+            const margin = 10;
+            let currentY = margin;
+            const lineHeight = 7; // Adjust based on your font size for better spacing
+            const pageWidth = doc.internal.pageSize.getWidth(); // Get the width of the page
+            const pageHeight = doc.internal.pageSize.getHeight(); // Get the height of the page
+            const maxWidth = pageWidth - (2 * margin); // Calculate the maximum width available for text // considering margins
+
+            // Split content into lines that fit the page width
+            let lines = doc.splitTextToSize(content, maxWidth);
+
+            lines.forEach(line => {
+                // Check if the current line will exceed the page height
+                if (currentY + lineHeight > pageHeight - margin) {
+                    doc.addPage(); // Add a new page
+                    currentY = margin; // Reset Y position for the new page
+                }
+                doc.text(line, margin, currentY);
+                currentY += lineHeight; // Move down for the next line
+            });
+
+            doc.save("The_Velveteen_Rabbit_Summary.pdf");
+        }
+
+        // For Urdu
+        function downloadPDF() {
+            const element = document.getElementById('urduContent');
+            const opt = {
+                margin: [0, 5, 0, 5], // [top, left, bottom, right] — top ko 0 rakho
+                filename: 'مخملی خرگوش.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="heading-2 text-center">HavenTales Signup</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password">
+                                <span class="input-group-text" onclick="togglePassword('password', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="passwordError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword">
+                                <span class="input-group-text" onclick="togglePassword('confirmPassword', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btns">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- AOS (Animation on Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

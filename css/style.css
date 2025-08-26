@@ -58,13 +58,13 @@ body {
 .heading-4 {
     color: var(--heading-color);
     font-size: 23px;
-    /* font-weight: 400; */
+    font-weight: 600;
     font-family: "IBM Plex Serif", serif;
 }
 
 .heading-5 {
     color: var(--heading-color);
-    font-size: 20px;
+    /* font-size: 25px; */
     font-weight: 600;
     font-family: "Belleza", serif;
 }
@@ -333,13 +333,14 @@ body {
 
 .author-card {
     display: flex;
-    justify-content: center !important;
+    justify-content: space-between !important;
     align-items: center;
     gap: 10px;
     padding: 10px !important;
-    background-color: #c47aae73 !important;
+    background-color: #d48dbf6e !important;
     border-radius: 10px !important;
     box-shadow: var(--box-shadow);
+    height: 200px;
 }
 
 .author-name .author-desc {
@@ -350,6 +351,10 @@ body {
     font-size: 20px !important;
     font-weight: 600 !important;
     margin-bottom: 5px !important;
+}
+
+.author-img {
+    height: 180px;
 }
 
 .author-img img {
@@ -615,78 +620,6 @@ body {
     background-image: url("../image/category/adventure/adv6.jpg");
 }
 
-#bg-scary-1 {
-    background-image: url("../image/emotion/scary/scary1.jpg");
-}
-
-#bg-scary-2 {
-    background-image: url("../image/emotion/scary/scary2.jfif");
-}
-
-#bg-scary-3 {
-    background-image: url("../image/emotion/scary/scary3.jpg");
-}
-
-#bg-scary-4 {
-    background-image: url("../image/emotion/scary/scary4.jpg");
-}
-
-#bg-scary-5 {
-    background-image: url("../image/emotion/scary/scary5.jpg");
-}
-
-#bg-scary-6 {
-    background-image: url("../image/emotion/scary/scary6.jpg");
-}
-
-#bg-sad-1 {
-    background-image: url("../image/emotion/sad/sad1.jpg");
-}
-
-#bg-sad-2 {
-    background-image: url("../image/emotion/sad/sad2.jpg");
-}
-
-#bg-sad-3 {
-    background-image: url("../image/emotion/sad/sad3.webp");
-}
-
-#bg-sad-4 {
-    background-image: url("../image/emotion/sad/sad4.jpg");
-}
-
-#bg-sad-5 {
-    background-image: url("../image/emotion/sad/sad5.jpg");
-}
-
-#bg-sad-6 {
-    background-image: url("../image/emotion/sad/sad6.jpg");
-}
-
-#bg-peacefull-1 {
-    background-image: url("../image/emotion/peacefull/peacefull1.jpg");
-}
-
-#bg-peacefull-2 {
-    background-image: url("../image/emotion/peacefull/peacefull2.jpg");
-}
-
-#bg-peacefull-3 {
-    background-image: url("../image/emotion/peacefull/peacefull3.jpg");
-}
-
-#bg-peacefull-4 {
-    background-image: url("../image/emotion/peacefull/peacefull4.jpg");
-}
-
-#bg-peacefull-5 {
-    background-image: url("../image/emotion/peacefull/peacefull5.jpg");
-}
-
-#bg-peacefull-6 {
-    background-image: url("../image/emotion/peacefull/peacefull6.jpg");
-}
-
 #bg-mind-1 {
     background-image: url("../image/emotion/mind-blowing/mind1.jpg");
 }
@@ -709,78 +642,6 @@ body {
 
 #bg-mind-6 {
     background-image: url("../image/emotion/mind-blowing/mind6.jpg");
-}
-
-#bg-inspiring-1 {
-    background-image: url("../image/emotion/inspiring/ins6.jpg");
-}
-
-#bg-inspiring-2 {
-    background-image: url("../image/emotion/inspiring/ins5.jpg");
-}
-
-#bg-inspiring-3 {
-    background-image: url("../image/emotion/inspiring/ins4.jpg");
-}
-
-#bg-inspiring-4 {
-    background-image: url("../image/emotion/inspiring/ins3.jpg");
-}
-
-#bg-inspiring-5 {
-    background-image: url("../image/emotion/inspiring/ins2.jpg");
-}
-
-#bg-inspiring-6 {
-    background-image: url("../image/emotion/inspiring/ins1.jpg");
-}
-
-#bg-funny-1 {
-    background-image: url("../image/emotion/funny/funny1.jpg");
-}
-
-#bg-funny-2 {
-    background-image: url("../image/emotion/funny/funny2.jpg");
-}
-
-#bg-funny-3 {
-    background-image: url("../image/emotion/funny/funny3.jpg");
-}
-
-#bg-funny-4 {
-    background-image: url("../image/emotion/funny/funny4.jpg");
-}
-
-#bg-funny-5 {
-    background-image: url("../image/emotion/funny/funny5.jpg");
-}
-
-#bg-funny-6 {
-    background-image: url("../image/emotion/funny/funny6.jpg");
-}
-
-#bg-mys-1 {
-    background-image: url("../image/category/mystery/mys1.jpg") !important;
-}
-
-#bg-mys-2 {
-    background-image: url("../image/category/mystery/mys2.jpg") !important;
-}
-
-#bg-mys-3 {
-    background-image: url("../image/category/mystery/mys3.jpg") !important;
-}
-
-#bg-mys-4 {
-    background-image: url("../image/category/mystery/mys4.jpg") !important;
-}
-
-#bg-mys-5 {
-    background-image: url("../image/category/mystery/mys5.jpg") !important;
-}
-
-#bg-mys-6 {
-    background-image: url("../image/category/mystery/mys6.jpg") !important;
 }
 
 #bg-rom-1 {
@@ -807,30 +668,6 @@ body {
     background-image: url("../image/category/romance/rom6.jpg") !important;
 }
 
-#bg-fan-1 {
-    background-image: url("../image/category/fantasy/fan1.jpg") !important;
-}
-
-#bg-fan-2 {
-    background-image: url("../image/category/fantasy/fan2.jpg") !important;
-}
-
-#bg-fan-3 {
-    background-image: url("../image/category/fantasy/fan3.jpg") !important;
-}
-
-#bg-fan-4 {
-    background-image: url("../image/category/fantasy/fan4.jpg") !important;
-}
-
-#bg-fan-5 {
-    background-image: url("../image/category/fantasy/fan5.webp") !important;
-}
-
-#bg-fan-6 {
-    background-image: url("../image/category/fantasy/fan6.jpg") !important;
-}
-
 #bg-sci-1 {
     background-image: url("../image/category/sci-fi/sci1.jpg") !important;
 }
@@ -853,30 +690,6 @@ body {
 
 #bg-sci-6 {
     background-image: url("../image/category/sci-fi/sci6.jpg") !important;
-}
-
-#bg-kid-1 {
-    background-image: url("../image/category/kids/kid1.jpg") !important;
-}
-
-#bg-kid-2 {
-    background-image: url("../image/category/kids/kid2.jpg") !important;
-}
-
-#bg-kid-3 {
-    background-image: url("../image/category/kids/kid3.jpeg") !important;
-}
-
-#bg-kid-4 {
-    background-image: url("../image/category/kids/kid\ 4.jpeg") !important;
-}
-
-#bg-kid-5 {
-    background-image: url("../image/category/kids/kid5.jpg") !important;
-}
-
-#bg-kid-6 {
-    background-image: url("../image/category/kids/kid\ 6.jpeg") !important;
 }
 
 /* footer */
@@ -1053,7 +866,10 @@ option {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100dvh;
+    height: auto;
+    /* border: 3px solid var(--primary-color) !important; */
+    border-radius: 20px;
+    margin-top: 80px !important;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1064,7 +880,7 @@ option {
 }
 
 .mission {
-    background-color: #c47aae73 !important;
+    background-color: #d48dbf6e !important;
     color: var(--primary-color) !important;
     border: 1px solid var(--primary-color) !important;
     border-radius: 15px;
@@ -1081,6 +897,22 @@ option {
     box-shadow: 0 12px 20px var(--secondary-color);
 }
 
+.team-card {
+    background-color: #d48dbf6e !important;
+    border: 1px solid var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: all ease-in-out 0.3s;
+    cursor: context-menu;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px var(--secondary-color);
+}
+
+
 /* Signup pg */
 .signup-container {
     /* max-width: 400px; */
@@ -1091,17 +923,46 @@ option {
     border-radius: 15px;
     /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); */
 }
+.signup-container {
+      max-width: 400px;
+      margin: 80px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
 
 .error {
     color: red;
     font-size: 14px;
 }
 
+/* Password Field */
+#password,
+#confirmPassword {
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px 0 0 8px;
+    /* left side rounded */
+    padding: 10px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
 
+#password:focus,
+#confirmPassword:focus {
+    border-color: var(--heading-color);
+    box-shadow: 0 0 5px rgba(106, 30, 85, 0.5);
+    outline: none;
+    border-radius: 8px 0 0 8px !important;
+}
 
-
-
-
+/* Eye Icon Style */
+#password+.input-group-text,
+#confirmPassword+.input-group-text {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
 /* =========================
    RESPONSIVE DESIGN
@@ -1158,6 +1019,10 @@ option {
         font-size: 14px !important;
     }
 
+    .overlay-card-text {
+        opacity: 1;
+        bottom: 75px;
+    }
 }
 
 /* For mobile screens */
@@ -1190,11 +1055,6 @@ option {
     .btns {
         font-size: 14px !important;
         padding: 6px 14px !important;
-    }
-
-    .overlay-card-text {
-        opacity: 1;
-        bottom: 75px;
     }
 
 }

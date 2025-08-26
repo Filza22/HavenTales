@@ -3,23 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Read Story || Harry Potter and the Philosopher's Stone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Read Story || Harry Potter and the Philosopher`s Stone</title>
      <!-- favIcon -->
     <link rel="shortcut icon" href="../image/homePage/logo.png" type="image/x-icon">
-
-    <!-- CSS -->
+    <!-- Css -->
     <link rel="stylesheet" href="../css/style.css">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel:wght@400..900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -30,11 +27,19 @@
     <!-- AOS (Animate on Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
     <!-- jsPDF library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="../index.html">
@@ -72,7 +77,7 @@
                                                     of daring quests
                                                     and exploration.</p></a>
                                         </li>
-                                        <li><a class="dropdown-item mb-0" href="./category/mystery.html">Mystery<p>
+                                        <li><a class="dropdown-item mb-0" href="../category/mystery.html">Mystery<p>
                                                     Puzzling
                                                     crimes and
                                                     enigmatic events.</p></a>
@@ -125,48 +130,128 @@
             </div>
         </div>
     </nav>
-
     <!-- Story Section -->
     <div class="container">
-        <h1 class="heading-1 text-center story_heading">Harry Potter and the Philosopher's Stone</h1>
+        <h1 class="heading-1 text-center story_heading">Harry Potter and the Philosopher's Stone/ہیری پوٹر اور فلاسفر کا
+            پتھر </h1>
         <div class="text-center mt-5 story_image">
-            <img src="../image/category/adventure/advStory1.jpg" alt="Harry Potter and the Philosopher's Stone image">
+            <img src="../image/category/adventure/bgadv1.jpg" alt="The Lightning Thief image">
         </div>
-        <div class="text-center mt-5 mb-0">
-            <h2 class="heading-2">Author</h2>
-            <p class="fs-4">J.K. Rowling</p>
-        </div>
-        <div class="text-center mt-4 mb-0 fs-5">
-            <h2 class="heading-2">The Full Story</h2>
-            <p>Harry Potter, an orphaned boy living with his cruel aunt, uncle, and cousin, learns on his 11th birthday
-                that he is a wizard. He receives a letter from Hogwarts School of Witchcraft and Wizardry, inviting him
-                to study magic.
-            </p>
-            <p>
-                At Hogwarts, Harry makes friends — especially Ron Weasley and Hermione Granger — and learns about his
-                past. He discovers that his parents were killed by a dark wizard named Lord Voldemort, whose killing
-                curse mysteriously failed when he tried to kill baby Harry. This event made Harry famous in the
-                wizarding world as “The Boy Who Lived.”
-            </p>
+    </div>
 
-            <p>
-                Throughout the school year, Harry and his friends uncover the mystery of the Philosopher's Stone, a
-                magical object that grants immortality. They suspect their teacher Professor Snape is trying to steal it
-                for Voldemort.
-            </p>
-            <p>
-                However, it turns out Professor Quirrell is the real villain, possessed by Voldemort himself. In a
-                dramatic climax, Harry protects the Stone, and Voldemort is once again defeated — though not destroyed.
-            </p>
-            <p>
-                Harry returns to his relatives for the summer, having found friendship, courage, and a sense of
-                belonging.
-            </p>
+    <!-- Btn -->
+    <div class="container">
+        <div class="text-center mt-3">
+            <button onclick="switchLanguage('en')" class="btns">English</button>
+            <button onclick="switchLanguage('ur')" class="btns">اردو</button>
         </div>
-        <div class="text-center mt-5 mb-4">
-            <h2 class="heading-2">Moral</h2>
-            <p><strong>The most powerful magic is love, which grants protection and inspires courage.</strong></p>
-            <button class="btns" onclick="downloadPDF()">Download PDF</button>
+    </div>
+    <!-- ENGLISH VERSION -->
+    <div class="container">
+        <div id="story-en" class="mt-5">
+            <div class="text-center mt-5 mb-0">
+                <h2 class="heading-2">Author</h2>
+                <p class="fs-4">J. K. Rowling</p>
+            </div>
+            <div class="text-center mt-4 mb-0 fs-5">
+                <h2 class="heading-2">The Full Story</h2>
+                <p>
+                    Harry Potter was an orphan boy who lived with his cruel aunt, uncle, and cousin, the Dursleys. They
+                    treated him badly, making him feel unwanted and unloved. On his eleventh birthday, Harry discovered
+                    the truth about himself: he was a wizard. A kind giant named Hagrid came to take him to a magical
+                    school called Hogwarts School of Witchcraft and Wizardry.
+                </p>
+                <p>
+                    At Hogwarts, Harry made two close friends, Ron Weasley and Hermione Granger. Together, they
+                    experienced a world full of magic, spells, enchanted creatures, and mysteries. Harry also discovered
+                    that he was famous in the wizarding world because, as a baby, he had survived an attack by the dark
+                    wizard Lord Voldemort, who killed his parents but mysteriously lost his power when he tried to kill
+                    Harry.
+                </p>
+                <p>
+                    Throughout the school year, Harry and his friends uncovered secrets about a powerful magical object
+                    called the Philosopher’s Stone, which could give eternal life and unlimited wealth. The Stone was
+                    hidden inside the school, protected by powerful spells and magical creatures.
+                </p>
+                <p>
+                    Harry, Ron, and Hermione bravely faced dangerous challenges to prevent Voldemort from returning.
+                    They solved puzzles, fought magical creatures, and relied on their friendship and courage. In the
+                    final challenge, Harry came face to face with Professor Quirrell, who was secretly helping
+                    Voldemort. With his bravery and the protection of his mother’s love, Harry was able to stop
+                    Voldemort from taking the Stone.
+                </p>
+                <p>
+                    In the end, the Philosopher’s Stone was destroyed to keep it from falling into the wrong hands.
+                    Harry returned to the Dursleys for the summer but now knew he belonged to a magical world where
+                    love, friendship, and bravery mattered most.
+                </p>
+
+
+            </div>
+            <div class="text-center mt-5 mb-4">
+                <h2 class="heading-2">Moral</h2>
+                <p><strong>
+                        True courage and love are stronger than power and evil.
+                    </strong>
+                </p>
+                <button class="btns" onclick="downloadPDF_en()">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Urdu Version -->
+    <div class="container">
+        <div class="mt-5">
+            <div id="story-ur" class="ur_story">
+                <div id="urduContent">
+                    <h2 class="heading-2 text-center">مصنف</h2>
+                    <p class="fs-4 text-center mb-5">جے کے رولنگ </p>
+                    <h1 class="heading-1 fs-1 mb-6 text-center">پوری کہانی</h1>
+                    <p>
+                        ہیری پوٹر ایک یتیم لڑکا تھا جو اپنی ظالم خالہ، ماموں اور کزن ڈرزلیز کے ساتھ رہتا تھا۔ وہ اس کے
+                        ساتھ برا سلوک کرتے، اسے کمتر سمجھتے اور ہمیشہ اس پر سختی کرتے تھے۔ ہیری کی زندگی اکیلی اور غمگین
+                        تھی۔
+                    </p>
+                    <p>
+                        گیارہویں سالگرہ کے دن، ایک بڑے اور مہربان دیو کی طرح کے آدمی ہیگریڈ اس کے پاس آئے اور بتایا کہ
+                        ہیری اصل میں ایک جادوگر ہے۔ وہ اسے ہوگ وارٹس اسکول آف وچ کرافٹ اینڈ وزرڈری لے گئے، جو جادوگر
+                        بچوں کا ایک شاندار اسکول تھا۔
+                    </p>
+                    <p>
+                        ہوگ وارٹس میں، ہیری کی دوستی رون ویزلی اور ہرمیون گرینجر سے ہوئی۔ یہ تینوں جلد ہی ایک دوسرے کے
+                        بہترین دوست بن گئے۔ ہیری کو پتا چلا کہ وہ جادو کی دنیا میں پہلے سے مشہور ہے کیونکہ بچپن میں اُس
+                        پر سب سے خطرناک جادوگر لارڈ وولڈیمورٹ نے حملہ کیا تھا۔ اُس حملے میں ہیری کے والدین مارے گئے تھے،
+                        مگر ہیری زندہ بچ گیا اور وولڈیمورٹ اپنی طاقت کھو بیٹھا۔
+                    </p>
+                    <p>
+                        سال کے دوران، ہیری اور اس کے دوستوں کو ایک طاقتور جادوئی چیز کے بارے میں پتا چلا، جسے فلاسفرز
+                        اسٹون کہا جاتا تھا۔ یہ پتھر ہمیشہ کی زندگی اور بے پناہ دولت دے سکتا تھا۔ یہ پتھر اسکول کے اندر
+                        چھپایا گیا تھا اور اس پر کئی جادوئی پہرے لگائے گئے تھے۔
+                    </p>
+                    <p>
+                        ہیری، رون اور ہرمیون نے مل کر ہمت دکھائی اور خطرناک مراحل کو پار کیا۔ انہوں نے جادوئی معمے حل
+                        کیے، جانوروں کا سامنا کیا اور دوستی کی طاقت پر بھروسہ کیا۔ آخر میں ہیری پروفیسر کوئیرل کے سامنے
+                        آیا، جو دراصل وولڈیمورٹ کی مدد کر رہا تھا۔ لیکن ہیری کی بہادری اور اُس کی ماں کی محبت کے سائے نے
+                        وولڈیمورٹ کو روک دیا۔
+                    </p>
+                    <p>
+                        آخر کار فلاسفرز اسٹون تباہ کر دیا گیا تاکہ وہ غلط ہاتھوں میں نہ جا سکے۔ ہیری گرمیوں کے لیے واپس
+                        ڈرزلیز کے پاس گیا، مگر اب اسے یقین ہو گیا تھا کہ وہ ایک جادوئی دنیا کا حصہ ہے جہاں محبت، دوستی
+                        اور بہادری سب سے زیادہ اہم ہیں۔
+                    </p>
+                    <h2 class="heading-2 text-center  mb-4">سبق</h2>
+                    <strong>
+                        سچی بہادری اور محبت طاقت اور برائی سے زیادہ مضبوط ہوتی ہیں۔ 
+                    </strong>
+                    </p>
+                </div>
+                <div class="text-center">
+                    <button onclick="downloadPDF()" class="btns">Download PDF</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -176,7 +261,7 @@
             <div class="row">
 
                 <div class="col-md-4">
-                    <a class="navbar-brand logo" href="./index.html">
+                    <a class="navbar-brand logo" href="../index.html">
                         <span>H</span>AVEN<span>T</span>ALES
                     </a>
                     <p>A Safe Space for Every Story and Every Soul.</p>
@@ -185,9 +270,9 @@
                 <div class="col-md-4 footer-column">
                     <h4 class="heading-4">Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-decoration-none">Home</a></li>
-                        <li><a href="submit.html" class="text-decoration-none">Submit Story</a></li>
-                        <li><a href="about.html" class="text-decoration-none">About</a></li>
+                        <li><a href="../index.html" class="text-decoration-none">Home</a></li>
+                        <li><a href="../submit.html" class="text-decoration-none">Submit Story</a></li>
+                        <li><a href="../about.html" class="text-decoration-none">About</a></li>
                     </ul>
                 </div>
 
@@ -212,27 +297,40 @@
     </footer>
 
     <script>
-        async function downloadPDF() {
+
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('story-en').style.display = 'block';
+                document.getElementById('story-ur').style.display = 'none';
+            } else if (lang === 'ur') {
+                document.getElementById('story-en').style.display = 'none';
+                document.getElementById('story-ur').style.display = 'block';
+            }
+        }
+
+
+        // For English Story
+        async function downloadPDF_en() {
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
 
             let content = `
 Harry Potter and the Philosopher's Stone
-Author: J.K. Rowling
+Author: Rick Riordan
+Harry Potter was an orphan boy who lived with his cruel aunt, uncle, and cousin, the Dursleys. They treated him badly, making him feel unwanted and unloved. On his eleventh birthday, Harry discovered the truth about himself: he was a wizard. A kind giant named Hagrid came to take him to a magical school called Hogwarts School of Witchcraft and Wizardry.
 
-Full Story Summary:
-At Hogwarts, Harry makes friends — especially Ron Weasley and Hermione Granger — and learns about his past. He discovers that his parents were killed by a dark wizard named Lord Voldemort, whose killing curse mysteriously failed when he tried to kill baby Harry. This event made Harry famous in the wizarding world  as “The Boy Who Lived.”
-Throughout the school year, Harry and his friends uncover the mystery of the Philosopher's Stone, a magical object that grants immortality. They suspect their teacher Professor Snape is trying to steal it for Voldemort.
-However, it turns out Professor Quirrell is the real villain, possessed by Voldemort himself. In a dramatic climax, Harry protects the Stone, and Voldemort is once again defeated — though not destroyed.
-Harry returns to his relatives for the summer, having found friendship, courage, and a sense of belonging.
-Harry Potter, an orphaned boy living with his cruel aunt, uncle, and cousin, learns on his 11th birthday that he is a wizard. He receives a letter from Hogwarts School of Witchcraft and Wizardry, inviting him to study magic.
+At Hogwarts, Harry made two close friends, Ron Weasley and Hermione Granger. Together, they experienced a world full of magic, spells, enchanted creatures, and mysteries. Harry also discovered that he was famous in the wizarding world because, as a baby, he had survived an attack by the dark wizard Lord Voldemort, who killed his parents but mysteriously lost his power when he tried to kill Harry.
 
-Moral:
-- Love is the strongest magic.
-- True courage and friendship overcome evil.
-- It's our choices that show who we really are, far more than our abilities.
+Throughout the school year, Harry and his friends uncovered secrets about a powerful magical object called the Philosopher’s Stone, which could give eternal life and unlimited wealth. The Stone was hidden inside the school, protected by powerful spells and magical creatures.
 
-        `;
+Harry, Ron, and Hermione bravely faced dangerous challenges to prevent Voldemort from returning. They solved puzzles, fought magical creatures, and relied on their friendship and courage. In the final challenge, Harry came face to face with Professor Quirrell, who was secretly helping Voldemort. With his bravery and the protection of his mother’s love, Harry was able to stop Voldemort from taking the Stone.
+
+In the end, the Philosopher’s Stone was destroyed to keep it from falling into the wrong hands. Harry returned to the Dursleys for the summer but now knew he belonged to a magical world where love, friendship, and bravery mattered most.
+
+Moral: True courage and love are stronger than power and evil.
+
+
+`;
 
             const margin = 10;
             let currentY = margin;
@@ -254,12 +352,74 @@ Moral:
                 currentY += lineHeight; // Move down for the next line
             });
 
-            doc.save("The_Secret_Garden_Summary.pdf");
+            doc.save("Harry_Potter_and_the_Philosopher's_Stone_Summary.pdf");
+        }
+
+        // For Urdu
+        function downloadPDF() {
+            const element = document.getElementById('urduContent');
+            const opt = {
+                margin: [0, 5, 0, 5], // [top, left, bottom, right] — top ko 0 rakho
+                filename: 'ہیری پوٹر اور فلاسفر کا پتھر.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
         }
     </script>
 
-    <script src="javascript/script.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="heading-2 text-center">HavenTales Signup</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password">
+                                <span class="input-group-text" onclick="togglePassword('password', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="passwordError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword">
+                                <span class="input-group-text" onclick="togglePassword('confirmPassword', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btns">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="javascript/script.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

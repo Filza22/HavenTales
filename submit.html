@@ -13,7 +13,7 @@
         <meta name="author" content="HavenTales Team">
         <title>Submit Story || HavenTales</title>
         <!-- favIcon -->
-        <link rel="shortcut icon" href="../image/homePage/logo.png" type="image/x-icon">
+        <link rel="shortcut icon" href="./image/homePage/logo.png" type="image/x-icon">
 
         <!-- CSS -->
         <link rel="stylesheet" href="./css/style.css">
@@ -50,7 +50,7 @@
     </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="./index.html">
                 <span>H</span>AVEN<span>T</span>ALES
@@ -174,12 +174,15 @@
                                         <label for="category" class="mt-4 form-label">Category</label>
                                         <select id="category" name="category" class="form-select">
                                             <option value="">--Choose Category--</option>
-                                            <option value="Kids">Kids</option>
+                                            <option value="Adventure">Adventure</option>
                                             <option value="Fantasy">Fantasy</option>
                                             <option value="Mystery">Mystery</option>
                                             <option value="Sci-Fi">Sci-Fi</option>
+                                            <option value="Romance">Romance</option>
+                                            <option value="Kids">Kids</option>
+                                            <option value="School&Learning">School & Learning</option>
+                                            <option value="Mind-Blowing">Mind-Blowing</option>
                                             <option value="Real Life">Real Life</option>
-                                            <option value="Horror">Horror</option>
                                         </select>
                                         <div id="categoryError" class="invalid-feedback">Please select Category.
                                         </div>
@@ -210,6 +213,56 @@
             </div>
         </div>
     </section>
+
+     <!-- Modal -->
+    <div class="modal fade" id="signupModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="heading-2 text-center">HavenTales Signup</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name">
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password">
+                                <span class="input-group-text" onclick="togglePassword('password', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="passwordError"></div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword">
+                                <span class="input-group-text" onclick="togglePassword('confirmPassword', this)">
+                                    <i class="fa-solid fa-eye"></i>
+                                </span>
+                            </div>
+                            <div class="error" id="confirmPasswordError"></div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btns">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Javascript -->
     <script src="./javascript/script.js"></script>
